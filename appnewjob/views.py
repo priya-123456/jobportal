@@ -1,6 +1,9 @@
 from django.shortcuts import render,redirect
 from .models import Createjob,Category,City,State,Resume,Functionalarea,Jobtype,Industry,Experience,Package,Country
 from .forms import ResumeForm,JobForm
+from django.contrib.auth.models import User
+from django.contrib import  auth
+from django.contrib.auth import authenticate,logout as auth_logout,login as auth_login
 from django.contrib import messages
 
 def apploed_jobs(request):
@@ -93,4 +96,53 @@ def emp_short_profil(request):
 
 def empjobappliers(request):
     return render(request,'Employer_job_appliers.html')
+
+
+def register(request):
+    if request.method == 'POST':
+        usernam = request.POST.get('username')
+        email = request.POST.get('email')
+        password1 = request.POST.get('password1')
+        password2 = request.POST.get('password2')
+        if password1 == password2:
+            if User.objects.filter(username=usernam).exists():
+                messages.error(request, 'Email already exists')
+                return redirect(index)
+            else:
+                user = User.objects.create_user(username=usernam,email=email, password=password1)
+                Log_User = authenticate(username=usernam, password=password1)
+                auth.login(request, user)
+                messages.success(request, 'Form submited successfully...')
+                return redirect(index)
+        else:
+            messages.error(request, 'username or password are not matching')
+            return redirect(index)
+    else:
+        return render(request, 'index.html')
+
+
+
+def logins(request):
+    if request.method == 'POST':
+        uname = request.POST.get('uname')
+        raw_password = request.POST.get('upass')
+        user = auth.authenticate(username=uname, password=raw_password)
+        if user is not None:
+            auth_login(request, user)
+            messages.success(request, 'Logined............')
+            return redirect(index)
+        else:
+            messages.error(request, 'Invalid credentials............')
+            return redirect(index)
+    else:
+        return redirect(logins)
+
+
+def logout(request):
+    auth_logout(request)
+    return redirect(index)
+
+
+
+
 

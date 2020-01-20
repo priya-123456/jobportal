@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="97591a9e-1799-4840-9ba5-f6168e627990" name="Default Changelist" comment="" />
+    <list default="true" id="97591a9e-1799-4840-9ba5-f6168e627990" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appnewjob/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/appnewjob/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appnewjob/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/appnewjob/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/headerfooter.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/headerfooter.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +24,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1Uk4HyYh2HC3bmHpHTb1mTwkIvF" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -28,7 +37,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../sms/matrimony updated files" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../sms/jango projects/newpython" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -140,6 +149,9 @@
       <workItem from="1578656194106" duration="706000" />
       <workItem from="1578658473087" duration="1421000" />
       <workItem from="1579493463215" duration="15000" />
+      <workItem from="1579505071906" duration="682000" />
+      <workItem from="1579511151885" duration="3730000" />
+      <workItem from="1579519015020" duration="2360000" />
     </task>
     <servers />
   </component>
@@ -152,15 +164,15 @@
     </state>
     <state x="452" y="149" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1578374534595" />
     <state x="530" y="176" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.860@0.0.1600.860" timestamp="1576754111339" />
-    <state x="495" y="156" key="FileChooserDialogImpl" timestamp="1578650943311">
+    <state x="495" y="156" key="FileChooserDialogImpl" timestamp="1579519484565">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="495" y="156" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1578650943311" />
+    <state x="495" y="156" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1579519484565" />
     <state x="580" y="184" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1576741134204" />
-    <state x="423" y="214" key="com.intellij.ide.util.TipDialog" timestamp="1577945472781">
+    <state x="423" y="214" key="com.intellij.ide.util.TipDialog" timestamp="1579519014864">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="423" y="214" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1577945472781" />
+    <state x="423" y="214" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1579519014864" />
     <state x="495" y="253" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1577161094977" />
   </component>
 </project>
