@@ -28,5 +28,8 @@ path('emp_short_profil/',views.emp_short_profil,name='emp_short_profil'),
 path('empchangepassword/',views.empchangepassword,name='empchangepassword'),
 path('jobappliers/',views.empjobappliers,name='empjobappliers'),
 path('save/',views.resume_save,name='rsave'),
+path('register/',views.register,name='register'),
+path('login/',views.logins,name='login'),
+path('logout/',views.logout,name='logout')
 
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
