@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html class="no-js" lang="zxx">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="robots" content="index,follow">
+    <title>Crazy Mar - Job Portal</title>
+	<link rel="stylesheet" href="{% static 'assets/plugins/bootstrap/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/plugins/bootstrap/css/bootstrap-select.min.css' %}">
+    <link href="{% static 'assets/plugins/icons/css/icons.css' %}" rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'assets/plugins/nice-select/css/nice-select.css' %}">
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+	<link href="{% static 'assets/css/responsiveness.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/plugins/animate/animate.css' %}" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
+    <!--
+    <link href="assets/css/skin/default.css" rel="stylesheet">
+	<link href="assets/css/main.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Jomolhari|Staatliches&display=swap" rel="stylesheet">  -->
+ <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet">
+    <style>
+        body, section {
+    background: #fff;
+}
+.navbar-default {
+	background-color: inherit;
+	border-color: inherit;
+	margin-top:-44px;
+}
+    </style>
+{#    <meta charset="utf-8">#}
+{#  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">#}
+{#  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">#}
+
+	</head>
+
+	<body>
+	  <header class="wow fadeInDown" data-offset-top="197" data-spy="">
+  <div class="logo-wrapper">
+	  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'img/logo1.png' %}" alt="Recruite Pro"/></a>
+	  <form class="navbar-form navbar-left" action="">
+      <div class="input-group">
+        <input type="text" class="form-control search_text" placeholder="Search" name="search">
+        <div class="input-group-btn">
+          <button class="btn btn-default search_button" type="submit">
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right hidden-xs">
+       <li class="btn-success"><a href="{% url 'index2' %}">For Employer </a></li>
+	   <li><a href="{% url 'create_resume' %}"> Post resume</a></li>
+	   <li class=""><a href="javascript:void(0)" data-toggle="modal" data-target="#signin">
+			Login / Sign Up</a></li>
+	  <li class="dropdown profile">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="{% static 'img/user-icon.png' %}" /><span class="caret"></span></a>
+          <ul class="dropdown-menu">
+    <li><a href="{% url 'myprofilee2' %}">profile</a></li>
+    <li><a href="#">logout</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav hidden-lg hidden-md hidden-sm">
+       <li class="btn-success"><a href="{% url 'index2' %}">For Employer </a></li>
+	   <li><a href="{% url 'create_resume' %}"> Post resume</a></li>
+	      <li class=""><a href="javascript:void(0)" data-toggle="modal" data-target="#signin">
+			Login / Sign Up</a></li>
+	  <li class="dropdown profile">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="{% static 'img/user-icon.png' %}" /><span class="caret"></span></a>
+          <ul class="dropdown-menu">
+    <li><a href="{% url 'myprofilee2' %}">profile</a></li>
+    <li><a href="#">logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+    </div>
+  </div>
+</header>
+      {% block content %}
+      {% endblock %}
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div>
+        <div class="col-md-4">
+        <div class="footer-section">
+		  <div class="single-secton1">
+		  <ul>
+		  <li> <h3>Need Help ?</h3></li>
+		  <li>
+            <p><i class="fa fa-phone"></i> CALL US : <span>1800-0000-1234</span></p>
+			</li>
+		  <li>
+		  <h3>Follow us on</h3>
+            <ul>
+              <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li class="linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+              <li class="google"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+              <li class="youtube"><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+            </ul>
+		  </li>
+		  <li>  <h3>Subscribe Our Newsletter</h3>
+            <div class="form">
+              <div class="form-group">
+                <input placeholder="Enter your Email" id="exampleInputName1" class="form-control first" type="text">
+              </div>
+              <input class="bttn" value="Subscribe" readonly type="text">
+            </div>
+			</li>
+		  </ul>
+
+          </div>
+          </div>
+        </div>
+        </div>
+        <div class="col-md-2 col-sm-3">
+        <div class="single-section-two">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+	  <div class="col-md-2 col-sm-3">
+        <div class="single-section-two white">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">How It Works</a></li>
+            <li><a href="#">Add Listing</a></li>
+            <li><a href="#">Popular Categories</a></li>
+            <li><a href="#">Popular Places</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        </div>
+		        <div class="col-md-4 col-sm-3">
+        <div class="single-section-two">
+          <h3>Get In Touch</h3>
+          <div class="form">
+            <div class="form-group">
+              <input placeholder="Enter your Name" id="exampleInputName2" class="form-control first" type="text">
+            </div>
+            <div class="form-group">
+              <input placeholder="Enter your Email" id="exampleInputEmail" class="form-control first" type="text">
+            </div>
+            <div class="form-group">
+              <input placeholder="Enter your Message" id="exampleInputMessage" class="form-control first message" type="text">
+              <input class="bttn" value="Subscribe" readonly type="text">
+            </div>
+          </div>
+        </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</footer>
+<div class="copyright-wrapper">
+  <div class="container">
+    <p>© Copyright
+      <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript">
+	var d=new Date();
+	document.write(d.getFullYear());
+	</script>
+      MHN Informatics Pvt Limited | All Rights Reserved.</p>
+  </div>
+</div>
+<div class="modal fade" id="signin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content" id="myModalLabel1">
+					<div class="modal-body">
+						<div class="text-center"><img src="{% static 'img/logo.png' %}" alt="" class="img-responsive"></div>
+
+						<!-- Nav tabs -->
+						<ul class="nav nav-tabs nav-advance" role="tablist">
+							<li class="nav-item active">
+								<a class="nav-link" data-toggle="tab" href="#candidate" role="tab">
+								<i class="ti-user"></i> Sign In</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" data-toggle="tab" href="#employer" role="tab">
+								<i class="ti-user"></i> Sign Up</a>
+							</li>
+						</ul>
+						<!-- Nav tabs -->
+
+						<!-- Tab panels -->
+						<div class="tab-content">
+
+							<!-- Employer Panel 1-->
+							<div class="tab-pane fade in show active" id="candidate" role="tabpanel">
+							<form>
+
+									<div class="form-group">
+										<label>User Name</label>
+										<input type="text" class="form-control" placeholder="User Name">
+									</div>
+
+									<div class="form-group">
+										<label>Password</label>
+										<input type="password" class="form-control" placeholder="*********">
+									</div>
+
+									<div class="form-group">
+										<span class="custom-checkbox">
+											<input type="checkbox" id="4">
+											<label for="4"></label>Terms and Conditions apply
+										</span>
+										<a href="#" title="Forget" class="fl-right">Forgot Password?</a>
+									</div>
+									<div class="form-group text-center">
+										<button type="button" class="btn theme-btn full-width btn-m">LogIn </button>
+									</div>
+										<div class="log-option"><span>OR</span></div>
+								<div class="row mrg-bot-20">
+									<div class="col-md-12">
+										<a href="#" title="" class="fb-log-btn log-btn"><i class="fa fa-facebook"></i>Sign In With Facebook</a>
+									</div>
+								</div>
+									<div class="row mrg-bot-20">
+									<div class="col-md-12">
+										<a href="#" title="" class="gplus-log-btn log-btn"><i class="fa fa-google-plus"></i>Sign In With Google+</a>
+									</div>
+								</div>
+
+								</form>
+
+							</div>
+							<!--/.Panel 1-->
+
+							<!-- Candidate Panel 2-->
+							<div class="tab-pane fade" id="employer" role="tabpanel">
+								<form>
+
+									<div class="">
+										<!-- <label>User Name</label> -->
+										<input type="text" class="form-control" placeholder="User Name">
+									</div>
+									<div class="form-group">
+										<!-- <label>last Name</label> -->
+										<input type="text" class="form-control" placeholder="last Name">
+									</div>
+									<div class="form-group">
+										<!-- <label>Email</label> -->
+										<input type="email" class="form-control" placeholder="Email">
+									</div>
+
+									<div class="form-group">
+										<!-- <label>Password</label> -->
+										<input type="password" class="form-control" placeholder="*********">
+									</div>
+
+									<div class="form-group">
+										<span class="custom-checkbox">
+											<input type="checkbox" id="44">
+											<label for="44"></label>Terms and Conditions apply
+										</span>
+										<a href="#" title="Forget" class="fl-right">Forgot Password?</a>
+									</div>
+									<div class="form-group text-center">
+										<button type="button" class="btn theme-btn full-width btn-m"> Create account </button>
+									</div>
+									<p>
+									Already a Member ? <a href="#">Login Here!</a>
+									</p>
+
+								</form>
+
+
+							</div>
+							<!--/.Panel 2-->
+
+						</div>
+						<!-- Tab panels -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="apply-job" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content" id="myModalLabel2">
+					<div class="modal-body">
+						<div class="text-center">
+							<img src="{% static 'assets/img/logo.png' %}" class="img-responsive" alt="">
+							<h4 class="mrg-0">Front End Designer</h4>
+							<span> 2708 Scenic Way, Sutter</span>
+						</div>
+						<form>
+							<div class="form-group">
+								<label>Name</label>
+								<input type="text" class="form-control" placeholder="Name">
+							</div>
+							<div class="form-group">
+								<label>Email</label>
+								<input type="email" class="form-control" placeholder="Email">
+							</div>
+							<div class="form-group">
+								<label>Phone</label>
+								<input type="text" class="form-control" placeholder="Phone">
+							</div>
+							<div class="form-group">
+								<label>Upload CV</label>
+								<div class="custom-file-upload">
+									<input type="file" id="file" name="myfiles[]" multiple />
+								</div>
+							</div>
+							<div class="form-group">
+								<textarea class="form-control height-120" placeholder="Pase CV"></textarea>
+							</div>
+							<div class="form-group text-center">
+								<button type="button" class="btn theme-btn btn-m">Save & Apply</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="signin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content" id="myModalLabel1">
+					<div class="modal-body">
+						<div class="text-center"><img src="{% static 'assets/img/logo.png' %}" class="img-responsive" alt=""></div>
+
+						<!-- Nav tabs -->
+						<ul class="nav nav-tabs nav-advance" role="tablist">
+							<li class="nav-item active">
+								<a class="nav-link" data-toggle="tab" href="#employer" role="tab">
+								<i class="ti-user"></i> Employer</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" data-toggle="tab" href="#candidate" role="tab">
+								<i class="ti-user"></i> Candidate</a>
+							</li>
+						</ul>
+						<!-- Nav tabs -->
+
+						<!-- Tab panels -->
+						<div class="tab-content">
+
+							<!-- Employer Panel 1-->
+							<div class="tab-pane fade in show active" id="employer" role="tabpanel">
+								<form>
+
+									<div class="form-group">
+										<label>User Name</label>
+										<input type="text" class="form-control" placeholder="User Name">
+									</div>
+
+									<div class="form-group">
+										<label>Password</label>
+										<input type="password" class="form-control" placeholder="*********">
+									</div>
+
+									<div class="form-group">
+										<span class="custom-checkbox">
+											<input type="checkbox" id="4">
+											<label for="4"></label>Terms and Conditions apply
+										</span>
+										<a href="#" title="Forget" class="fl-right">Forgot Password?</a>
+									</div>
+									<div class="form-group text-center">
+										<button type="button" class="btn theme-btn full-width btn-m">LogIn </button>
+									</div>
+
+								</form>
+
+								<div class="log-option"><span>OR</span></div>
+								<div class="row mrg-bot-20">
+									<div class="col-md-12">
+										<a href="#" title="" class="fb-log-btn log-btn"><i class="fa fa-facebook"></i>Sign In With Facebook</a>
+									</div>
+								</div>
+									<div class="row mrg-bot-20">
+									<div class="col-md-12">
+										<a href="#" title="" class="gplus-log-btn log-btn"><i class="fa fa-google-plus"></i>Sign In With Google+</a>
+									</div>
+								</div>
+
+							</div>
+							<!--/.Panel 1-->
+
+							<!-- Candidate Panel 2-->
+							<div class="tab-pane fade" id="candidate" role="tabpanel">
+								<form>
+
+									<div class="form-group">
+										<label>User Name</label>
+										<input type="text" class="form-control" placeholder="User Name">
+									</div>
+
+									<div class="form-group">
+										<label>Password</label>
+										<input type="password" class="form-control" placeholder="*********">
+									</div>
+
+									<div class="form-group">
+										<span class="custom-checkbox">
+											<input type="checkbox" id="44">
+											<label for="44"></label>Terms and Conditions apply
+										</span>
+										<a href="#" title="Forget" class="fl-right">Forgot Password?</a>
+									</div>
+									<div class="form-group text-center">
+										<button type="button" class="btn theme-btn full-width btn-m">LogIn </button>
+									</div>
+
+								</form>
+
+								<div class="log-option"><span>OR</span></div>
+								<div class="row mrg-bot-20">
+									<div class="col-md-12">
+										<a href="#" title="" class="fb-log-btn log-btn"><i class="fa fa-facebook"></i>Sign In With Facebook</a>
+									</div>
+								</div>
+									<div class="row mrg-bot-20">
+									<div class="col-md-12">
+										<a href="#" title="" class="gplus-log-btn log-btn"><i class="fa fa-google-plus"></i>Sign In With Google+</a>
+									</div>
+								</div>
+
+							</div>
+							<!--/.Panel 2-->
+
+						</div>
+						<!-- Tab panels -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+                        </div>
+                    </div>
+			</div>
+		<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+		<script src="{% static 'assets/plugins/bootstrap/js/bootstrap.min.js' %}"></script>
+		<script src="{% static 'assets/plugins/bootstrap/js/bootsnav.js' %}"></script>
+		<script src="{% static 'assets/js/viewportchecker.js' %}"></script>
+		<script src="{% static 'assets/plugins/slick-slider/slick.js' %}"></script>
+		<script src="{% static 'assets/plugins/bootstrap/js/bootstrap-wysihtml5.js' %}"></script>
+		<script src="{% static 'assets/plugins/nice-select/js/jquery.nice-select.min.js' %}"></script>
+		<script src="{% static 'assets/js/custom.js' %}"></script>
+		<script src="{% static 'assets/js/main.js' %}"></script>
+
+    </body>
+</html>

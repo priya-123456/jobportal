@@ -1,0 +1,335 @@
+
+   {% extends 'headerfooter2.html' %}
+{% block content %}
+    {% load staticfiles %}
+         <section>
+		 <div class="container-fluid">      
+		 <div class="row">      
+		 
+			<div class="" >
+			 <div class="main-banner" style="background-image:url({% static 'assets/img/slider-2.jpg' %});">
+				</div> 
+				<!-- <img src="assets/img/slider-2.jpg" class="main-banner" /> -->
+			</div>
+			</div>
+			</div>
+         <div class="container">
+         <div class="row">
+		 <div class="search-bg">
+		 
+					<form>
+					<!-- 
+					
+<div class="search-btn-bg text-center">
+						<a href="index.html" class="btn theme-btn">For Job Seeker</a>
+						<a href="index2.html" class="btn theme-btn1">For Employer</a>
+					</div>
+					
+					<ul class="search-btn-bg nav nav-tabs" id="myTab" role="tablist">
+  <a href="index.html"><li class="nav-item">
+    <a class="btn theme-btn nav-link active" id="home-tab" data-toggle="tab" href="index.html" role="tab" aria-controls="home" aria-selected="true">For Job Seeker</a>
+  </li><a>
+  <a href="index2.html"><li class="nav-item">
+    <a class="btn theme-btn1 nav-link" id="profile-tab" data-toggle="tab" href="#" role="tab" aria-controls="profile" aria-selected="false">For Employer</a>
+  </li></a>
+  
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+</div>
+<div class="search-btn-bg text-center">
+						<a href="index.html" class="btn theme-btn">For Job Seeker</a>
+						<a href="index2.html" class="btn theme-btn1">For Employer</a>
+					</div> -->
+					
+						<fieldset class="home-form-1 icon-field">
+							<div class="col-md-4 col-sm-4 padd-0">
+								<div class="form-group">
+									<div class="icon-addon addon-lg">
+										<input type="text" class="form-control br-1" placeholder="Skills, Designation, Companies" />
+										<label class="fa fa-pencil"></label>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-3 padd-0">
+								<div class="form-group">
+									<div class="icon-addon addon-lg">
+										<select class="wide form-control br-1">
+											<option data-display="Location">All Country</option>
+											<option value="1">Allahabad</option>
+											<option value="2">India</option>
+											<option value="3" disabled>Australia</option>
+											<option value="4">United State</option>
+										</select>
+										<label class="fa fa-map-marker"></label>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-3 padd-0">
+								<div class="form-group">
+									<div class="icon-addon addon-lg">
+										<select class="wide form-control">
+											<option data-display="Experience">Show All</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3" disabled>3</option>
+											<option value="4">4</option>
+										</select>
+										<label class="fa fa-crosshairs"></label>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-1 col-sm-1 padd-0">
+							
+								<a href="Employer_browse_employer.html"  class="btn theme-btn" >FIND Employer</a>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+				</div>
+				</div>
+				</section>
+				<section class="why_choose_us">
+<div class="container">
+<div class="row aos-init aos-animate" data-aos="fade-up">
+<div class="col-md-12">
+<div class="heading">
+<h3>Why choose CrazyMarJobs</h3>
+</div>
+</div>
+</div>
+<div class="">
+<!-- Single Features -->
+<div class="col-md-4 col-sm-4">
+<div class="features-box">
+<i class="theme-cl ti-headphone-alt" aria-hidden="true"></i>
+<h4>Industry leader</h4>
+<p>India’s no. 1 hiring platform for blue collar and entry level white collar roles.</p>
+</div>
+</div>
+<div class="col-md-4 col-sm-4">
+<div class="features-box">
+<i class="theme-cl ti-briefcase" aria-hidden="true"></i>
+<h4>Large database</h4>
+<p>1 Crore+ active resumes across diverse 500+ roles are registered on QuikrJobs.</p>
+</div>
+</div>
+<div class="col-md-4 col-sm-4">
+<div class="features-box">
+<i class="theme-cl ti-paint-bucket" aria-hidden="true"></i>
+<h4>Hire 2X faster</h4>
+<p>Get fast, easy, affordable solutions to help you find the right people, for the right jobs</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+				<section class="catehpru_choose trending_indur">
+<div class="">
+<div class="" data-aos="fade-up">
+<div class="col-md-12">
+<div class="heading">
+<h3>Trending Industries</h3>
+</div>
+</div>
+</div>
+<div class="container">
+	
+		<div class="col-md-4 col-sm-6">
+		<div class="blog-box blog-grid-box">
+		<a href="browse_employer?industry=1">
+		<div class="blog-grid-box-img">
+		<img src="https://www.crazymar.com/assets/jobportal/images/trending1.jpg" class="img-responsive" alt="" />
+		</div>
+		<div class="blog-grid-box-content">
+		<h4>BPO</h4>
+		<ul class="rend_indlist">
+		
+		</ul>
+		</div>
+
+		</div>
+		</a>
+		</div>
+	
+		<div class="col-md-4 col-sm-6">
+		<div class="blog-box blog-grid-box">
+		<a href="browse_employer?industry=2">
+		<div class="blog-grid-box-img">
+		<img src="https://www.crazymar.com/assets/jobportal/images/trending2.jpg" class="img-responsive" alt="" />
+		</div>
+		<div class="blog-grid-box-content">
+		<h4>LOGISTICS</h4>
+		<ul class="rend_indlist">
+		
+		</ul>
+		</div>
+
+		</div>
+		</a>
+		</div>
+	
+		<div class="col-md-4 col-sm-6">
+		<div class="blog-box blog-grid-box">
+		<a href="browse_employer?industry=3">
+		<div class="blog-grid-box-img">
+		<img src="https://www.crazymar.com/assets/jobportal/images/trending3.jpg" class="img-responsive" alt="" />
+		</div>
+		<div class="blog-grid-box-content">
+		<h4>HEALTH</h4>
+		<ul class="rend_indlist">
+		
+		</ul>
+		</div>
+
+		</div>
+		</a>
+		</div>
+	
+		<div class="col-md-4 col-sm-6">
+		<div class="blog-box blog-grid-box">
+		<a href="browse_employer?industry=4">
+		<div class="blog-grid-box-img">
+		<img src="https://www.crazymar.com/assets/jobportal/images/trending4.jpg" class="img-responsive" alt="" />
+		</div>
+		<div class="blog-grid-box-content">
+		<h4>HOSPITALITY</h4>
+		<ul class="rend_indlist">
+		
+		</ul>
+		</div>
+
+		</div>
+		</a>
+		</div>
+	
+		<div class="col-md-4 col-sm-6">
+		<div class="blog-box blog-grid-box">
+		<a href="browse_employer?industry=5">
+		<div class="blog-grid-box-img">
+		<img src="https://www.crazymar.com/assets/jobportal/images/trending5.jpg" class="img-responsive" alt="" />
+		</div>
+		<div class="blog-grid-box-content">
+		<h4>FACILITY MANAGEMENT</h4>
+		<ul class="rend_indlist">
+		
+		</ul>
+		</div>
+
+		</div>
+		</a>
+		</div>
+	
+		<div class="col-md-4 col-sm-6">
+		<div class="blog-box blog-grid-box">
+		<a href="browse_employer?industry=6">
+		<div class="blog-grid-box-img">
+		<img src="https://www.crazymar.com/assets/jobportal/images/trending6.jpg" class="img-responsive" alt="" />
+		</div>
+		<div class="blog-grid-box-content">
+		<h4>FINANCIAL SERVICES</h4>
+		<ul class="rend_indlist">
+		
+		</ul>
+		</div>
+
+		</div>
+		</a>
+		</div>
+	 
+
+</div>
+</div>
+</section>
+                            <section class="gray-bg catehpru_choose catehpru_choose2">
+                                <div class="row" data-aos="fade-up">
+					<div class="col-md-12">
+						<div class="heading">
+							<h3>We Can Help You Get A Job</h3>
+						</div>
+					</div>
+				</div>
+				<div class="">
+                    <div class="col-md-15 col-sm-3">
+                        <div class="grid-job-widget">
+
+                            <div class="u-content">
+                                <div class="avatar box-80">
+                                    <a href="browse_jobseeker.html">
+                                        <img class="img-responsive" src="assets/img/c-1.png" alt="">
+                                    </a>
+                                </div>
+                                <h5><a href="browse_jobseeker.html">Work from home</a></h5>
+                            </div>
+
+                            <div class="job-type-grid">
+                                <a href="browse_jobseeker.html" class="btn job-browse-btn btn-radius br-light">Open Now</a>
+                            </div>
+
+                        </div>
+                    </div>
+                      <div class="col-md-15 col-sm-3">
+                            <div class="grid-job-widget">
+                            <div class="u-content">
+                                <div class="avatar box-80">
+                                    <a href="{% url 'browse_jobseeker' %}">
+                                        <img class="img-responsive" src="{% static 'assets/img/c-8.png' %}" alt="">
+                                    </a>
+                                </div>
+                                <h5><a href="{% url 'browse_jobseeker' %}">Internship</a></h5>
+                            </div>
+                            <div class="job-type-grid">
+                                <a href="{% url 'browse_jobseeker' %}" class="btn job-browse-btn btn-radius br-light">Open Now</a>
+                            </div>
+                        </div>
+                        </div>
+                      <div class="col-md-15 col-sm-3">
+                        <div class="grid-job-widget">
+                            <div class="u-content">
+                                <div class="avatar box-80">
+                                    <a href="{% url 'browse_jobseeker' %}">
+                                        <img class="img-responsive" src="{% static 'assets/img/c-3.png' %}" alt="">
+                                    </a>
+                                </div>
+                                <h5><a href="{% url 'browse_jobseeker' %}">Part time</a></h5>
+                            </div>
+                            <div class="job-type-grid">
+                                <a href="{% url 'browse_jobseeker' %}" class="btn job-browse-btn btn-radius br-light">Open Now</a>
+                            </div>
+                        </div>
+                        </div>
+                      <div class="col-md-15 col-sm-3">
+                        <div class="grid-job-widget">
+                            <div class="u-content">
+                                <div class="avatar box-80">
+                                    <a href="browse_jobseeker.html">
+                                        <img class="img-responsive" src="{% static 'assets/img/c-7.png' %}" alt="">
+                                    </a>
+                                </div>
+                                <h5><a href="{% url 'browse_jobseeker' %}">Full time</a></h5>
+                            </div>
+                            <div class="job-type-grid">
+                                <a href="{% url 'browse_jobseeker' %}" class="btn job-browse-btn btn-radius br-light">Open Now</a>
+                            </div>
+                        </div>
+                        </div>
+                      <div class="col-md-15 col-sm-3">
+                        <div class="grid-job-widget">
+                            <div class="u-content">
+                                <div class="avatar box-80">
+                                    <a href="{% url 'browse_jobseeker' %}">
+                                        <img class="img-responsive" src="{% static 'assets/img/c-4.png' %}" alt="">
+                                    </a>
+                                </div>
+                                <h5><a href="{% url 'browse_jobseeker' %}">Government job</a></h5>
+                            </div>
+                            <div class="job-type-grid">
+                                <a href="{% url 'browse_jobseeker' %}" class="btn job-browse-btn btn-radius br-light">Open Now</a>
+                            </div>
+                        </div>
+                        </div>
+			</div>
+		</section>
+{% endblock %}

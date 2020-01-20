@@ -1,0 +1,279 @@
+{% extends 'headerfooter.html' %}
+{% block content %}
+    {% load staticfiles %}
+		<div class="full_width propery_listing">
+			<div class="container">
+				<div class="row">
+<div class="col-md-3 col-sm-3">
+<div id="sticky-anchor"></div>
+<div class="filter_sidebar filtersidebar_menu for_mob_filter sidebar">
+<div class="text-center">
+<span class="photo_edit text-center">	
+<img src="{% static 'img/noimg.jpg' %}" class="img-responsive img-circle">
+<div class="image-upload">
+    <label for="file-input">
+        <img src="https://goo.gl/pB9rpQ"/>
+    </label>
+    <input id="file-input" type="file"/>
+</div>
+<!-- <input id="sample_input" type="hidden" name="test[image]"> -->
+</span>	
+</div>
+    <div class="div_welcome">
+<h3>Welcome saipoojitha !!</h3>
+</div>
+<ul>
+   <li class="active"><a href="{% url 'myprofilee2' %}">My Profile</a></li>
+    <!--<li class=""><a href="shortlisted_profiles.html">Shortlisted Profiles</a></li>
+    <li class=""><a href="posted_jobs.html">Posted Jobs</a></li>
+	<li class=""><a href="Contacted_pro.html">Contacted Profiles</a></li>-->
+    <li class=""><a href="{% url 'apploed_jobs' %}">Applied Jobs (110)</a></li>
+	<li class=""><a href="{% url 'intersted_jobs' %}">Interested Jobs</a></li>
+    <li class=""><a href="{% url 'shortlisted_comp' %}">Shortlisted Companies</a></li>
+	 <li class=""><a href="{% url 'contacted_comp' %}">Contacted Companies</a></li>
+    <li class=""><a href="{% url 'changepassword' %}">Change Password</a></li>
+    <li class=""><a href="#">Logout</a></li>
+</ul>
+</div>						
+					</div>
+					<div class="col-md-9 liting_grid padding_10_right">
+					<div class="row">
+					<div class="col-md-6"></div>
+<div class="col-md-6">
+	
+	</div>
+	</div>
+<div class="prop_prop" data-aos="fade-up" data-aos-duration="500">
+
+ <div class="panel panel-default">
+    <div class="panel-heading">
+    <div class="row">
+	
+	<div class="col-md-6">
+	<h4 class=" personal_details">Personal Details</h4>
+	</div>
+	<div class="edit">
+	<a href="edit.html"><span class="glyphicon glyphicon-edit">	</span>	Edit</a>
+	</div>
+	<div class="col-md-6">
+	<div class="edit">
+	</div>
+	</div>
+	</div>
+	</div>
+    <div class="panel-body">	
+    <div class="row">	
+	 <div class="col-md-3">
+	 Name
+	</div>
+	 <div class="col-md-6">
+	 :  &nbsp;&nbsp;Vuppu Ravali
+	</div>
+	</div>	
+    <div class="row">	
+	 <div class="col-md-3 ">
+	 Email 
+	</div>
+	 <div class="col-md-6">
+	 :  &nbsp;&nbsp;ravali@mhninformatics.com
+	</div>
+	</div>	
+    <div class="row">	
+	 <div class="col-md-3 ">
+	 Contact No  
+	</div>
+	 <div class="col-md-6">
+	 :  &nbsp;&nbsp;9876543210
+	</div>
+	</div>	
+    <div class="row">	
+	 <div class="col-md-3 ">
+	 Address line  
+	</div>
+	 <div class="col-md-6">
+	 :  &nbsp;&nbsp;9876543210
+	</div>
+	</div>	
+    <div class="row">	
+	 <div class="col-md-3 ">
+	 City: 
+	</div>
+	 <div class="col-md-6">
+	 :  &nbsp;9876543210
+	</div>
+	</div>	
+    <div class="row">	
+	 <div class="col-md-3 ">
+	 State 
+	</div>
+	 <div class="col-md-6">
+	 :  &nbsp;&nbsp;9876543210
+	</div>
+	</div>	
+    <div class="row">	
+	 <div class="col-md-3 ">
+	 Country 
+	</div>
+	 <div class="col-md-6">
+	 :  &nbsp;9876543210
+	</div>
+	</div>	
+    <div class="row">	
+	 <div class="col-md-3 ">
+	 Zip code 
+	</div>
+	 <div class="col-md-6">
+	 :  &nbsp;&nbsp;9876543210
+	</div>
+	</div>
+	</div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+    <div class="row">
+	
+	<div class="col-md-12">
+	<h4 class=" personal_details">  Social Accounts</h4>
+	</div>
+	</div>
+	</div>
+    <div class="panel-body">	
+    <div class="row">	
+	 <div class="col-md-4">
+	
+	 <label>
+	 <i class="fa fa-facebook"></i>   Facebook :
+	 </label>Facebook
+	</div>
+	 <div class="col-md-4">
+	 
+	 <label>
+	 <i class="fa fa-google"></i>   Google :
+	 </label>Google
+	</div>
+	 <div class="col-md-4">	  
+	 <label>
+	 <i class="fa fa-twitter"></i>  Twitter :
+	 </label>Twitter
+	</div>
+	</div>	
+    <div class="row">	
+	  <div class="col-md-4">
+	   
+	  <label>
+	 
+<i class="fa fa-linkedin"></i>  LinkedIn :
+	 </label>
+	 LinkedIn
+	</div>
+	 <div class="col-md-4">  
+	  <label>
+	 <i class="fa fa-pinterest"></i>  Pinterest :
+	 </label>
+	 Pinterest
+	</div>
+	 <div class="col-md-4">	  
+	  <label>
+	 
+	 <i class="fa fa-instagram"></i>  Instagram :
+	 </label>
+	 Instagram
+	</div>
+	</div>	
+	</div>
+	</div>
+  </div>
+</div>
+						
+</div>
+					
+					<!-- Sidebar -->
+					
+					
+				</div>
+                                </div>
+                                
+                            </div>
+                            
+
+
+		<script>
+    $(document).ready(function () {
+        $('#sample_input').awesomeCropper(
+        { width: 150, height: 150, debug: true }
+        );
+    });
+	</script> 
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-36251023-1']);
+	  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+		<script>
+function sticky_relocate() {
+			    var window_top = $(window).scrollTop() ;
+			    var footer_top = $(".footer").offset().top - 30;
+			    var div_top = $('#sticky-anchor').offset().top;
+			    var div_height = $(".sidebar").height();
+			    var leftHeight = $('.left-container').height(); 
+  
+			    if (window_top + div_height > footer_top){
+			        $('.sidebar').removeClass('stick');
+			    	$('.sidebar').addClass('abs');
+			    	 $('.right-conatainer').css('min-height', leftHeight + 'px');
+			    	}
+			    else if (window_top > div_top) {
+			        $('.sidebar').addClass('stick');
+			        $('.sidebar').removeClass('abs');
+			    } else {
+			        $('.sidebar').removeClass('stick');
+			        $('.sidebar').removeClass('abs');
+			    }
+			}
+
+			$(function () {
+			    $(window).scroll(sticky_relocate);
+			    sticky_relocate();
+			});
+</script>
+		<script>
+		$('#myTab a').click(function (e) {
+			e.preventDefault()
+			$(this).tab('show')
+		})
+		</script>
+		
+		<script>
+			$('#reservation-date').dateDropper();
+		</script>
+		
+		<script>
+			$('#date-from').dateDropper();
+		</script>
+		
+		<script>
+			$('#date-to').dateDropper();
+		</script>
+		
+		<script>
+			$('#e-date-from').dateDropper();
+		</script>
+		
+		<script>
+			$('#e-date-to').dateDropper();
+		</script>
+		
+		<script>
+			AOS.init();
+		</script>
+		
+{% endblock %}

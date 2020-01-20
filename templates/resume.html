@@ -1,0 +1,424 @@
+{% extends 'headerfooter.html' %}
+{% block content %}
+<div class="full_width main_content">
+
+
+
+                    <div class="shopping_main">
+                        <div class="home-one">
+                          <!--
+                            <nav class="navbar navbar-default navbar-mobile light bootsnav">
+			<div class="container">
+
+
+				<div class="collapse navbar-collapse" id="navbar-menu">
+
+					<ul class="nav navbar-nav navbar-left" data-in="fadeInDown" data-out="fadeOutUp">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#">Menu one</a></li>
+                        <li><a href="#">Menu Two</a></li>
+
+
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Post your resume</a></li>
+
+					</ul>
+
+				</div>
+			</div>
+		</nav> -->
+
+                            <div class="full_width fotrm_main">
+			<div class="container">
+                <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+				<form class="c-form">
+
+					<div class="box">
+<div class="box-header">
+<h4>Personal Details</h4>
+</div>
+<div class="box-body">
+<div class="row">
+<div class="col-sm-4">
+<label>First Name</label>
+<input type="text" class="form-control" placeholder="Enter first name" name="first_name" value=""  required data-parsley-required-message="Enter first name">
+</div>
+<div class="col-sm-4">
+<label>Last Name</label>
+<input type="text" class="form-control" placeholder="Enter last name" name="last_name" value=""  required data-parsley-required-message="Enter last name">
+</div>
+<div class="col-sm-4">
+<label>Email</label>
+<input type="email" data-parsley-res_email="" class="form-control" placeholder="Enter email id" name="email" value="" required  data-parsley-required-message="Enter email id">
+</div>
+<div class="col-sm-4">
+<label>Mobile no</label>
+<input type="text" data-parsley-res_mob="" class="form-control" placeholder="Enter mobile number" name="mobile_number" value="" required data-parsley-required-message="Enter mobile number">
+</div>
+<div class="col-sm-4">
+<label>Date Of Birth</label>
+<input type="text" name="date_of_birth" placeholder="Select date of birth" class="date_of_birth" value="" required readonly data-parsley-trigger="change" data-parsley-required-message="Date of birth is required">
+</div>
+<div class="col-sm-4">
+<label>Upload Resume</label>
+<!--data-parsley-res_img=""-->
+<input type="file" name="resume" required data-parsley-required-message="Upload Resume" data-parsley-trigger="change">
+</div>
+<div class="col-sm-4">
+<label>Passport</label>
+<select class="wide form-control" name="passport">
+<option value="">Select</option>
+<option value="Yes" >Yes</option>
+<option value="No" >No</option>
+</select>
+</div>
+<div class="col-sm-4">
+<label>Address</label>
+<textarea class="form-control" placeholder="Enter Address" name="address">
+</textarea>
+</div>
+<div class="col-sm-4">
+<label>Location</label>
+<input type="text" class="form-control" placeholder="Location" onclick="getLocation();"  id="searchTextField" name="city" value="">
+</div>
+<!--
+<div class="col-sm-4">
+<label>State</label>
+<input type="text" class="form-control" placeholder="state" name="state" value="">
+</div>
+<div class="col-sm-4">
+<label>Country</label>
+<select class="wide form-control" name="country">
+<option value="">Select</option>
+<option value="India" >India</option>
+<option value="United Kingdom" >United Kingdom</option>
+<option value="Austrailia" >Austrailia</option>
+<option value="New ZeLand" >New ZeLand</option>
+</select>
+</div>-->
+<div class="col-sm-4">
+<label>Father's Name</label>
+<input type="text" class="form-control" placeholder="Enter father name" name="father_name" value="">
+</div>
+<div class="col-sm-4">
+<label>Hobbies(With Comma)<span style="color:red;">Ex:Reading books,Playing Cricket</span></label>
+<input type="text" class="form-control" placeholder="Enter hobbies(With Comma)" name="hobbies" value="">
+</div>
+<div class="col-sm-4">
+<label>Languages Known<span style="color:red;">Ex:Telugu,Hindi,English</span></label>
+<input type="text" class="form-control" placeholder="Enter languages known(With Comma)" name="languages_known" value="">
+</div>
+<div class="col-sm-4">
+<label>Gender</label>
+<select class="wide form-control" name="gender">
+<option value="">Select</option>
+<option value="Male" >Male</option>
+<option value="Female" >Female</option>
+<option value="others" >Others</option>
+</select>
+</div>
+<div class="col-sm-4">
+<label>Marital Status</label>
+<select class="wide form-control" name="marital_status">
+<option value="">Select</option>
+<option value="Married" >Married</option>
+<option value="Unmarried" >Unmarried</option>
+</select>
+</div>
+<div class="col-sm-12">
+<label>Career</label>
+<textarea class="form-control height-120" placeholder="Career Objective" name="career">
+</textarea>
+</div>
+</div>
+</div>
+</div>
+<div class="box">
+<div class="box-header">
+<h4>Job Preferences</h4>
+</div>
+<div class="box-body">
+<div class="row">
+<div class="col-sm-4">
+<label>Desired Job Title</label>
+<input type="text" class="form-control" placeholder="Enter desired job title" name="desired_job_title" value="">
+</div>
+<div class="col-sm-4">
+<label>Desired Job Type</label>
+<select class="wide form-control" name="desired_job_type">
+<option value="">Select</option>
+<option value="1" >Work from home</option>
+<option value="2" >Internship</option>
+<option value="3" >Part time</option>
+<option value="4" >Full time</option>
+<option value="5" >Government job</option>
+</select>
+</div>
+<div class="col-sm-4">
+<label>Desired Designantion</label>
+<select class="wide form-control" name="designation">
+<option value="">Select</option>
+<option value="1" value="1" >PHP Developer</option>
+<option value="2" value="2" >Project Manager</option>
+<option value="3" value="3" >Testing</option>
+<option value="4" value="4" >Human Resource</option>
+<option value="5" value="5" >UI/UX Designer</option>
+<option value="6" value="6" >SEO Developer</option>
+<option value="7" value="7" >Tele Caller</option>
+<option value="8" value="8" >Fashion Designer</option>
+<option value="9" value="9" >Doctor</option>
+<option value="10" value="10" >Cashier</option>
+<option value="11" value="11" >Receptionist</option>
+<option value="12" value="12" >Cook</option>
+<option value="13" value="13" >Python Developer</option>
+<option value="14" value="14" >Nurse</option>
+<option value="15" value="15" >Driver</option>
+<option value="16" value="16" >Teacher</option>
+<option value="17" value="17" >Delivery Boy</option>
+<option value="18" value="18" >Interior Designer</option>
+<option value="19" value="19" >Office Assistant</option>
+</select>
+</div>
+{#<div class="col-sm-4">#}
+{#<label>Total Work Experience</label>#}
+{#<select class="wide form-control" name="total_work_experience">#}
+{#<option value="">Select</option>#}
+{#<option value="5" >Fresher</option>#}
+{#<option value="6" >6 Months to 1 Year</option>#}
+{#<option value="7" >1Year To 2Years</option>#}
+{#<option value="8" >2Years To 3Years</option>#}
+{#<option value="9" >3Years To 4Years</option>#}
+{#<option value="10" >4Years To 5Years</option>#}
+{#<option value="11" >5Years To 10Years</option>#}
+{#<option value="12" >Above 10 Years</option>#}
+{#</select>#}
+{#</div> #}
+<div class="col-sm-4">
+<label>Expect Package</label>
+<select class="wide form-control" name="expect_package">
+<option value="">Select</option>
+<option value="1" >6,000 and above</option>
+<option value="2" >7,000 and above</option>
+<option value="4" >8,000 and above</option>
+<option value="5" >9,000 and above</option>
+<option value="6" >10,000 and above</option>
+<option value="7" >15,000 and above</option>
+<option value="8" >20,000 and above</option>
+<option value="9" >25,000 and above</option>
+<option value="10" >30,000 and above</option>
+<option value="11" >35,000 and above</option>
+</select>
+</div>
+<div class="col-sm-4">
+<label>Desired Shift</label>
+<select class="wide form-control" name="desired_shift">
+<option value="">Select</option>
+<option value="Day shift" >Day shift</option>
+<option value="Night shift" >Night shift</option>
+<option value="Rotational shift" >Rotational shift</option>
+</select>
+</div>
+<div class="col-sm-4">
+<label>Desired Location</label>
+<input type="text" class="form-control" placeholder="Enter desired location"  name="desired_location" value="">
+</div>
+<div class="col-sm-4">
+<label>Desired Industry</label>
+<select class="wide form-control" name="desired_industry">
+<option value="">Select</option>
+<option value="1" >Beautician</option>
+<option value="3" >BPO/ Telecaller</option>
+<option value="4" >Cashier</option>
+<option value="5" >Cook</option>
+<option value="6" >Data Entry / Back Office</option>
+<option value="7" >Delivery/ Collections</option>
+<option value="8" >Driver</option>
+<option value="9" >Hospitality Executive</option>
+<option value="10" >HR/Admin</option>
+<option value="11" >IT Hardware Engineer</option>
+<option value="12" >IT Software - Developer</option>
+<option value="13" >Marketing</option>
+<option value="14" >Nurse</option>
+<option value="15" >Office Assistant/ Helper</option>
+<option value="16" >Receptionist/ Front Office</option>
+<option value="17" >Sales</option>
+<option value="18" >Teacher</option>
+<option value="19" >Warehouse Executive</option>
+</select>
+</div>
+<div class="col-sm-4">
+<label>Availability to Join</label>
+<select class="wide form-control" name="availability_to_join">
+<option value="">Select</option>
+<option value="Immediatly" >Immediatly</option>
+<option value="Within 15days" >Within 15days</option>
+<option value="1 month" >1 month</option>
+<option value="2 months" >2 months</option>
+<option value="3 months" >3 months</option>
+<option value="4 months" >4 months</option>
+<option value="5 months" >5 months</option>
+<option value="6 months" >6 months</option>
+<option value="7 months" >7 months</option>
+<option value="8 months" >8 months</option>
+<option value="9 months" >9 months</option>
+<option value="10 months" >10 months</option>
+</select>
+</div>
+</div>
+</div>
+</div>
+<div class="box">
+<div class="box-header">
+<h4>Add Qualification</h4>
+</div>
+<div class="box-body">
+<div class="extra-field-box">
+<div class="multi-box" id="add_qualification">
+<div class="dublicat-box mrg-bot-40">
+<div class="row">
+<div class="col-sm-6">
+<label>Qualification</label>
+<select class="wide form-control" name="qualification[]">
+<option value=''>select</option>
+<option value="1" >SSC</option>
+<option value="2" >Intermediate</option>
+<option value="4" >Graduation</option>
+<option value="5" >Post Graduation</option>
+<option value="6" >Masters Degree</option>
+</select>
+</div>
+<div class="col-sm-6">
+<label>University/College Name/School Name</label>
+<input type="text" class="form-control" placeholder="Enter University/College Name/School Name" name="university_name[]" value="">
+</div>
+{#<div class="col-sm-6">#}
+{#<label>Specialization</label>#}
+{#<input type="text" class="form-control" placeholder="Enter Specialization" name="specialization[]" value="">#}
+{#</div>#}
+<div class="col-sm-6">
+<label>Year Of Passing</label>
+<input type="text" class="form-control" placeholder="Enter Year Of Passing" name="year_of_passing[]" value="">
+</div>
+<div class="col-sm-6">
+<label>Percentage or CGPA</label>
+<input type="text" class="form-control" placeholder="Enter Percentage(%)" name="percentage[]" value="">
+</div>
+</div>
+</div>
+<script>
+$(document).ready(function(){
+$(".del_div").click(function(){
+$(this).parents(".dublicat-box").hide();
+});
+});
+</script></div>
+<div class="text-center">
+<button type="button" class="btn theme-btn" Onclick="Add_more('add_qualification');">Add More</button>
+</div>
+</div>
+</div>
+</div>
+<div class="box">
+<div class="box-header">
+<h4>Add Skills</h4>
+</div>
+<div class="box-body">
+<div class="extra-field-box">
+<div class="multi-box" id="add_skills">	<div class="dublicat-box mrg-bot-40">
+<div class="row">
+<div class="col-sm-12">
+<label>Skill(s)</label>
+<input type="text" class="form-control" placeholder="Enter CSS, Photoshop, Js, Bootstrap" name="skills[]" value="">
+</div>
+<div class="col-sm-6">
+<label>Experience</label>
+<select class="wide form-control" name="experience">
+<option value="">Select</option>
+<option value="Fresher" >Fresher</option>
+<option value="Trained" >Trained</option>
+<option value="Below 6 Months" >Below 6 Months</option>
+</select>
+</div>
+<div class="col-sm-6">
+<label>Company name</label>
+<input type="text" class="form-control" placeholder="Enter Company name" name="company_name[]" value="">
+</div>
+<div class="col-sm-12">
+<label>Job Description</label>
+<textarea class="form-control height-120 ckeditor" placeholder="Job Description" name="job_description[]">
+</textarea>
+</div>
+</div>
+</div>
+<script>
+$(document).ready(function(){
+$(".del_div").click(function(){
+$(this).parents(".dublicat-box").hide();
+});
+});
+</script></div>
+<div class="text-center">
+<button type="button" class="btn theme-btn" Onclick="Add_more('add_skills');">Add More</button>
+</div>
+</div>
+</div>
+</div>
+<div class="box">
+<div class="box-header">
+<h4>Social Accounts</h4>
+</div>
+<div class="box-body">
+<div class="row">
+
+<div class="col-sm-4">
+<label><i class="fa fa-facebook mrg-r-5"></i>Facebook</label>
+<input type="url" class="form-control" placeholder="Copy and paste Facebook url" name="facebook_account" value="">
+</div>
+
+<div class="col-sm-4">
+<label><i class="fa fa-google-plus mrg-r-5"></i>Google +</label>
+<input type="url" class="form-control" placeholder="Copy and paste Google + url" name="google_account" value="">
+</div>
+
+<div class="col-sm-4">
+<label><i class="fa fa-twitter mrg-r-5"></i>Twitter</label>
+<input type="url" class="form-control" placeholder="Copy and paste Twitter url" name="twitter_account" value="">
+</div>
+
+<div class="col-sm-4">
+<label><i class="fa fa-linkedin mrg-r-5"></i>LinkedIn</label>
+<input type="url" class="form-control" placeholder="Copy and paste LinkedIn url" name="linkedin_account" value="">
+</div>
+
+<div class="col-sm-4">
+<label><i class="fa fa-pinterest mrg-r-5"></i>Pinterest</label>
+<input type="url" class="form-control" placeholder="Copy and paste Pinterest url" name="pinterest_account" value="">
+</div>
+
+<div class="col-sm-4">
+<label><i class="fa fa-instagram mrg-r-5"></i>Instagram</label>
+<input type="url" class="form-control" placeholder="Copy and paste Instagram url" name="instagram_account" value="">
+</div>
+</div>
+</div>
+</div>
+
+					<div class="text-center">
+						<button type="submit" class="btn btn-m theme-btn">Submit & Exit</button>
+					</div>
+
+				</form>
+                    </div>
+                </div>
+			</div>
+		</div>
+                        </div>
+                    </div>
+</div>
+
+
+
+           {% endblock %}

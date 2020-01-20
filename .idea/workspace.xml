@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="97591a9e-1799-4840-9ba5-f6168e627990" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Uk4HyYh2HC3bmHpHTb1mTwkIvF" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../sms/matrimony updated files" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\jobportalnew\templates" />
+      <recent name="D:\jobportalnew\appnewjob\static" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="jobportalnew" type="Python.DjangoServer" factoryName="Django server">
+      <module name="jobportalnew" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="97591a9e-1799-4840-9ba5-f6168e627990" name="Default Changelist" comment="" />
+      <created>1575887175743</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1575887175743</updated>
+      <workItem from="1575887180912" duration="134000" />
+      <workItem from="1575890354960" duration="5486000" />
+      <workItem from="1575951701057" duration="6585000" />
+      <workItem from="1576045819033" duration="1326000" />
+      <workItem from="1576212028287" duration="8990000" />
+      <workItem from="1576298322552" duration="1804000" />
+      <workItem from="1576482026226" duration="1231000" />
+      <workItem from="1576578431596" duration="3935000" />
+      <workItem from="1576651414249" duration="3791000" />
+      <workItem from="1576665554571" duration="1499000" />
+      <workItem from="1576732336257" duration="4903000" />
+      <workItem from="1576741126093" duration="6186000" />
+      <workItem from="1577091928880" duration="3791000" />
+      <workItem from="1577161096107" duration="2162000" />
+      <workItem from="1577678011076" duration="4037000" />
+      <workItem from="1577683665492" duration="2239000" />
+      <workItem from="1577689987342" duration="2263000" />
+      <workItem from="1577695476417" duration="1085000" />
+      <workItem from="1577764646394" duration="594000" />
+      <workItem from="1577765880452" duration="1077000" />
+      <workItem from="1577771422544" duration="604000" />
+      <workItem from="1577938797665" duration="2181000" />
+      <workItem from="1577945601264" duration="497000" />
+      <workItem from="1577960540613" duration="179000" />
+      <workItem from="1578024986027" duration="1447000" />
+      <workItem from="1578032303035" duration="328000" />
+      <workItem from="1578283690049" duration="1005000" />
+      <workItem from="1578289328905" duration="3641000" />
+      <workItem from="1578301926344" duration="434000" />
+      <workItem from="1578303852077" duration="2927000" />
+      <workItem from="1578309854640" duration="5029000" />
+      <workItem from="1578315468330" duration="354000" />
+      <workItem from="1578370111191" duration="4487000" />
+      <workItem from="1578375920133" duration="4524000" />
+      <workItem from="1578382959762" duration="927000" />
+      <workItem from="1578389842926" duration="4020000" />
+      <workItem from="1578396817639" duration="1268000" />
+      <workItem from="1578398348054" duration="2107000" />
+      <workItem from="1578454378530" duration="1187000" />
+      <workItem from="1578456247297" duration="1624000" />
+      <workItem from="1578460470046" duration="163000" />
+      <workItem from="1578463501071" duration="4241000" />
+      <workItem from="1578469035735" duration="1638000" />
+      <workItem from="1578475083770" duration="3687000" />
+      <workItem from="1578480784282" duration="3768000" />
+      <workItem from="1578542625013" duration="1561000" />
+      <workItem from="1578544659292" duration="3271000" />
+      <workItem from="1578552450251" duration="1800000" />
+      <workItem from="1578563244213" duration="2857000" />
+      <workItem from="1578569288018" duration="2921000" />
+      <workItem from="1578628605299" duration="2238000" />
+      <workItem from="1578634974540" duration="734000" />
+      <workItem from="1578641821507" duration="1167000" />
+      <workItem from="1578650717281" duration="1176000" />
+      <workItem from="1578656194106" duration="706000" />
+      <workItem from="1578658473087" duration="1421000" />
+      <workItem from="1579493463215" duration="15000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="452" y="149" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1578374534595">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="452" y="149" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1578374534595" />
+    <state x="530" y="176" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.860@0.0.1600.860" timestamp="1576754111339" />
+    <state x="495" y="156" key="FileChooserDialogImpl" timestamp="1578650943311">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="495" y="156" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1578650943311" />
+    <state x="580" y="184" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1576741134204" />
+    <state x="423" y="214" key="com.intellij.ide.util.TipDialog" timestamp="1577945472781">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="423" y="214" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1577945472781" />
+    <state x="495" y="253" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1577161094977" />
+  </component>
+</project>

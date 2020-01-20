@@ -1,0 +1,148 @@
+
+{% extends 'headerfooter.html' %}
+{% block content %}
+    {% load staticfiles %}
+                            <div class="full_width propery_listing">
+                                <div class="container">
+                                    <div class="row">
+					<div class="col-md-3 col-sm-3">
+					<div id="sticky-anchor"></div>
+					<div class="filter_sidebar filtersidebar_menu for_mob_filter sidebar">
+					
+<div class="profileimg">
+<br/>
+<img src="img/noimg.jpg" class="img-thumbnail img-responsive img-circle">
+
+</div>
+    <div class="div_welcome">
+<h3>Welcome saipoojitha !!</h3>
+</div>
+<ul>
+   <li class=""><a href="myprofilee1.html">My Profile</a></li>
+    <li class=""><a href="shortlisted_profiles.html">Shortlisted Profiles</a></li>
+    <!--<li class=""><a href="sent_jobs.html">Sent Jobs</a></li>-->
+    <li class=""><a href="Employer_Posted_Jobs.html">Posted Jobs</a></li>
+	<li class=""><a href="Employer_Contacted_Pro.html">Contacted Profiles</a></li>
+    <li class="active"><a href="applied_jobs.html">Apply Jobs (110)</a></li>
+    <!--<li class=""><a href="shortlisted_jobs.html">Shortlisted Jobs</a></li>-->
+    <li class=""><a href="changepassword.html">Change Password</a></li>
+    <li class=""><a href="#">Logout</a></li>
+</ul>
+</div>
+						
+					</div>
+					<div class="col-md-9 liting_grid padding_10_right">
+	 <div class="panel panel-default">
+     <div class="panel-heading" style="margin-bottom:10px;"><h4>Applied Profiles</h4></div>
+	
+  <table id="example1" class="display nowrap" style="width:100%">
+        <thead>
+            <tr>
+                <th width="10%">S No</th>
+                <th width="30%">Name</th>
+                <th width="30%">Designation</th>
+                <th width="10%">Experience</th>
+			    <th width="10%">Status</th>
+				<th width="10%">Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td width="10%" style="padding-left: 15px;">1.</td>
+                <td width="30%" style="padding-left: 15px;">Poojitha</td>
+                <td width="30%" style="padding-left: 15px;">UI Developer</td>
+                <td width="10%" style="padding-left: 15px;">2 years</td>
+				 <td width="10%" style="padding-left: 15px;">Accept</td>
+                <td width="10%" style="padding-left: 15px;"><a class="view_btn_dash" href="Employer_profile.html">View</a></td>
+            </tr>
+			 <tr>
+                <td width="10%" style="padding-left: 15px;">1.</td>
+                <td width="30%" style="padding-left: 15px;">Poojitha</td>
+                <td width="30%" style="padding-left: 15px;">UI Developer</td>
+                <td width="10%" style="padding-left: 15px;">2 years</td>
+				 <td width="10%" style="padding-left: 15px;">Accept</td>
+                <td width="10%" style="padding-left: 15px;"><a class="view_btn_dash" href="Employer_profile.html">View</a></td>
+            </tr>
+			 <tr>
+                <td width="10%" style="padding-left: 15px;">1.</td>
+                <td width="30%" style="padding-left: 15px;">Poojitha</td>
+                <td width="30%" style="padding-left: 15px;">UI Developer</td>
+                <td width="10%" style="padding-left: 15px;">2 years</td>
+				 <td width="10%" style="padding-left: 15px;">Accept</td>
+                <td width="10%" style="padding-left: 15px;"><a class="view_btn_dash" href="Employer_profile.html">View</a></td>
+            </tr>
+			
+            
+        </tbody>
+    </table>
+	
+		</div>				
+					
+					<!-- Sidebar -->
+					
+					
+				</div>
+                                </div>
+                                
+                            </div>
+                            </div>
+                            
+
+		<script>
+function sticky_relocate() {
+			    var window_top = $(window).scrollTop() ;
+			    var footer_top = $(".footer").offset().top - 30;
+			    var div_top = $('#sticky-anchor').offset().top;
+			    var div_height = $(".sidebar").height();
+			    var leftHeight = $('.left-container').height(); 
+  
+			    if (window_top + div_height > footer_top){
+			        $('.sidebar').removeClass('stick');
+			    	$('.sidebar').addClass('abs');
+			    	 $('.right-conatainer').css('min-height', leftHeight + 'px');
+			    	}
+			    else if (window_top > div_top) {
+			        $('.sidebar').addClass('stick');
+			        $('.sidebar').removeClass('abs');
+			    } else {
+			        $('.sidebar').removeClass('stick');
+			        $('.sidebar').removeClass('abs');
+			    }
+			}
+
+			$(function () {
+			    $(window).scroll(sticky_relocate);
+			    sticky_relocate();
+			});
+</script>
+		<script>
+		$('#myTab a').click(function (e) {
+			e.preventDefault()
+			$(this).tab('show')
+		})
+		</script>
+		
+		<script>
+			$('#reservation-date').dateDropper();
+		</script>
+		
+		<script>
+			$('#date-from').dateDropper();
+		</script>
+		
+		<script>
+			$('#date-to').dateDropper();
+		</script>
+		
+		<script>
+			$('#e-date-from').dateDropper();
+		</script>
+		
+		<script>
+			$('#e-date-to').dateDropper();
+		</script>
+		
+		<script>
+			AOS.init();
+		</script>
+   {% endblock %}

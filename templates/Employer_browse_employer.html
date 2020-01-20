@@ -1,0 +1,933 @@
+{% extends 'headerfooter.html' %}
+{% block content %}
+    {% load staticfiles %}
+            <div class="full_width main_content">
+                
+               
+                    <div class="shopping_main">
+                        <div class="home-one"> 
+                            
+                           <!--  <nav class="navbar navbar-default navbar-mobile light bootsnav">
+			<div class="container">
+			
+			
+				<div class="collapse navbar-collapse" id="navbar-menu">
+				
+					<ul class="nav navbar-nav navbar-left" data-in="fadeInDown" data-out="fadeOutUp">
+                       <li class="active"><a href="index2.html">Home</a></li>         
+                <li><a href="browse_employer.html"> Posted Jobs</a></li>
+                <li><a href="browse_employer.html"> Bookmark</a></li>
+                <li><a href="browse_employer.html">Shortlisted</a></li>
+                <li><a href="browse_employer.html">Paid Resumes</a></li>
+                <li><a href="browse_employer.html">Post New Job</a></li>
+						
+					
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Post your job</a></li>
+					
+					</ul>
+						
+				</div>
+			</div>   
+		</nav> -->
+                
+                            <section class="list_jobs">
+			<div class="container">	                
+				<div class="row">					
+					<div class="col-md-3 col-sm-4">
+                        <div id="sticky-anchor"></div>
+                        <div class="ful_width sidebar_filter">
+					
+						<h5 style="margin: 0;padding: 12px;"> Filter jobs</h5>
+						
+						<div class="widget-boxed padd-bot-0">
+							<div class="widget-boxed-header">
+								<h5>Roles</h5>
+							</div>
+                            
+                            <div style="padding: 3px 0 0;" class="widget-boxed-body">
+								<div class="search_widget_job">
+									<div class="field_w_search">
+										<input type="text" class="form-control" placeholder="Search Keywords">
+									</div>
+									
+								</div>
+							</div>
+							<div style="padding: 0;" class="widget-boxed-body">
+								<div class="side-list no-border">
+									<ul id="style-3">
+										<li>
+                                        <span class="custom-checkbox">
+                                            <input type="checkbox" id="1">
+                                            <label for="1"></label>
+                                        </span>Accountant
+
+                                        </li>
+										<li>
+                                        <span class="custom-checkbox">
+                                            <input type="checkbox" id="1">
+                                            <label for="1"></label>
+                                        </span>Animation
+
+                                        </li>
+                                        
+                                        <li>
+                                        <span class="custom-checkbox">
+                                            <input type="checkbox" id="1">
+                                            <label for="1"></label>
+                                        </span>Architect
+
+                                        </li>
+										 
+                                        <li>
+                                        <span class="custom-checkbox">
+                                            <input type="checkbox" id="1">
+                                            <label for="1"></label>
+                                        </span>Caretaker/Nanny
+
+                                        </li><li>
+                                        <span class="custom-checkbox">
+                                            <input type="checkbox" id="1">
+                                            <label for="1"></label>
+                                        </span>Bartender
+
+                                        </li>
+										<li>
+                                        <span class="custom-checkbox">
+                                            <input type="checkbox" id="1">
+                                            <label for="1"></label>
+                                        </span>Beautician
+
+                                        </li>
+										<li>
+                                        <span class="custom-checkbox">
+                                            <input type="checkbox" id="1">
+                                            <label for="1"></label>
+                                        </span>BPO/ Telecaller
+
+                                        </li>
+                                        
+                                         <li>
+                                        <span class="custom-checkbox">
+                                            <input type="checkbox" id="1">
+                                            <label for="1"></label>
+                                        </span>Caretaker/Nanny
+
+                                        </li><li>
+                                        <span class="custom-checkbox">
+                                            <input type="checkbox" id="1">
+                                            <label for="1"></label>
+                                        </span>Bartender
+
+                                        </li>
+										<li>
+                                        <span class="custom-checkbox">
+                                            <input type="checkbox" id="1">
+                                            <label for="1"></label>
+                                        </span>Beautician
+
+                                        </li>
+										<li>
+                                        <span class="custom-checkbox">
+                                            <input type="checkbox" id="1">
+                                            <label for="1"></label>
+                                        </span>BPO/ Telecaller
+
+                                        </li>
+										
+										
+									</ul>
+								</div>
+							</div>
+						</div>
+						
+						<div class="widget-boxed padd-bot-0">
+							<div class="widget-boxed-header">
+								<h5>Monthly Salary</h5>
+							</div>
+                         
+							<div style="padding: 0;" class="widget-boxed-body">
+								<div class="side-list no-border">
+									<ul id="style-3">
+										<li>
+                                        <span class="custom-checkbox">
+                                            <input type="checkbox" id="1">
+                                            <label for="1"></label>
+                                        </span>₹ 5,000 to 10,000
+
+                                        </li>
+										<li>
+                                        <span class="custom-checkbox">
+                                            <input type="checkbox" id="1">
+                                            <label for="1"></label>
+                                        </span>₹ 11,000 to 15,000
+
+                                        </li>
+                                        
+                                        <li>
+                                        <span class="custom-checkbox">
+                                            <input type="checkbox" id="1">
+                                            <label for="1"></label>
+                                        </span>₹ 16,000 to 20,000
+
+                                        </li>
+										 
+                                        <li>
+                                        <span class="custom-checkbox">
+                                            <input type="checkbox" id="1">
+                                            <label for="1"></label>
+                                        </span>₹ 20,000 to 25,000
+
+                                        </li><li>
+                                        <span class="custom-checkbox">
+                                            <input type="checkbox" id="1">
+                                            <label for="1"></label>
+                                        </span>₹ 30,000 to 35,000
+
+                                        </li>
+										<li>
+                                        <span class="custom-checkbox">
+                                            <input type="checkbox" id="1">
+                                            <label for="1"></label>
+                                        </span>₹ 40,000 to 45,000
+
+                                        </li>
+										<li>
+                                        <span class="custom-checkbox">
+                                            <input type="checkbox" id="1">
+                                            <label for="1"></label>
+                                        </span>₹ 50,000 to 1,00,000
+
+                                        </li>
+                                        
+                                         <li>
+                                        <span class="custom-checkbox">
+                                            <input type="checkbox" id="1">
+                                            <label for="1"></label>
+                                        </span>₹ 1,00,000 and above
+
+                                        </li>
+										
+									</ul>
+								</div>
+							</div>
+						</div>
+						
+						<div class="widget-boxed padd-bot-0">
+							<div class="widget-boxed-header br-0">
+								<h5>Designation <a href="#designation" data-toggle="collapse"><i class="pull-right ti-plus" aria-hidden="true"></i></a></h5>
+							</div>
+							<div class="widget-boxed-body collapse" id="designation">
+								<div class="side-list no-border">
+									<ul id="style-3">
+										<li>
+											<span class="custom-checkbox">
+												<input type="checkbox" id="a">
+												<label for="a"></label>
+											</span>
+											Web Designer
+										</li>
+										<li>
+											<span class="custom-checkbox">
+												<input type="checkbox" id="b">
+												<label for="b"></label>
+											</span>
+											Php Developer
+										</li>
+										<li>
+											<span class="custom-checkbox">
+												<input type="checkbox" id="c">
+												<label for="c"></label>
+											</span>
+											Project Manager
+										</li>
+										<li>
+											<span class="custom-checkbox">
+												<input type="checkbox" id="d">
+												<label for="d"></label>
+											</span>
+											Human Resource
+										</li>
+										<li>
+											<span class="custom-checkbox">
+												<input type="checkbox" id="e">
+												<label for="e"></label>
+											</span>
+											CMS Developer
+										</li>
+										<li>
+											<span class="custom-checkbox">
+												<input type="checkbox" id="f">
+												<label for="f"></label>
+											</span>
+											App Developer
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						
+						<div class="widget-boxed padd-bot-0">
+							<div class="widget-boxed-header br-0">
+								<h5>Experince <a href="#experince" data-toggle="collapse"><i class="pull-right ti-plus" aria-hidden="true"></i></a></h5>
+							</div>
+							<div class="widget-boxed-body collapse" id="experince">
+								<div class="side-list no-border">
+									<ul id="style-3">
+										<li>
+											<span class="custom-checkbox">
+												<input type="checkbox" id="11">
+												<label for="11"></label>
+											</span>
+											1Year To 2Year
+										</li>
+										<li>
+											<span class="custom-checkbox">
+												<input type="checkbox" id="21">
+												<label for="21"></label>
+											</span>
+											2Year To 3Year
+										</li>
+										<li>
+											<span class="custom-checkbox">
+												<input type="checkbox" id="31">
+												<label for="31"></label>
+											</span>
+											3Year To 4Year
+										</li>
+										<li>
+											<span class="custom-checkbox">
+												<input type="checkbox" id="41">
+												<label for="41"></label>
+											</span>
+											4Year To 5Year
+										</li>
+										<li>
+											<span class="custom-checkbox">
+												<input type="checkbox" id="51">
+												<label for="51"></label>
+											</span>
+											5Year To 7Year
+										</li>
+										<li>
+											<span class="custom-checkbox">
+												<input type="checkbox" id="61">
+												<label for="61"></label>
+											</span>
+											7Year To 10Year
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						
+						<div class="widget-boxed padd-bot-0">
+							<div class="widget-boxed-header br-0">
+								<h5>Qualification <a href="#qualification" data-toggle="collapse"><i class="pull-right ti-plus" aria-hidden="true"></i></a></h5>
+							</div>
+							<div class="widget-boxed-body collapse" id="qualification">
+								<div class="side-list no-border">
+									<ul id="style-3">
+										<li>
+											<span class="custom-checkbox">
+												<input type="checkbox" id="12">
+												<label for="12"></label>
+											</span>
+											High School
+										</li>
+										<li>
+											<span class="custom-checkbox">
+												<input type="checkbox" id="22">
+												<label for="22"></label>
+											</span>
+											Intermediate
+										</li>
+										<li>
+											<span class="custom-checkbox">
+												<input type="checkbox" id="32">
+												<label for="32"></label>
+											</span>
+											Graduation
+										</li>
+										<li>
+											<span class="custom-checkbox">
+												<input type="checkbox" id="42">
+												<label for="42"></label>
+											</span>
+											Master Degree
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+					
+					<!-- Start Job List -->
+					
+					
+				
+                    </div>
+                    
+                    <div class="no_padding_left col-md-9 col-sm-8">
+						
+						<div class="fl-right">
+									<div class="search-wide">
+										<h5>Short By</h5>
+									</div>
+									
+									<div class="search-wide full">
+										<select class="wide form-control">
+											<option value="1">Most Recent</option>
+											<option value="2">Most Viewed</option>
+											<option value="4">Most Search</option>
+										</select>
+									</div>
+								
+								</div>
+				
+						
+						<div class="job-verticle-list">
+							<div class="vertical-job-card">
+								<div class="vertical-job-body">
+									<div class="row">
+										<div class="col-md-12 col-sm-12">
+                                            
+											<ul class="can-skils cm_logo_emploer_mian">
+                                                <div class="vrt-job-cmp-logo cm_logo_emploer">
+                                                 <a href="job-detail.html"><img src="{% static 'img/female.jpg' %}" class="img-responsive" alt=""></a>
+                                                </div>
+												<li>
+                                                    <h5><a href="#" class="cm_logo_emploer_heading">Somnath Bhadra</a><span>ID:2587TH</span></h5>
+                                                    <p>Teacher from Berhampur, Murshidabad</p>
+                                                    <span class="no_margin_left"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Graduate - Btech/BE, Computers (Computers)
+                                                    </span>
+                                                    <span><i class="fa fa-briefcase" aria-hidden="true"></i> 2 yrs</span>
+                                                    
+                                                
+                                                    <span><i class="fa fa-inr" aria-hidden="true"></i> 5000 / month</span>
+                                                </li>
+												
+												
+											</ul>
+                                            
+                                            
+                                            <ul class="emplouer_detials">
+                                                <p>Interested in Full Time Jobs with Any Shift</p>
+                                                
+                                                <li>
+                                                    <span class="emp_heading">Photo ID Proof</span>
+                                                    <span class="emp_repe">Aadhaar Card, Ration Card</span>
+                                                </li>
+                                                
+                                              
+                                                
+                                                <li>
+                                                    <span class="emp_heading">Sub Type</span>
+                                                    <span class="emp_repe">Govt Institution</span>
+                                                </li>
+                                                <li>
+                                                    <span class="emp_heading">Languages known</span>
+                                                    <span class="emp_repe">Hindi, Bengali, English</span>
+                                                </li>
+                                                
+                                                <li>
+                                                    <span class="emp_heading">Preference Location</span>
+                                                    <span class="emp_repe">Hyderabad</span>
+                                                </li>
+                                                
+                                               
+                                                <li>
+                                                    <span class="emp_heading">Passport</span>
+                                                    <span class="emp_repe">No</span>
+                                                </li> 
+                                             
+                                                <li>
+                                                    <span class="emp_heading">Industry</span>
+                                                    <span class="emp_repe">Others</span>
+                                                </li>
+                                                
+                                                <li>
+                                                    <span class="emp_heading">Job Title </span>
+                                                    <span class="emp_repe">Security Officer</span>
+                                                </li>
+                                                <li>
+                                                    <span class="emp_heading"> Address Proof</span>
+                                                    <span class="emp_repe">Voter ID Card, Ration Card</span>
+                                                </li>
+                                            </ul>
+										</div>
+									</div>
+								</div>
+								<div class="vertical-job-footer ertical-job-footer2 vertical-job-footerq">
+									<div class="row">
+										<div class="col-md-6 col-sm-6 footer_emploer">
+											<a href="#"><button type="button" class="btn btn-sm theme-btn" data-toggle="modal" data-target="#myModal">SMS</button></a>
+											<a href="#"><button type="button" class="btn btn-sm theme-btn" data-toggle="modal" data-target="#myModal">Email</button></a>
+											<a href="profile.html" class="btn btn-sm theme-btn">View Contact</a>
+										</div>
+										<div class="col-md-6 col-sm-6">
+											<a href="#" class="btn btn-sm resume-theme-btn pull-right"><img src="{% static 'img/resume.png' %}" class="resumeicon">Download resume</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					
+						
+                        <div class="job-verticle-list">
+							<div class="vertical-job-card">
+								<div class="vertical-job-body">
+									<div class="row">
+										<div class="col-md-12 col-sm-12">
+                                            
+											<ul class="can-skils cm_logo_emploer_mian">
+                                                <div class="vrt-job-cmp-logo cm_logo_emploer">
+                                                 <a href="job-detail.html"><img src="{% static 'img/male.jpg' %}" class="img-responsive" alt=""></a>
+                                                </div>
+												<li>
+                                                    <h5><a href="#" class="cm_logo_emploer_heading">Somnath Bhadra</a><span>ID:2587TH</span></h5>
+                                                    <p>Teacher from Berhampur, Murshidabad</p>
+                                                    <span class="no_margin_left"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Graduate - Btech/BE, Computers (Computers)
+                                                    </span>
+                                                    <span><i class="fa fa-briefcase" aria-hidden="true"></i> 2 yrs</span>
+                                                    
+                                                
+                                                    <span><i class="fa fa-inr" aria-hidden="true"></i> 5000 / month</span>
+                                                </li>
+												
+												
+											</ul>
+                                            
+                                            
+                                            <ul class="emplouer_detials">
+                                                <p>Interested in Full Time Jobs with Any Shift</p>
+                                                
+                                                <li>
+                                                    <span class="emp_heading">Photo ID Proof</span>
+                                                    <span class="emp_repe">Aadhaar Card, Ration Card</span>
+                                                </li>
+                                                
+                                              
+                                                
+                                                <li>
+                                                    <span class="emp_heading">Sub Type</span>
+                                                    <span class="emp_repe">Govt Institution</span>
+                                                </li>
+                                                <li>
+                                                    <span class="emp_heading">Languages known</span>
+                                                    <span class="emp_repe">Hindi, Bengali, English</span>
+                                                </li>
+                                                
+                                                <li>
+                                                    <span class="emp_heading">Preference Location</span>
+                                                    <span class="emp_repe">Hyderabad</span>
+                                                </li>
+                                                
+                                               
+                                                <li>
+                                                    <span class="emp_heading">Passport</span>
+                                                    <span class="emp_repe">No</span>
+                                                </li> 
+                                             
+                                                <li>
+                                                    <span class="emp_heading">Industry</span>
+                                                    <span class="emp_repe">Others</span>
+                                                </li>
+                                                
+                                                <li>
+                                                    <span class="emp_heading">Job Title </span>
+                                                    <span class="emp_repe">Security Officer</span>
+                                                </li>
+                                                <li>
+                                                    <span class="emp_heading"> Address Proof</span>
+                                                    <span class="emp_repe">Voter ID Card, Ration Card</span>
+                                                </li>
+                                            </ul>
+										</div>
+									</div>
+								</div>
+								<div class="vertical-job-footer ertical-job-footer2 vertical-job-footerq">
+									<div class="row">
+										<div class="col-md-6 col-sm-6 footer_emploer">
+											<a href="#"><button type="button" class="btn btn-sm theme-btn" data-toggle="modal" data-target="#myModal">SMS</button></a>
+											<a href="#"><button type="button" class="btn btn-sm theme-btn" data-toggle="modal" data-target="#myModal">Email</button></a>
+											<a href="profile.html" class="btn btn-sm theme-btn">View Contact</a>
+										</div>
+										<div class="col-md-6 col-sm-6">
+											<a href="#" class="btn btn-sm resume-theme-btn pull-right"><img src="{% static 'img/resume.png' %}" class="resumeicon">Download resume</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+                        
+                        <div class="job-verticle-list">
+							<div class="vertical-job-card">
+								<div class="vertical-job-body">
+									<div class="row">
+										<div class="col-md-12 col-sm-12">
+                                            
+											<ul class="can-skils cm_logo_emploer_mian">
+                                                <div class="vrt-job-cmp-logo cm_logo_emploer">
+                                                 <a href="job-detail.html"><img src="{% static 'img/female.jpg' %}" class="img-responsive" alt=""></a>
+                                                </div>
+												<li>
+                                                    <h5><a href="#" class="cm_logo_emploer_heading">Somnath Bhadra</a><span>ID:2587TH</span></h5>
+                                                    <p>Teacher from Berhampur, Murshidabad</p>
+                                                    <span class="no_margin_left"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Graduate - Btech/BE, Computers (Computers)
+                                                    </span>
+                                                    <span><i class="fa fa-briefcase" aria-hidden="true"></i> 2 yrs</span>
+                                                    
+                                                
+                                                    <span><i class="fa fa-inr" aria-hidden="true"></i> 5000 / month</span>
+                                                </li>
+												
+												
+											</ul>
+                                            
+                                            
+                                            <ul class="emplouer_detials">
+                                                <p>Interested in Full Time Jobs with Any Shift</p>
+                                                
+                                                <li>
+                                                    <span class="emp_heading">Photo ID Proof</span>
+                                                    <span class="emp_repe">Aadhaar Card, Ration Card</span>
+                                                </li>
+                                                
+                                              
+                                                
+                                                <li>
+                                                    <span class="emp_heading">Sub Type</span>
+                                                    <span class="emp_repe">Govt Institution</span>
+                                                </li>
+                                                <li>
+                                                    <span class="emp_heading">Languages known</span>
+                                                    <span class="emp_repe">Hindi, Bengali, English</span>
+                                                </li>
+                                                
+                                                <li>
+                                                    <span class="emp_heading">Preference Location</span>
+                                                    <span class="emp_repe">Hyderabad</span>
+                                                </li>
+                                                
+                                               
+                                                <li>
+                                                    <span class="emp_heading">Passport</span>
+                                                    <span class="emp_repe">No</span>
+                                                </li> 
+                                             
+                                                <li>
+                                                    <span class="emp_heading">Industry</span>
+                                                    <span class="emp_repe">Others</span>
+                                                </li>
+                                                
+                                                <li>
+                                                    <span class="emp_heading">Job Title </span>
+                                                    <span class="emp_repe">Security Officer</span>
+                                                </li>
+                                                <li>
+                                                    <span class="emp_heading"> Address Proof</span>
+                                                    <span class="emp_repe">Voter ID Card, Ration Card</span>
+                                                </li>
+                                            </ul>
+										</div>
+									</div>
+								</div>
+								<div class="vertical-job-footer ertical-job-footer2 vertical-job-footerq">
+									<div class="row">
+										<div class="col-md-6 col-sm-6 footer_emploer">
+											<a href="#"><button type="button" class="btn btn-sm theme-btn" data-toggle="modal" data-target="#myModal">SMS</button></a>
+											<a href="#"><button type="button" class="btn btn-sm theme-btn" data-toggle="modal" data-target="#myModal">Email</button></a>
+											<a href="profile.html" class="btn btn-sm theme-btn">View Contact</a>
+										</div>
+										<div class="col-md-6 col-sm-6">
+											<a href="#" class="btn btn-sm resume-theme-btn pull-right"><img src="{% static 'img/resume.png' %}" class="resumeicon">Download resume</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+                        
+                        <div class="job-verticle-list">
+							<div class="vertical-job-card">
+								<div class="vertical-job-body">
+									<div class="row">
+										<div class="col-md-12 col-sm-12">
+                                            
+											<ul class="can-skils cm_logo_emploer_mian">
+                                                <div class="vrt-job-cmp-logo cm_logo_emploer">
+                                                 <a href="job-detail.html"><img src="{% static 'img/male.jpg' %}" class="img-responsive" alt=""></a>
+                                                </div>
+												<li>
+                                                    <h5><a href="#" class="cm_logo_emploer_heading">Somnath Bhadra</a><span>ID:2587TH</span></h5>
+                                                    <p>Teacher from Berhampur, Murshidabad</p>
+                                                    <span class="no_margin_left"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Graduate - Btech/BE, Computers (Computers)
+                                                    </span>
+                                                    <span><i class="fa fa-briefcase" aria-hidden="true"></i> 2 yrs</span>
+                                                    
+                                                
+                                                    <span><i class="fa fa-inr" aria-hidden="true"></i> 5000 / month</span>
+                                                </li>
+												
+												
+											</ul>
+                                            
+                                            
+                                            <ul class="emplouer_detials">
+                                                <p>Interested in Full Time Jobs with Any Shift</p>
+                                                
+                                                <li>
+                                                    <span class="emp_heading">Photo ID Proof</span>
+                                                    <span class="emp_repe">Aadhaar Card, Ration Card</span>
+                                                </li>
+                                                
+                                              
+                                                
+                                                <li>
+                                                    <span class="emp_heading">Sub Type</span>
+                                                    <span class="emp_repe">Govt Institution</span>
+                                                </li>
+                                                <li>
+                                                    <span class="emp_heading">Languages known</span>
+                                                    <span class="emp_repe">Hindi, Bengali, English</span>
+                                                </li>
+                                                
+                                                <li>
+                                                    <span class="emp_heading">Preference Location</span>
+                                                    <span class="emp_repe">Hyderabad</span>
+                                                </li>
+                                                
+                                               
+                                                <li>
+                                                    <span class="emp_heading">Passport</span>
+                                                    <span class="emp_repe">No</span>
+                                                </li> 
+                                             
+                                                <li>
+                                                    <span class="emp_heading">Industry</span>
+                                                    <span class="emp_repe">Others</span>
+                                                </li>
+                                                
+                                                <li>
+                                                    <span class="emp_heading">Job Title </span>
+                                                    <span class="emp_repe">Security Officer</span>
+                                                </li>
+                                                <li>
+                                                    <span class="emp_heading"> Address Proof</span>
+                                                    <span class="emp_repe">Voter ID Card, Ration Card</span>
+                                                </li>
+                                            </ul>
+										</div>
+									</div>
+								</div>
+								<div class="vertical-job-footer ertical-job-footer2 vertical-job-footerq">
+									<div class="row">
+										<div class="col-md-6 col-sm-6 footer_emploer">
+											<a href="#"><button type="button" class="btn btn-sm theme-btn" data-toggle="modal" data-target="#myModal">SMS</button></a>
+											<a href="#"><button type="button" class="btn btn-sm theme-btn" data-toggle="modal" data-target="#myModal">Email</button></a>
+											<a href="profile.html" class="btn btn-sm theme-btn">View Contact</a>
+										</div>
+										<div class="col-md-6 col-sm-6">
+											<a href="#" class="btn btn-sm resume-theme-btn pull-right"><img src="{% static 'img/resume.png' %}" class="resumeicon">Download resume</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+                        
+                        <div class="job-verticle-list">
+							<div class="vertical-job-card">
+								<div class="vertical-job-body">
+									<div class="row">
+										<div class="col-md-12 col-sm-12">
+                                            
+											<ul class="can-skils cm_logo_emploer_mian">
+                                                <div class="vrt-job-cmp-logo cm_logo_emploer">
+                                                 <a href="job-detail.html"><img src="{% static 'img/female.jpg' %}" class="img-responsive" alt=""></a>
+                                                </div>
+												<li>
+                                                    <h5><a href="#" class="cm_logo_emploer_heading">Somnath Bhadra</a><span>ID:2587TH</span></h5>
+                                                    <p>Teacher from Berhampur, Murshidabad</p>
+                                                    <span class="no_margin_left"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Graduate - Btech/BE, Computers (Computers)
+                                                    </span>
+                                                    <span><i class="fa fa-briefcase" aria-hidden="true"></i> 2 yrs</span>
+                                                    
+                                                
+                                                    <span><i class="fa fa-inr" aria-hidden="true"></i> 5000 / month</span>
+                                                </li>
+												
+												
+											</ul>
+                                            
+                                            
+                                            <ul class="emplouer_detials">
+                                                <p>Interested in Full Time Jobs with Any Shift</p>
+                                                
+                                                <li>
+                                                    <span class="emp_heading">Photo ID Proof</span>
+                                                    <span class="emp_repe">Aadhaar Card, Ration Card</span>
+                                                </li>
+                                                
+                                              
+                                                
+                                                <li>
+                                                    <span class="emp_heading">Sub Type</span>
+                                                    <span class="emp_repe">Govt Institution</span>
+                                                </li>
+                                                <li>
+                                                    <span class="emp_heading">Languages known</span>
+                                                    <span class="emp_repe">Hindi, Bengali, English</span>
+                                                </li>
+                                                
+                                                <li>
+                                                    <span class="emp_heading">Preference Location</span>
+                                                    <span class="emp_repe">Hyderabad</span>
+                                                </li>
+                                                
+                                               
+                                                <li>
+                                                    <span class="emp_heading">Passport</span>
+                                                    <span class="emp_repe">No</span>
+                                                </li> 
+                                             
+                                                <li>
+                                                    <span class="emp_heading">Industry</span>
+                                                    <span class="emp_repe">Others</span>
+                                                </li>
+                                                
+                                                <li>
+                                                    <span class="emp_heading">Job Title </span>
+                                                    <span class="emp_repe">Security Officer</span>
+                                                </li>
+                                                <li>
+                                                    <span class="emp_heading"> Address Proof</span>
+                                                    <span class="emp_repe">Voter ID Card, Ration Card</span>
+                                                </li>
+                                            </ul>
+										</div>
+									</div>
+								</div>
+								<div class="vertical-job-footer ertical-job-footer2 vertical-job-footerq">
+									<div class="row">
+										<div class="col-md-6 col-sm-6 footer_emploer">
+											<a href="#"><button type="button" class="btn btn-sm theme-btn" data-toggle="modal" data-target="#myModal">SMS</button></a>
+											<a href="#"><button type="button" class="btn btn-sm theme-btn" data-toggle="modal" data-target="#myModal">Email</button></a>
+											<a href="profile.html" class="btn btn-sm theme-btn">View Contact</a>
+										</div>
+										<div class="col-md-6 col-sm-6">
+											<a href="#" class="btn btn-sm resume-theme-btn pull-right"><img src="{% static 'img/resume.png' %}" class="resumeicon">Download resume</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+                        
+                        <div class="job-verticle-list">
+							<div class="vertical-job-card">
+								<div class="vertical-job-body">
+									<div class="row">
+										<div class="col-md-12 col-sm-12">
+                                            
+											<ul class="can-skils cm_logo_emploer_mian">
+                                                <div class="vrt-job-cmp-logo cm_logo_emploer">
+                                                 <a href="job-detail.html"><img src="{% static 'img/male.jpg' %}" class="img-responsive" alt=""></a>
+                                                </div>
+												<li>
+                                                    <h5><a href="#" class="cm_logo_emploer_heading">Somnath Bhadra</a><span>ID:2587TH</span></h5>
+                                                    <p>Teacher from Berhampur, Murshidabad</p>
+                                                    <span class="no_margin_left"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Graduate - Btech/BE, Computers (Computers)
+                                                    </span>
+                                                    <span><i class="fa fa-briefcase" aria-hidden="true"></i> 2 yrs</span>
+                                                    
+                                                
+                                                    <span><i class="fa fa-inr" aria-hidden="true"></i> 5000 / month</span>
+                                                </li>
+												
+												
+											</ul>
+                                            
+                                            
+                                            <ul class="emplouer_detials">
+                                                <p>Interested in Full Time Jobs with Any Shift</p>
+                                                
+                                                <li>
+                                                    <span class="emp_heading">Photo ID Proof</span>
+                                                    <span class="emp_repe">Aadhaar Card, Ration Card</span>
+                                                </li>
+                                                
+                                              
+                                                
+                                                <li>
+                                                    <span class="emp_heading">Sub Type</span>
+                                                    <span class="emp_repe">Govt Institution</span>
+                                                </li>
+                                                <li>
+                                                    <span class="emp_heading">Languages known</span>
+                                                    <span class="emp_repe">Hindi, Bengali, English</span>
+                                                </li>
+                                                
+                                                <li>
+                                                    <span class="emp_heading">Preference Location</span>
+                                                    <span class="emp_repe">Hyderabad</span>
+                                                </li>
+                                                
+                                               
+                                                <li>
+                                                    <span class="emp_heading">Passport</span>
+                                                    <span class="emp_repe">No</span>
+                                                </li> 
+                                             
+                                                <li>
+                                                    <span class="emp_heading">Industry</span>
+                                                    <span class="emp_repe">Others</span>
+                                                </li>
+                                                
+                                                <li>
+                                                    <span class="emp_heading">Job Title </span>
+                                                    <span class="emp_repe">Security Officer</span>
+                                                </li>
+                                                <li>
+                                                    <span class="emp_heading"> Address Proof</span>
+                                                    <span class="emp_repe">Voter ID Card, Ration Card</span>
+                                                </li>
+                                            </ul>
+										</div>
+									</div>
+								</div>
+								<div class="vertical-job-footer ertical-job-footer2 vertical-job-footerq">
+									<div class="row">
+										<div class="col-md-6 col-sm-6 footer_emploer">
+											<a href="#"><button type="button" class="btn btn-sm theme-btn" data-toggle="modal" data-target="#myModal">SMS</button></a>
+											<a href="#"><button type="button" class="btn btn-sm theme-btn" data-toggle="modal" data-target="#myModal">Email</button></a>
+											<a href="profile.html" class="btn btn-sm theme-btn">View Contact</a>
+										</div>
+										<div class="col-md-6 col-sm-6">
+											<a href="#" class="btn btn-sm resume-theme-btn pull-right"><img src="{% url 'img/resume.png' %}" class="resumeicon">Download resume</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+                        
+                        
+                         <ul class="pagination">
+  <li class="disabled"><a href="#">&laquo;</a></li>
+  <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+  <li><a href="#">2</a></li>
+  <li><a href="#">3</a></li>
+  <li><a href="#">4</a></li>
+  <li><a href="#">5</a></li>
+  <li><a href="#">&raquo;</a></li>
+</ul>
+						
+					</div>
+                    </div>
+				
+			</div>
+		</section>
+                        </div>
+                    </div>
+            </div>
+           {% endblock %}
