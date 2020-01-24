@@ -1,6 +1,8 @@
 from django.contrib import admin
+from .models import Category, Industry, Jobtype, Country, Experience, Qualification, City,\
+    State, Functionalarea, Package, Designation, Resume, Createjob
 
-from .models import Category,Industry,Jobtype,Country,Experience,Qualification,City,State,Functionalarea,Package,Designation,Resume,Createjob
+
 admin.site.register(Category)
 admin.site.register(Industry)
 admin.site.register(Jobtype)
