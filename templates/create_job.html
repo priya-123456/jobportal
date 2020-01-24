@@ -1,8 +1,13 @@
 {% extends 'headerfooter.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
 {% block content %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
                                         <div class="full_width main_content">
-                
+
                 
                 
                     <div class="shopping_main">
@@ -13,564 +18,579 @@
 			<div class="container">
                 <div class="row">
                 <div class="col-md-10 col-md-offset-1">
-				<form class="c-form">
-					<div class="box">
-<div class="box-header">
-<h4>Job Profile</h4>
-</div>
-<div class="box-body create_job_boxbody">
-<div class="row">
-<div class="col-sm-4">
-<label>Job Title</label>
-<input type="text" class="form-control" placeholder="Job Title" name="job_title" value="" required  data-parsley-required-message="Enter Job Title">
-<span class="errorBlock"></span>
-</div>
-<div class="col-sm-4">
-<label>Designation</label>
-<select class="wide form-control selectpicker" name="designation" required  data-parsley-required-message="Select Designation">
-<option value="">Select</option>
-<option value="1" >PHP Developer</option>
-<option value="2" >Project Manager</option>
-<option value="3" >Testing</option>
-<option value="4" >Human Resource</option>
-<option value="5" >UI/UX Designer</option>
-<option value="6" >SEO Developer</option>
-<option value="7" >Tele Caller</option>
-<option value="8" >Fashion Designer</option>
-<option value="9" >Doctor</option>
-<option value="10" >Cashier</option>
-<option value="11" >Receptionist</option>
-<option value="12" >Cook</option>
-<option value="13" >Python Developer</option>
-<option value="14" >Nurse</option>
-<option value="15" >Driver</option>
-<option value="16" >Teacher</option>
-<option value="17" >Delivery Boy</option>
-<option value="18" >Interior Designer</option>
-<option value="19" >Office Assistant</option>
-</select>
-<span class="errorBlock"></span>
-</div>
-<div class="col-sm-4">
-<label>Job Category</label>
-<select class="wide form-control" name="category" required  data-parsley-required-message="Select Category">
-<option value="">select</option>
-<option value="1" >Beautician</option>
-<option value="3" >BPO/ Telecaller</option>
-<option value="4" >Cashier</option>
-<option value="5" >Cook</option>
-<option value="6" >Data Entry / Back Office</option>
-<option value="7" >Delivery/ Collections</option>
-<option value="8" >Driver</option>
-<option value="9" >Hospitality Executive</option>
-<option value="10" >HR/Admin</option>
-<option value="11" >IT Hardware Engineer</option>
-<option value="12" >IT Software - Developer</option>
-<option value="13" >Marketing</option>
-<option value="14" >Nurse</option>
-<option value="15" >Office Assistant/ Helper</option>
-<option value="16" >Receptionist/ Front Office</option>
-<option value="17" >Sales</option>
-<option value="18" >Teacher</option>
-<option value="19" >Warehouse Executive</option>
-</select>
-<span class="errorBlock"></span>
-</div>
-</div>
-
-<div class="row">
-<div class="col-sm-4" style="float:left;">
-<label>Industry</label>
-<select class="wide form-control" name="industry" required data-parsley-required-message="Select Industry">
-<option value="">Select</option>
-<option value="Accounting-Tax/Consulting">Accounting-Tax/Consulting</option>
-<option value="Advertising/PR/Event Management">Advertising/PR/Event Management</option>
-<option value="Agriculture/Forestry/Fishing">Agriculture/Forestry/Fishing</option>
-<option value="Apparel/Garments">Apparel/Garments</option>
-<option value="Architecture/Interior Design">Architecture/Interior Design</option>
-<option value="Automobiles/Auto Component/Auto Ancillary">Automobiles/Auto Component/Auto Ancillary</option>
-<option value="Banking">Banking</option>
-<option value="Biotechnology/Pharmaceutical/Medicine">Biotechnology/Pharmaceutical/Medicine</option>
-<option value="CRM/CallCentres/BPO/ITES/Med.Trans">CRM/CallCentres/BPO/ITES/Med.Trans</option>
-<option value="Catering/Food Services/Restaurant">Catering/Food Services/Restaurant</option>
-<option value="Construction/Cement/Metal/Steel/Iron">Construction/Cement/Metal/Steel/Iron</option>
-<option value="Consulting Services">Consulting Services</option>
-<option value="Consumer Durables/FMCG">Consumer Durables/FMCG</option>
-<option value="Defence">Defence</option>
-<option value="Educational/Training">Educational/Training</option>
-<option value="Engineering/Projects">Engineering/Projects</option>
-<option value="Entertainment/Media">Entertainment/Media</option>
-<option value="Export/Import/Merchandising">Export/Import/Merchandising</option>
-<option value="Fashion/Modelling">Fashion/Modelling</option>
-<option value="Financial Services/Stockbroking">Financial Services/Stockbroking</option>
-<option value="Gems &amp; Jewellery">Gems &amp; Jewellery</option>
-<option value="Government Sector">Government Sector</option>
-<option value="Healthcare">Healthcare</option>
-<option value="Hotel/Travel/Tourism/Airlines/Hospitality">Hotel/Travel/Tourism/Airlines/Hospitality</option>
-<option value="IT-Hardware/Networking">IT-Hardware/Networking</option>
-<option value="IT-Software">IT-Software</option>
-<option value="Insurance">Insurance</option>
-<option value="Internet/Dot com/ISP">Internet/Dot com/ISP</option>
-<option value="Law/Legal Firms">Law/Legal Firms</option>
-<option value="Logistics/Freight Forward/Distribution/Courier">Logistics/Freight Forward/Distribution/Courier</option>
-<option value="Manufacturing/Industrial">Manufacturing/Industrial</option>
-<option value="Marine/Aviation/Military/Mining/Shipping">Marine/Aviation/Military/Mining/Shipping</option>
-<option value="NGO/Social Services">NGO/Social Services</option>
-<option value="Petrochemicals">Petrochemicals</option>
-<option value="Petroleum/Oil and Gas/Power">Petroleum/Oil and Gas/Power</option>
-<option value="Printing/Packaging">Printing/Packaging</option>
-<option value="Projects/Infrastructure/Power/Energy">Projects/Infrastructure/Power/Energy</option>
-<option value="Real Estate">Real Estate</option>
-<option value="Recruitment/Placement Agencies">Recruitment/Placement Agencies</option>
-<option value="Research/Surveyor/MR">Research/Surveyor/MR</option>
-<option value="Retailing">Retailing</option>
-<option value="Security/Law Enforcement">Security/Law Enforcement</option>
-<option value="	Software Services">Software Services</option>
-<option value="Sports/Recreation">Sports/Recreation</option>
-<option value="Telecom">Telecom</option>
-<option value="Warehousing">Warehousing</option>
-<option value="Others">Others</option>
-</select>
-<span class="errorBlock"></span>
-</div>
-<div class="col-sm-4">
-<div id="jobfuncDiv" style="float:left;">
-<fieldset>
-<label>Functional area</label>
-<div class="rhs_inptcol">
-<div onchange="validatePartial('funcArea1,otherFuncArea1');makeEnable(this,'funcareaOth');cleanValue('funcareaOth','otherFuncArea');hide('div6');" onfocus="show('div6');">
-<div class="input_focus">
-<select id='funcArea' onChange="validatePartial('funcArea1,otherFuncArea1');makeEnable(this,'funcareaOth');cleanValue('funcareaOth','otherFuncArea');hide('div6');" onfocus="show('div6');"  onblur="validatePartial('funcArea1');hide('div6');"  style='width:300px,height: 5px' class="wide form-control" name="functional_area">
-<option value='' >Please Select from Below Options</option><optgroup label="   Finance & Accounts" class="loctext opt_space1">
-<option value='Accounting/Tax/Company Secretary/Audit'   class="opt_space">Accounting/Tax/Company Secretary/Audit</option>
-<option value='Finance and Insurance'    class="opt_space">Finance and Insurance</option></optgroup><optgroup label="   Sales & Marketing & Advertisement" class="loctext opt_space1">
-<option value='Online & Offline Marketing / MR / Media Planning'   class="opt_space">Online & Offline Marketing / MR / Media Planning </option>
-<option value='Sales/Business Development'   class="opt_space">Sales/Business Development</option>
-<option value='Advertising / Public Relation / Events'   class="opt_space">Advertising / Public Relation / Events</option></optgroup><optgroup label="   Office Operations / Human Resources" class="loctext opt_space1">
-<option value='Front Office Staff/Secretarial/Computer Operator'   class="opt_space">Front Office Staff/Secretarial/Computer Operator</option>
-<option value='Adminstration / Operations'   class="opt_space">Adminstration / Operations</option>
-<option value='Human Resource / IR / Training & Development'   class="opt_space">Human Resource / IR / Training & Development</option></optgroup><optgroup label="   Production / Maintenance / Quality" class="loctext opt_space1">
-<option value='Production/ Maintenance/ Manufacturing/ Packaging'   class="opt_space">Production/ Maintenance/ Manufacturing/ Packaging</option>
-<option value='Quality/Process Control'   class="opt_space">Quality/Process Control</option></optgroup><optgroup label="   IT Software / Hardware / Telecom" class="loctext opt_space1">
-<option value='IT Hardware - Control'   class="opt_space">IT Hardware - Control</option>
-<option value='IT Hardware - EDA/ VLSI/ ASIC/ Chip Designing'   class="opt_space">IT Hardware - EDA/ VLSI/ ASIC/ Chip Designing</option>
-<option value='IT Hardware - Embedded Technology'   class="opt_space">IT Hardware - Embedded Technology</option>
-<option value='IT Hardware - External hardware'   class="opt_space">IT Hardware - External hardware</option>
-<option value='IT Hardware - IC Fabrication/ Programming'   class="opt_space">IT Hardware - IC Fabrication/ Programming</option>
-<option value='IT Hardware - Installation/ Maintenance'   class="opt_space">IT Hardware - Installation/ Maintenance</option>
-<option value='IT Hardware - Large Equipments'   class="opt_space">IT Hardware - Large Equipments</option>
-<option value='IT Hardware - Networking'   class="opt_space">IT Hardware - Networking</option>
-<option value='IT Hardware - Remote Sensing'   class="opt_space">IT Hardware - Remote Sensing</option>
-<option value='IT Hardware - Support'   class="opt_space">IT Hardware - Support</option>
-<option value='IT/Telecom - Hardware'   class="opt_space">IT/Telecom - Hardware</option>
-<option value='IT Software  - Animation/ Graphics/ Web Designing/ Usability'   class="opt_space">IT Software  - Animation/ Graphics/ Web Designing/ Usability</option>
-<option value='IT Software - Application Programming'   class="opt_space">IT Software - Application Programming</option>
-<option value='IT Software - Business/ Systems Analysis'   class="opt_space">IT Software - Business/ Systems Analysis</option>
-<option value='IT Software - Client Server'   class="opt_space">IT Software - Client Server</option>
-<option value='IT Software - DataBase, Datawarehousing'   class="opt_space">IT Software - DataBase, Datawarehousing</option>
-<option value='IT Software - E-Commerce/ Internet Technologies'   class="opt_space">IT Software - E-Commerce/ Internet Technologies</option>
-<option value='IT Software - ERP,CRM'   class="opt_space">IT Software - ERP,CRM</option>
-<option value='IT Software - Maintenance/ Systems'   class="opt_space">IT Software - Maintenance/ Systems</option>
-<option value='IT Software - Middleware'   class="opt_space">IT Software - Middleware</option>
-<option value='IT Software - MIS/ EDP'    class="opt_space">IT Software - MIS/ EDP</option>
-<option value='IT Software - Mobile Technologies'   class="opt_space">IT Software - Mobile Technologies</option>
-<option value='IT Software - Networking'   class="opt_space">IT Software - Networking</option>
-<option value='IT Software - Operations/ Support Services'  class="opt_space">IT Software - Operations/ Support Services</option>
-<option value='IT Software - Quality Management/ Testing'   class="opt_space">IT Software - Quality Management/ Testing</option>
-<option value='IT Software - Security/ Operating Systems'   class="opt_space">IT Software - Security/ Operating Systems</option>
-<option value='IT Software - Systems Programming'   class="opt_space">IT Software - Systems Programming</option>
-<option value='IT Software - Training & Development'  class="opt_space">IT Software - Training & Development</option>
-<option value='IT/Telecom - Software'  class="opt_space">IT/Telecom - Software</option>
-<option value='Telecom - Design'  class="opt_space">Telecom - Design</option>
-<option value='Telecom - Mobile Technologies'   class="opt_space">Telecom - Mobile Technologies</option>
-<option value='Telecom - Networking'   class="opt_space">Telecom - Networking</option>
-<option value='Telecom - Operations/ Support'  class="opt_space">Telecom - Operations/ Support</option>
-<option value='Telecom - Programming'   class="opt_space">Telecom - Programming</option>
-<option value='Telecom - Maintenance'  class="opt_space">Telecom - Maintenance</option>
-<option value='Telecom - Training & Development'  class="opt_space">Telecom - Training & Development</option>
-<option value='Telecom - Others'  class="opt_space">Telecom - Others</option></optgroup><optgroup label="   Agriculture / Farming / Dairy" class="loctext opt_space1"><optgroup label="   Construction / Real Estate" class="loctext opt_space1"><optgroup label="   More Functional Area" class="loctext opt_space1">
-<option value='Hotel/Restaurant'  class="opt_space">Hotel/Restaurant</option>
-<option value='Architects/Interior Design/Naval Arch'  class="opt_space">Architects/Interior Design/Naval Arch</option>
-<option value='Bio Tech/R&D/Scientist'  class="opt_space">Bio Tech/R&D/Scientist</option>
-<option value='Consultants / Freelancers'  class="opt_space">Consultants / Freelancers</option>
-<option value='Content/Editors/Journalists'  class="opt_space">Content/Editors/Journalists</option>
-<option value='Corporate Planning/ Counsulting/ Strategy'  class="opt_space">Corporate Planning/ Counsulting/ Strategy</option>
-<option value='Doctors/Nurses/Medical Professional'  class="opt_space">Doctors/Nurses/Medical Professional</option>
-<option value='Civil & Site/ Electrical/ Aerospace/ Engg Project Management'  class="opt_space">Civil & Site/ Electrical/ Aerospace/ Engg Project Management</option>
-<option value='Export/Import'  class="opt_space">Export/Import</option>
-<option value='Legal/Law'  class="opt_space">Legal/Law</option>
-<option value='Fashion Designing'  class="opt_space">Fashion Designing</option>
-<option value='Retailing/ Logistics/ Supply Chain/ Materials/ Procurement'  class="opt_space">Retailing/ Logistics/ Supply Chain/ Materials/ Procurement</option>
-<option value='BPO/ ITES/ Telecaller/ Customer Care'  class="opt_space">BPO/ ITES/ Telecaller/ Customer Care</option>
-<option value='Education / Teachers / Professors / Lecturers / Academics'  class="opt_space">Education / Teachers / Professors / Lecturers / Academics</option>
-<option value='Travel / Ticket / Airlines / Cabin Crew / Air Hostess / Floor Operations'  class="opt_space">Travel / Ticket / Airlines / Cabin Crew / Air Hostess / Floor Operations</option>
-<option value='Top Management'  class="opt_space">Top Management</option>
-<option value='Entertainment & Media'  class="opt_space">Entertainment & Media</option>
-<option value='Retail Services'  class="opt_space">Retail Services</option></optgroup>
-</select>
-<span class="errorBlock"></span>
-<span class="tool_tip"  style="display:none; right:-154px; #right:0px; _right:-154px; top:-5px; width:200px;" id="div6">
-<span class="arw_tip" ></span>Select the Job Function(department) you work in. If you are a Fresher with no experience, select Job Function (department) which you look forward to work in. In case you are unable to find your Job Function, please select closest matching Job Function. </span>
-<span id="erJob" ></span>
-</div>
-<div id="funcArea_error" class="error-block fl cll" style="margin-left: 0px !important; display:none;">
-<div class="errorico">&nbsp;</div>
-</div>
-</div>
-</div>
-</fieldset>
-<fieldset>
-<div class="row">
-<div class="col-sm-4" style="display:none;"	id="funcareaOth">
-<label id="lbOtherJob" style="width:220px;">&nbsp;</label>
-<span class="col-sm-4" style="color:#58595B; margin-left:160px;"> Other
-Functional Area:<br /> 
-<input id="otherFuncArea" name="otherFuncArea" class="inpt-typ" onblur="validatePartial('otherFuncArea1,otherFuncArea2, otherFuncArea4');" type="text" value="" maxlength="60"/><br />
-<span class="errorBlock"></span>
-<div id="otherFuncArea_error" class="error-block fl cll" style="margin-left: 0px !important; display:none;">
-<div class="errorico">&nbsp;</div>
-<input type="hidden" id="currntFuncAreaId" value="" name="currntFuncAreaId" />
-<span class="errorBlock"></span>
-</div> </span>
-<div class="cl "></div>
-</div>
-</div>
-</fieldset>
-
-</div>
-
-    </div>
-	
-<div class="col-sm-4">
-<label>Hiring Process</label>
-<select class="wide form-control" name="hiring_process">
-<option value="">Select</option>
-<option value="Face to Face" >Face to Face</option>
-<option value="Written Test" >Written Test</option>
-<option value="Telephonic" >Telephonic</option>
-<option value="Group Discussion" >Group Discussion</option>
-<option value="Walk in" >Walk in</option>
-</select>
-<span class="errorBlock"></span>
-</div>
-</div>
-
-<div class="row">
-<div class="col-sm-4">
-<label>Experience</label>
-<select class="wide form-control" name="experience" required data-parsley-required-message="Select Experience">
-<option value="">Select</option>
- <option value="5" >Fresher</option>
-<option value="6" >6 Months to 1 Year</option>
-<option value="7" >1Year To 2Years</option>
-<option value="8" >2Years To 3Years</option>
-<option value="9" >3Years To 4Years</option>
-<option value="10" >4Years To 5Years</option>
-<option value="11" >5Years To 10Years</option>
-<option value="12" >Above 10 Years</option>
-</select>
-<span class="errorBlock"></span>
-</div>
-<div class="col-sm-4">
-<label>No. Of Vacancies</label>
-<input type="text" class="form-control" placeholder="No. Of Vacancies" name="no_of_vacancies" value="">
-<span class="errorBlock"></span>
-</div>
-<div class="col-sm-4">
-<label>Package</label>
-<select class="wide form-control" name="package" required data-parsley-required-message="Select Package">
-<option value="">Select</option>
-<option value="1" >6,000 and above</option>
-<option value="2" >7,000 and above</option>
-<option value="4" >8,000 and above</option>
-<option value="5" >9,000 and above</option>
-<option value="6" >10,000 and above</option>
-<option value="7" >15,000 and above</option>
-<option value="8" >20,000 and above</option>
-<option value="9" >25,000 and above</option>
-<option value="10" >30,000 and above</option>
-<option value="11" >35,000 and above</option>
-</select>
-<span class="errorBlock"></span>
-</div>
-</div>
-<div class="row">
-<div class="col-sm-4">
-<label>Job Type</label>
-<select class="wide form-control" name="job_type" required data-parsley-required-message="Select Job Type">
-<option value="">Select</option>
-<option value="1" >Work from home</option>
-<option value="2" >Internship</option>
-<option value="3" >Part time</option>
-<option value="4" >Full time</option>
-<option value="5" >Government job</option>
-</select>
-<span class="errorBlock"></span>
-</div>
-<div class="col-sm-4">
-<label>Job Location</label>
-<input type="text" class="form-control" placeholder="Job Location" name="job_location" onclick="getLocation();" id="searchTextField" value="">
-<span class="errorBlock"></span>
-</div>
-</div>
-</div>
-</div>
-<div class="box">
-<div class="box-header">
-<h4>Candidate Profile</h4>
-</div>
-<div class="box-body create_job_boxbody">
-<div class="row">
-<div class="col-sm-6 col-md-4 col-xs-12">
-<label>Key Skills(Seperate with Comma)</label>
-<input value="" type="text" class="form-control" placeholder="Required Skills(Seperate with Comma)" name="skills" required data-parsley-required-message="Enter Skills">
-<span class="errorBlock"></span>
-</div>
-<div class="col-sm-6 col-md-4 col-xs-12">
-<label>Education Qualification</label>
-<select class="wide form-control" name="qualification" required data-parsley-required-message="Enter qualification">
-<option value="">Select</option>
-<option value="1" >SSC</option>
-<option value="2" >Intermediate</option>
-<option value="4" >Graduation</option>
-<option value="5" >Post Graduation</option>
-<option value="6" >Masters Degree</option>
-</select>
-<span class="errorBlock"></span>
-</div>
-<div class="col-sm-6 col-md-4 col-xs-12">
-<label>Year of Passing</label>
-<input type="text" class="form-control" placeholder="year of passing" value="" name="year_of_passing">
-<span class="errorBlock"></span>
-</div>
-<div class="col-sm-6 col-md-4 col-xs-12">
-<label>highest Qualification marks above</label>
-<input value="" type="text" class="form-control" placeholder="%  or  CGPA" name="percentage">
-<span class="errorBlock"></span>
-</div>
-<div class="col-sm-4 col-xs-12">
-<label>Languages known</label>
-<input type="text" class="form-control" placeholder="Languages known" name="languages_known" value="">
-<span class="errorBlock"></span>
-</div>
-<div class="col-sm-4 col-xs-12">
-<label>Eligible for</label>
-<select class="wide form-control" name="eligible_for">
-<option value="">Select</option>
-<option value="Male candidates only" >Male candidates only</option>
-<option value="Female candidates only" >Female candidates only</option>
-<option value="both male and female candidates" >both male and female candidates</option>
-</select>
-<span class="errorBlock"></span>
-</div>
-<div class="col-sm-4 col-xs-12">
-<label>Flexible for</label>
-<select class="wide form-control" name="flexible_for">
-<option value="">Select</option>
-<option value="Day Shifts" >Day Shifts</option>
-<option value="Night Shifts" >Night Shifts</option>
-<option value="Rotational shifts" >Rotational shifts</option>
-</select>
-<span class="errorBlock"></span>
-</div>
-</div>
-</div>
-</div>
-<div class="box">
-<div class="box-header">
-<h4>Company Profile</h4>
-</div>
-<div class="box-body create_job_boxbody">
-<div class="row">
-<div class="col-sm-4 col-md-4 col-xs-12">
-<label><b>I am a</b></label>
-	<label class="radio-inline job_radio_btn_rght">
-	  <input type="radio" name="company_or_consultancy" value="Company"  required data-parsley-required-message="Select Company Type">Company
-	</label>
-	<label class="radio-inline job_radio_btn_rght">
-	  <input type="radio" name="company_or_consultancy" value="Consultant"  required data-parsley-required-message="Select Company Type">Consultant
-	</label>
-	<span class="errorBlock"></span>
-</div>
-<div class="col-sm-4">
-<label>Company/Consultancy Name</label>
-<input type="text" class="form-control" value="" placeholder="Company/Consultancy Name" name="company_name" required data-parsley-required-message="Enter Company name">
-<span class="errorBlock"></span>
-</div>
-<div class="col-sm-4">
-<label>Email</label>
-<input type="email" class="form-control" placeholder="Email" name="email" value="" required data-parsley-required-message="Enter email">
-<span class="errorBlock"></span>
-</div>
-</div>
-<div class="row">
-<div class="col-sm-4">
-<label>Contact Number</label>
-<input type="text" class="form-control" placeholder="Contact number" name="mobile_number" value="" required data-parsley-required-message="Enter contact number">
-<span class="errorBlock"></span>
-</div>
-<div class="col-sm-4">
-<label>Alternative Number</label>
-<input type="text" class="form-control" placeholder="Alternative number" name="landline_number" value="">
-<span class="errorBlock"></span>
-</div>
-<div class="col-sm-4">
-<label>Website Link</label>
-<input type="url" class="form-control" placeholder="Website Link" name="company_website" value="" required data-parsley-required-message="Enter website link">
-<span class="errorBlock"></span>
-</div>
-</div>
-<div class="row">
-<div class="col-sm-4">
-<label>Address</label>
-<textarea class="form-control textarea_height" placeholder="Address" name="company_address" required data-parsley-required-message="Enter address"></textarea>
-<span class="errorBlock"></span>
-</div>
-<div class="col-sm-4">
-<label>City</label>
-<input type="text" class="form-control" placeholder="City" name="city" value="" required data-parsley-required-message="Enter city">
-<span class="errorBlock"></span>
-</div>
-<div class="col-sm-4">
-<label>State</label>
-<input type="text" class="form-control" placeholder="state" name="state" value="" required data-parsley-required-message="Enter state">
-<span class="errorBlock"></span>
-</div>
-</div>
-<div class="row">
-<div class="col-sm-4">
-<label>Country</label>
-<select class="wide form-control" name="country" required data-parsley-required-message="Enter country name">
-<option value="">Select</option>
-<option value="India" >India</option>
-<option value="United Kingdom" >United Kingdom</option>
-<option value="Austrailia" >Austrailia</option>
-<option value="New ZeLand" >New ZeLand</option>
-</select>
-<span class="errorBlock"></span>
-</div>
-<div class="col-sm-4">
-<label>Zip Code</label>
-<input type="text" class="form-control" placeholder="Zip Code" name="zip_code" value="" required data-parsley-required-message="Enter zipcode">
-<span class="errorBlock"></span>
-</div>
-<div class="col-sm-4">
-<label>Company Logo</label>
-<div class="form-control">
-<input type="file" id="file" name="company_logo" required data-parsley-required-message="Upload logo" class="crop_upload"/>
-<span class="errorBlock"></span>
-<!--
-<input type="hidden" name="exist_logo" value="">
--->
-<input type="hidden" name="crop_img_url" id="crop_img_url" value=""/>
-<!-- <div class="crop-upload-demo-i" style="background:#e1e1e1;width:46px;height:46px;">
-46X
-46</div> -->
-</div>
-</div>
-</div>
-<div class="row">
-<div class="col-sm-4">
-<label>Interview Location</label>
-<input type="text" class="form-control" placeholder="Interview Location" value="" name="interview_location" required data-parsley-required-message="Enter location">
-<span class="errorBlock"></span>
-</div>
-<div class="col-sm-4">
-<label>Contact Person Role</label>
-<input type="text" class="form-control" placeholder="Contact Person Role" name="contact_person_role" value="">
-<span class="errorBlock"></span>
-</div>
-<div class="col-sm-4">
-<label>Contact Person Name</label>
-<input type="text" class="form-control" placeholder="Contact Person Name" value="" name="contact_person_name">
-<span class="errorBlock"></span>
-</div>
-</div>
-<div class="row">
-<div class="col-sm-4">
-<label>Contact Person official email</label>
-<input type="text" class="form-control" placeholder="Contact Person official email" name="contact_person_official_email" value="">
-<span class="errorBlock"></span>
-</div>
-</div>
-</div>
-</div>
-<div class="box">
-<div class="box-header">
-<h4>Job Description</h4>
-</div>
-<div class="box-body create_job_boxbody">
-<div class="row">
-<div class="col-sm-12">
-<label><b>Job Summary</b></br><span>(Describe the Position and its Role within Your Company)</span></label>
-<textarea class="form-control height-100 ckeditor" placeholder="Describe the Position and its Role within Your Company" name="job_summary" required data-parsley-required-message="Enter summery"></textarea>
-<span class="errorBlock"></span>
-</div></br>
-<div class="col-sm-12">
-<label><b>Responsibilities and Duties</b></br>(Outline the functions a person in this position will perform on a regular basis)</label>
-<textarea class="form-control height-100 ckeditor" placeholder="Outline the functions a person in this position will perform on a regular basis" name="responsibilities_and_duties"></textarea>
-<span class="errorBlock"></span>
-</div></br>
-<div class="col-sm-12">
-<label><b>Required Experience, Skills and Qualifications</b></br>(This may include education,previous job experience,certifications and technical skills)</label>
-<textarea class="form-control height-100 ckeditor" placeholder="This may include education,previous job experience,certifications and technical skills" name="required_exp_skills_qualifications"></textarea>
-<span class="errorBlock"></span>
-</div></br>
-<div class="col-sm-12">
-<label><b>Benefits</b></br>(This may include training,mentoring, health insurance,consulting support,lunch service etc..)</label>
-<textarea class="form-control height-100 ckeditor" placeholder="This may include training,mentoring, health insurance,consulting support,lunch service etc.." name="benefits"></textarea>
-<span class="errorBlock"></span>
-</div>
-<div class="col-sm-12">
-<label><b>Company Description</b></label>
-<textarea class="form-control height-100 ckeditor" placeholder="Company Description" name="company_description" required data-parsley-required-message="Enter desscription">
-</textarea>
-<span class="errorBlock"></span>
-</div></br>
-</div>
-</div>
-</div>
-<div class="box">
-<div class="box-header">
-<h4>Social Accounts</h4>
-</div>
-<div class="box-body create_job_boxbody">
-<div class="row">
-<div class="col-sm-4">
-<label><i class="fa fa-facebook mrg-r-5"></i>Facebook</label>
-<input type="url" class="form-control" name="facebook_account" value="">
-<span class="errorBlock"></span>
-</div>
-
-<div class="col-sm-4">
-<label><i class="fa fa-google-plus mrg-r-5"></i>Google +</label>
-<input type="url" class="form-control" name="google_account" value="">
-<span class="errorBlock"></span>
-</div>
-
-<div class="col-sm-4">
-<label><i class="fa fa-twitter mrg-r-5"></i>Twitter</label>
-<input type="url" class="form-control" name="twitter_account" value="">
-<span class="errorBlock"></span>
-</div>
-
-<div class="col-sm-4">
-<label><i class="fa fa-linkedin mrg-r-5"></i>LinkedIn</label>
-<input type="url" class="form-control" name="linkedin_account" value="">
-<span class="errorBlock"></span>
-</div>
-
-<div class="col-sm-4">
-<label><i class="fa fa-pinterest mrg-r-5"></i>Pinterest</label>
-<input type="url" class="form-control" name="pinterest_account"  value="">
-<span class="errorBlock"></span>
-</div>
-
-<div class="col-sm-4">
-<label><i class="fa fa-instagram mrg-r-5"></i>Instagram</label>
-<input type="url" class="form-control" name="instagram_account" value="">
-<span class="errorBlock"></span>
-</div>
+				<form class="c-form" action="{% url 'jobsave' %}" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ jform|crispy }}
+{#					<div class="box">#}
+{#<div class="box-header">#}
+{#<h4>Job Profile</h4>#}
+{#</div>#}
+{#<div class="box-body create_job_boxbody">#}
+{#<div class="row">#}
+{#<div class="col-sm-4">#}
+{#<label>Job Title</label>#}
+{#    {{ form.jobtitle }}#}
+{#<input type="text" class="form-control" placeholder="Job Title" name="job_title" value="" required  data-parsley-required-message="Enter Job Title">#}
+{#<span class="errorBlock"></span>#}
+{#</div>#}
+{#<div class="col-sm-4">#}
+{#<label>Designation</label>#}
+{#<select class="wide form-control selectpicker" name="designation" required  data-parsley-required-message="Select Designation">#}
+{#<option value="">Select</option>#}
+{#<option value="1" >PHP Developer</option>#}
+{#<option value="2" >Project Manager</option>#}
+{#<option value="3" >Testing</option>#}
+{#<option value="4" >Human Resource</option>#}
+{#<option value="5" >UI/UX Designer</option>#}
+{#<option value="6" >SEO Developer</option>#}
+{#<option value="7" >Tele Caller</option>#}
+{#<option value="8" >Fashion Designer</option>#}
+{#<option value="9" >Doctor</option>#}
+{#<option value="10" >Cashier</option>#}
+{#<option value="11" >Receptionist</option>#}
+{#<option value="12" >Cook</option>#}
+{#<option value="13" >Python Developer</option>#}
+{#<option value="14" >Nurse</option>#}
+{#<option value="15" >Driver</option>#}
+{#<option value="16" >Teacher</option>#}
+{#<option value="17" >Delivery Boy</option>#}
+{#<option value="18" >Interior Designer</option>#}
+{#<option value="19" >Office Assistant</option>#}
+{#</select>#}
+{#<span class="errorBlock"></span>#}
+{#</div>#}
+{#<div class="col-sm-4">#}
+{#<label>Job Category</label>#}
+{#<select class="wide form-control" name="category" required  data-parsley-required-message="Select Category">#}
+{#<option value="">select</option>#}
+{#<option value="1" >Beautician</option>#}
+{#<option value="3" >BPO/ Telecaller</option>#}
+{#<option value="4" >Cashier</option>#}
+{#<option value="5" >Cook</option>#}
+{#<option value="6" >Data Entry / Back Office</option>#}
+{#<option value="7" >Delivery/ Collections</option>#}
+{#<option value="8" >Driver</option>#}
+{#<option value="9" >Hospitality Executive</option>#}
+{#<option value="10" >HR/Admin</option>#}
+{#<option value="11" >IT Hardware Engineer</option>#}
+{#<option value="12" >IT Software - Developer</option>#}
+{#<option value="13" >Marketing</option>#}
+{#<option value="14" >Nurse</option>#}
+{#<option value="15" >Office Assistant/ Helper</option>#}
+{#<option value="16" >Receptionist/ Front Office</option>#}
+{#<option value="17" >Sales</option>#}
+{#<option value="18" >Teacher</option>#}
+{#<option value="19" >Warehouse Executive</option>#}
+{#</select>#}
+{#<span class="errorBlock"></span>#}
+{#</div>#}
+{#</div>#}
+{##}
+{#<div class="row">#}
+{#<div class="col-sm-4" style="float:left;">#}
+{#<label>Industry</label>#}
+{#<select class="wide form-control" name="industry" required data-parsley-required-message="Select Industry">#}
+{#<option value="">Select</option>#}
+{#<option value="Accounting-Tax/Consulting">Accounting-Tax/Consulting</option>#}
+{#<option value="Advertising/PR/Event Management">Advertising/PR/Event Management</option>#}
+{#<option value="Agriculture/Forestry/Fishing">Agriculture/Forestry/Fishing</option>#}
+{#<option value="Apparel/Garments">Apparel/Garments</option>#}
+{#<option value="Architecture/Interior Design">Architecture/Interior Design</option>#}
+{#<option value="Automobiles/Auto Component/Auto Ancillary">Automobiles/Auto Component/Auto Ancillary</option>#}
+{#<option value="Banking">Banking</option>#}
+{#<option value="Biotechnology/Pharmaceutical/Medicine">Biotechnology/Pharmaceutical/Medicine</option>#}
+{#<option value="CRM/CallCentres/BPO/ITES/Med.Trans">CRM/CallCentres/BPO/ITES/Med.Trans</option>#}
+{#<option value="Catering/Food Services/Restaurant">Catering/Food Services/Restaurant</option>#}
+{#<option value="Construction/Cement/Metal/Steel/Iron">Construction/Cement/Metal/Steel/Iron</option>#}
+{#<option value="Consulting Services">Consulting Services</option>#}
+{#<option value="Consumer Durables/FMCG">Consumer Durables/FMCG</option>#}
+{#<option value="Defence">Defence</option>#}
+{#<option value="Educational/Training">Educational/Training</option>#}
+{#<option value="Engineering/Projects">Engineering/Projects</option>#}
+{#<option value="Entertainment/Media">Entertainment/Media</option>#}
+{#<option value="Export/Import/Merchandising">Export/Import/Merchandising</option>#}
+{#<option value="Fashion/Modelling">Fashion/Modelling</option>#}
+{#<option value="Financial Services/Stockbroking">Financial Services/Stockbroking</option>#}
+{#<option value="Gems &amp; Jewellery">Gems &amp; Jewellery</option>#}
+{#<option value="Government Sector">Government Sector</option>#}
+{#<option value="Healthcare">Healthcare</option>#}
+{#<option value="Hotel/Travel/Tourism/Airlines/Hospitality">Hotel/Travel/Tourism/Airlines/Hospitality</option>#}
+{#<option value="IT-Hardware/Networking">IT-Hardware/Networking</option>#}
+{#<option value="IT-Software">IT-Software</option>#}
+{#<option value="Insurance">Insurance</option>#}
+{#<option value="Internet/Dot com/ISP">Internet/Dot com/ISP</option>#}
+{#<option value="Law/Legal Firms">Law/Legal Firms</option>#}
+{#<option value="Logistics/Freight Forward/Distribution/Courier">Logistics/Freight Forward/Distribution/Courier</option>#}
+{#<option value="Manufacturing/Industrial">Manufacturing/Industrial</option>#}
+{#<option value="Marine/Aviation/Military/Mining/Shipping">Marine/Aviation/Military/Mining/Shipping</option>#}
+{#<option value="NGO/Social Services">NGO/Social Services</option>#}
+{#<option value="Petrochemicals">Petrochemicals</option>#}
+{#<option value="Petroleum/Oil and Gas/Power">Petroleum/Oil and Gas/Power</option>#}
+{#<option value="Printing/Packaging">Printing/Packaging</option>#}
+{#<option value="Projects/Infrastructure/Power/Energy">Projects/Infrastructure/Power/Energy</option>#}
+{#<option value="Real Estate">Real Estate</option>#}
+{#<option value="Recruitment/Placement Agencies">Recruitment/Placement Agencies</option>#}
+{#<option value="Research/Surveyor/MR">Research/Surveyor/MR</option>#}
+{#<option value="Retailing">Retailing</option>#}
+{#<option value="Security/Law Enforcement">Security/Law Enforcement</option>#}
+{#<option value="	Software Services">Software Services</option>#}
+{#<option value="Sports/Recreation">Sports/Recreation</option>#}
+{#<option value="Telecom">Telecom</option>#}
+{#<option value="Warehousing">Warehousing</option>#}
+{#<option value="Others">Others</option>#}
+{#</select>#}
+{#<span class="errorBlock"></span>#}
+{#</div>#}
+{#<div class="col-sm-4">#}
+{#<div id="jobfuncDiv" style="float:left;">#}
+{#<fieldset>#}
+{#<label>Functional area</label>#}
+{#<div class="rhs_inptcol">#}
+{#<div onchange="validatePartial('funcArea1,otherFuncArea1');makeEnable(this,'funcareaOth');cleanValue('funcareaOth','otherFuncArea');hide('div6');" onfocus="show('div6');">#}
+{#<div class="input_focus">#}
+{#<select id='funcArea' onChange="validatePartial('funcArea1,otherFuncArea1');makeEnable(this,'funcareaOth');cleanValue('funcareaOth','otherFuncArea');hide('div6');" onfocus="show('div6');"  onblur="validatePartial('funcArea1');hide('div6');"  style='width:300px,height: 5px' class="wide form-control" name="functional_area">#}
+{#<option value='' >Please Select from Below Options</option><optgroup label="   Finance & Accounts" class="loctext opt_space1">#}
+{#<option value='Accounting/Tax/Company Secretary/Audit'   class="opt_space">Accounting/Tax/Company Secretary/Audit</option>#}
+{#<option value='Finance and Insurance'    class="opt_space">Finance and Insurance</option></optgroup><optgroup label="   Sales & Marketing & Advertisement" class="loctext opt_space1">#}
+{#<option value='Online & Offline Marketing / MR / Media Planning'   class="opt_space">Online & Offline Marketing / MR / Media Planning </option>#}
+{#<option value='Sales/Business Development'   class="opt_space">Sales/Business Development</option>#}
+{#<option value='Advertising / Public Relation / Events'   class="opt_space">Advertising / Public Relation / Events</option></optgroup><optgroup label="   Office Operations / Human Resources" class="loctext opt_space1">#}
+{#<option value='Front Office Staff/Secretarial/Computer Operator'   class="opt_space">Front Office Staff/Secretarial/Computer Operator</option>#}
+{#<option value='Adminstration / Operations'   class="opt_space">Adminstration / Operations</option>#}
+{#<option value='Human Resource / IR / Training & Development'   class="opt_space">Human Resource / IR / Training & Development</option></optgroup><optgroup label="   Production / Maintenance / Quality" class="loctext opt_space1">#}
+{#<option value='Production/ Maintenance/ Manufacturing/ Packaging'   class="opt_space">Production/ Maintenance/ Manufacturing/ Packaging</option>#}
+{#<option value='Quality/Process Control'   class="opt_space">Quality/Process Control</option></optgroup><optgroup label="   IT Software / Hardware / Telecom" class="loctext opt_space1">#}
+{#<option value='IT Hardware - Control'   class="opt_space">IT Hardware - Control</option>#}
+{#<option value='IT Hardware - EDA/ VLSI/ ASIC/ Chip Designing'   class="opt_space">IT Hardware - EDA/ VLSI/ ASIC/ Chip Designing</option>#}
+{#<option value='IT Hardware - Embedded Technology'   class="opt_space">IT Hardware - Embedded Technology</option>#}
+{#<option value='IT Hardware - External hardware'   class="opt_space">IT Hardware - External hardware</option>#}
+{#<option value='IT Hardware - IC Fabrication/ Programming'   class="opt_space">IT Hardware - IC Fabrication/ Programming</option>#}
+{#<option value='IT Hardware - Installation/ Maintenance'   class="opt_space">IT Hardware - Installation/ Maintenance</option>#}
+{#<option value='IT Hardware - Large Equipments'   class="opt_space">IT Hardware - Large Equipments</option>#}
+{#<option value='IT Hardware - Networking'   class="opt_space">IT Hardware - Networking</option>#}
+{#<option value='IT Hardware - Remote Sensing'   class="opt_space">IT Hardware - Remote Sensing</option>#}
+{#<option value='IT Hardware - Support'   class="opt_space">IT Hardware - Support</option>#}
+{#<option value='IT/Telecom - Hardware'   class="opt_space">IT/Telecom - Hardware</option>#}
+{#<option value='IT Software  - Animation/ Graphics/ Web Designing/ Usability'   class="opt_space">IT Software  - Animation/ Graphics/ Web Designing/ Usability</option>#}
+{#<option value='IT Software - Application Programming'   class="opt_space">IT Software - Application Programming</option>#}
+{#<option value='IT Software - Business/ Systems Analysis'   class="opt_space">IT Software - Business/ Systems Analysis</option>#}
+{#<option value='IT Software - Client Server'   class="opt_space">IT Software - Client Server</option>#}
+{#<option value='IT Software - DataBase, Datawarehousing'   class="opt_space">IT Software - DataBase, Datawarehousing</option>#}
+{#<option value='IT Software - E-Commerce/ Internet Technologies'   class="opt_space">IT Software - E-Commerce/ Internet Technologies</option>#}
+{#<option value='IT Software - ERP,CRM'   class="opt_space">IT Software - ERP,CRM</option>#}
+{#<option value='IT Software - Maintenance/ Systems'   class="opt_space">IT Software - Maintenance/ Systems</option>#}
+{#<option value='IT Software - Middleware'   class="opt_space">IT Software - Middleware</option>#}
+{#<option value='IT Software - MIS/ EDP'    class="opt_space">IT Software - MIS/ EDP</option>#}
+{#<option value='IT Software - Mobile Technologies'   class="opt_space">IT Software - Mobile Technologies</option>#}
+{#<option value='IT Software - Networking'   class="opt_space">IT Software - Networking</option>#}
+{#<option value='IT Software - Operations/ Support Services'  class="opt_space">IT Software - Operations/ Support Services</option>#}
+{#<option value='IT Software - Quality Management/ Testing'   class="opt_space">IT Software - Quality Management/ Testing</option>#}
+{#<option value='IT Software - Security/ Operating Systems'   class="opt_space">IT Software - Security/ Operating Systems</option>#}
+{#<option value='IT Software - Systems Programming'   class="opt_space">IT Software - Systems Programming</option>#}
+{#<option value='IT Software - Training & Development'  class="opt_space">IT Software - Training & Development</option>#}
+{#<option value='IT/Telecom - Software'  class="opt_space">IT/Telecom - Software</option>#}
+{#<option value='Telecom - Design'  class="opt_space">Telecom - Design</option>#}
+{#<option value='Telecom - Mobile Technologies'   class="opt_space">Telecom - Mobile Technologies</option>#}
+{#<option value='Telecom - Networking'   class="opt_space">Telecom - Networking</option>#}
+{#<option value='Telecom - Operations/ Support'  class="opt_space">Telecom - Operations/ Support</option>#}
+{#<option value='Telecom - Programming'   class="opt_space">Telecom - Programming</option>#}
+{#<option value='Telecom - Maintenance'  class="opt_space">Telecom - Maintenance</option>#}
+{#<option value='Telecom - Training & Development'  class="opt_space">Telecom - Training & Development</option>#}
+{#<option value='Telecom - Others'  class="opt_space">Telecom - Others</option></optgroup><optgroup label="   Agriculture / Farming / Dairy" class="loctext opt_space1"><optgroup label="   Construction / Real Estate" class="loctext opt_space1"><optgroup label="   More Functional Area" class="loctext opt_space1">#}
+{#<option value='Hotel/Restaurant'  class="opt_space">Hotel/Restaurant</option>#}
+{#<option value='Architects/Interior Design/Naval Arch'  class="opt_space">Architects/Interior Design/Naval Arch</option>#}
+{#<option value='Bio Tech/R&D/Scientist'  class="opt_space">Bio Tech/R&D/Scientist</option>#}
+{#<option value='Consultants / Freelancers'  class="opt_space">Consultants / Freelancers</option>#}
+{#<option value='Content/Editors/Journalists'  class="opt_space">Content/Editors/Journalists</option>#}
+{#<option value='Corporate Planning/ Counsulting/ Strategy'  class="opt_space">Corporate Planning/ Counsulting/ Strategy</option>#}
+{#<option value='Doctors/Nurses/Medical Professional'  class="opt_space">Doctors/Nurses/Medical Professional</option>#}
+{#<option value='Civil & Site/ Electrical/ Aerospace/ Engg Project Management'  class="opt_space">Civil & Site/ Electrical/ Aerospace/ Engg Project Management</option>#}
+{#<option value='Export/Import'  class="opt_space">Export/Import</option>#}
+{#<option value='Legal/Law'  class="opt_space">Legal/Law</option>#}
+{#<option value='Fashion Designing'  class="opt_space">Fashion Designing</option>#}
+{#<option value='Retailing/ Logistics/ Supply Chain/ Materials/ Procurement'  class="opt_space">Retailing/ Logistics/ Supply Chain/ Materials/ Procurement</option>#}
+{#<option value='BPO/ ITES/ Telecaller/ Customer Care'  class="opt_space">BPO/ ITES/ Telecaller/ Customer Care</option>#}
+{#<option value='Education / Teachers / Professors / Lecturers / Academics'  class="opt_space">Education / Teachers / Professors / Lecturers / Academics</option>#}
+{#<option value='Travel / Ticket / Airlines / Cabin Crew / Air Hostess / Floor Operations'  class="opt_space">Travel / Ticket / Airlines / Cabin Crew / Air Hostess / Floor Operations</option>#}
+{#<option value='Top Management'  class="opt_space">Top Management</option>#}
+{#<option value='Entertainment & Media'  class="opt_space">Entertainment & Media</option>#}
+{#<option value='Retail Services'  class="opt_space">Retail Services</option></optgroup>#}
+{#</select>#}
+{#<span class="errorBlock"></span>#}
+{#<span class="tool_tip"  style="display:none; right:-154px; #right:0px; _right:-154px; top:-5px; width:200px;" id="div6">#}
+{#<span class="arw_tip" ></span>Select the Job Function(department) you work in. If you are a Fresher with no experience, select Job Function (department) which you look forward to work in. In case you are unable to find your Job Function, please select closest matching Job Function. </span>#}
+{#<span id="erJob" ></span>#}
+{#</div>#}
+{#<div id="funcArea_error" class="error-block fl cll" style="margin-left: 0px !important; display:none;">#}
+{#<div class="errorico">&nbsp;</div>#}
+{#</div>#}
+{#</div>#}
+{#</div>#}
+{#</fieldset>#}
+{#<fieldset>#}
+{#<div class="row">#}
+{#<div class="col-sm-4" style="display:none;"	id="funcareaOth">#}
+{#<label id="lbOtherJob" style="width:220px;">&nbsp;</label>#}
+{#<span class="col-sm-4" style="color:#58595B; margin-left:160px;"> Other#}
+{#Functional Area:<br />#}
+{#<input id="otherFuncArea" name="otherFuncArea" class="inpt-typ" onblur="validatePartial('otherFuncArea1,otherFuncArea2, otherFuncArea4');" type="text" value="" maxlength="60"/><br />#}
+{#<span class="errorBlock"></span>#}
+{#<div id="otherFuncArea_error" class="error-block fl cll" style="margin-left: 0px !important; display:none;">#}
+{#<div class="errorico">&nbsp;</div>#}
+{#<input type="hidden" id="currntFuncAreaId" value="" name="currntFuncAreaId" />#}
+{#<span class="errorBlock"></span>#}
+{#</div> </span>#}
+{#<div class="cl "></div>#}
+{#</div>#}
+{#</div>#}
+{#</fieldset>#}
+{##}
+{#</div>#}
+{##}
+{#    </div>#}
+{##}
+{#<div class="col-sm-4">#}
+{#<label>Hiring Process</label>#}
+{#<select class="wide form-control" name="hiring_process">#}
+{#<option value="">Select</option>#}
+{#<option value="Face to Face" >Face to Face</option>#}
+{#<option value="Written Test" >Written Test</option>#}
+{#<option value="Telephonic" >Telephonic</option>#}
+{#<option value="Group Discussion" >Group Discussion</option>#}
+{#<option value="Walk in" >Walk in</option>#}
+{#</select>#}
+{#<span class="errorBlock"></span>#}
+{#</div>#}
+{#</div>#}
+{##}
+{#<div class="row">#}
+{#<div class="col-sm-4">#}
+{#<label>Experience</label>#}
+{#<select class="wide form-control" name="experience" required data-parsley-required-message="Select Experience">#}
+{#<option value="">Select</option>#}
+{# <option value="5" >Fresher</option>#}
+{#<option value="6" >6 Months to 1 Year</option>#}
+{#<option value="7" >1Year To 2Years</option>#}
+{#<option value="8" >2Years To 3Years</option>#}
+{#<option value="9" >3Years To 4Years</option>#}
+{#<option value="10" >4Years To 5Years</option>#}
+{#<option value="11" >5Years To 10Years</option>#}
+{#<option value="12" >Above 10 Years</option>#}
+{#</select>#}
+{#<span class="errorBlock"></span>#}
+{#</div>#}
+{#<div class="col-sm-4">#}
+{#<label>No. Of Vacancies</label>#}
+{#<input type="text" class="form-control" placeholder="No. Of Vacancies" name="no_of_vacancies" value="">#}
+{#<span class="errorBlock"></span>#}
+{#</div>#}
+{#<div class="col-sm-4">#}
+{#<label>Package</label>#}
+{#<select class="wide form-control" name="package" required data-parsley-required-message="Select Package">#}
+{#<option value="">Select</option>#}
+{#<option value="1" >6,000 and above</option>#}
+{#<option value="2" >7,000 and above</option>#}
+{#<option value="4" >8,000 and above</option>#}
+{#<option value="5" >9,000 and above</option>#}
+{#<option value="6" >10,000 and above</option>#}
+{#<option value="7" >15,000 and above</option>#}
+{#<option value="8" >20,000 and above</option>#}
+{#<option value="9" >25,000 and above</option>#}
+{#<option value="10" >30,000 and above</option>#}
+{#<option value="11" >35,000 and above</option>#}
+{#</select>#}
+{#<span class="errorBlock"></span>#}
+{#</div>#}
+{#</div>#}
+{#<div class="row">#}
+{#<div class="col-sm-4">#}
+{#<label>Job Type</label>#}
+{#<select class="wide form-control" name="job_type" required data-parsley-required-message="Select Job Type">#}
+{#<option value="">Select</option>#}
+{#<option value="1" >Work from home</option>#}
+{#<option value="2" >Internship</option>#}
+{#<option value="3" >Part time</option>#}
+{#<option value="4" >Full time</option>#}
+{#<option value="5" >Government job</option>#}
+{#</select>#}
+{#<span class="errorBlock"></span>#}
+{#</div>#}
+{#<div class="col-sm-4">#}
+{#<label>Job Location</label>#}
+{#<input type="text" class="form-control" placeholder="Job Location" name="job_location" onclick="getLocation();" id="searchTextField" value="">#}
+{#<span class="errorBlock"></span>#}
+{#</div>#}
+{#</div>#}
+{#</div>#}
+{#</div>#}
+{#<div class="box">#}
+{#<div class="box-header">#}
+{#<h4>Candidate Profile</h4>#}
+{#</div>#}
+{#<div class="box-body create_job_boxbody">#}
+{#<div class="row">#}
+{#<div class="col-sm-6 col-md-4 col-xs-12">#}
+{#<label>Key Skills(Seperate with Comma)</label>#}
+{#<input value="" type="text" class="form-control" placeholder="Required Skills(Seperate with Comma)" name="skills" required data-parsley-required-message="Enter Skills">#}
+{#<span class="errorBlock"></span>#}
+{#</div>#}
+{#<div class="col-sm-6 col-md-4 col-xs-12">#}
+{#<label>Education Qualification</label>#}
+{#<select class="wide form-control" name="qualification" required data-parsley-required-message="Enter qualification">#}
+{#<option value="">Select</option>#}
+{#<option value="1" >SSC</option>#}
+{#<option value="2" >Intermediate</option>#}
+{#<option value="4" >Graduation</option>#}
+{#<option value="5" >Post Graduation</option>#}
+{#<option value="6" >Masters Degree</option>#}
+{#</select>#}
+{#<span class="errorBlock"></span>#}
+{#</div>#}
+{#<div class="col-sm-6 col-md-4 col-xs-12">#}
+{#<label>Year of Passing</label>#}
+{#<input type="text" class="form-control" placeholder="year of passing" value="" name="year_of_passing">#}
+{#<span class="errorBlock"></span>#}
+{#</div>#}
+{#<div class="col-sm-6 col-md-4 col-xs-12">#}
+{#<label>highest Qualification marks above</label>#}
+{#<input value="" type="text" class="form-control" placeholder="%  or  CGPA" name="percentage">#}
+{#<span class="errorBlock"></span>#}
+{#</div>#}
+{#<div class="col-sm-4 col-xs-12">#}
+{#<label>Languages known</label>#}
+{#<input type="text" class="form-control" placeholder="Languages known" name="languages_known" value="">#}
+{#<span class="errorBlock"></span>#}
+{#</div>#}
+{#<div class="col-sm-4 col-xs-12">#}
+{#<label>Eligible for</label>#}
+{#<select class="wide form-control" name="eligible_for">#}
+{#<option value="">Select</option>#}
+{#<option value="Male candidates only" >Male candidates only</option>#}
+{#<option value="Female candidates only" >Female candidates only</option>#}
+{#<option value="both male and female candidates" >both male and female candidates</option>#}
+{#</select>#}
+{#<span class="errorBlock"></span>#}
+{#</div>#}
+{#<div class="col-sm-4 col-xs-12">#}
+{#<label>Flexible for</label>#}
+{#<select class="wide form-control" name="flexible_for">#}
+{#<option value="">Select</option>#}
+{#<option value="Day Shifts" >Day Shifts</option>#}
+{#<option value="Night Shifts" >Night Shifts</option>#}
+{#<option value="Rotational shifts" >Rotational shifts</option>#}
+{#</select>#}
+{#<span class="errorBlock"></span>#}
+{#</div>#}
+{#</div>#}
+{#</div>#}
+{#</div>#}
+{#<div class="box">#}
+{#<div class="box-header">#}
+{#<h4>Company Profile</h4>#}
+{#</div>#}
+{#<div class="box-body create_job_boxbody">#}
+{#<div class="row">#}
+{#<div class="col-sm-4 col-md-4 col-xs-12">#}
+{#<label><b>I am a</b></label>#}
+{#	<label class="radio-inline job_radio_btn_rght">#}
+{#	  <input type="radio" name="company_or_consultancy" value="Company"  required data-parsley-required-message="Select Company Type">Company#}
+{#	</label>#}
+{#	<label class="radio-inline job_radio_btn_rght">#}
+{#	  <input type="radio" name="company_or_consultancy" value="Consultant"  required data-parsley-required-message="Select Company Type">Consultant#}
+{#	</label>#}
+{#	<span class="errorBlock"></span>#}
+{#</div>#}
+{#<div class="col-sm-4">#}
+{#<label>Company/Consultancy Name</label>#}
+{#<input type="text" class="form-control" value="" placeholder="Company/Consultancy Name" name="company_name" required data-parsley-required-message="Enter Company name">#}
+{#<span class="errorBlock"></span>#}
+{#</div>#}
+{#<div class="col-sm-4">#}
+{#<label>Email</label>#}
+{#<input type="email" class="form-control" placeholder="Email" name="email" value="" required data-parsley-required-message="Enter email">#}
+{#<span class="errorBlock"></span>#}
+{#</div>#}
+{#</div>#}
+{#<div class="row">#}
+{#<div class="col-sm-4">#}
+{#<label>Contact Number</label>#}
+{#<input type="text" class="form-control" placeholder="Contact number" name="mobile_number" value="" required data-parsley-required-message="Enter contact number">#}
+{#<span class="errorBlock"></span>#}
+{#</div>#}
+{#<div class="col-sm-4">#}
+{#<label>Alternative Number</label>#}
+{#<input type="text" class="form-control" placeholder="Alternative number" name="landline_number" value="">#}
+{#<span class="errorBlock"></span>#}
+{#</div>#}
+{#<div class="col-sm-4">#}
+{#<label>Website Link</label>#}
+{#<input type="url" class="form-control" placeholder="Website Link" name="company_website" value="" required data-parsley-required-message="Enter website link">#}
+{#<span class="errorBlock"></span>#}
+{#</div>#}
+{#</div>#}
+{#<div class="row">#}
+{#<div class="col-sm-4">#}
+{#<label>Address</label>#}
+{#<textarea class="form-control textarea_height" placeholder="Address" name="company_address" required data-parsley-required-message="Enter address"></textarea>#}
+{#<span class="errorBlock"></span>#}
+{#</div>#}
+{#<div class="col-sm-4">#}
+{#<label>City</label>#}
+{#<input type="text" class="form-control" placeholder="City" name="city" value="" required data-parsley-required-message="Enter city">#}
+{#<span class="errorBlock"></span>#}
+{#</div>#}
+{#<div class="col-sm-4">#}
+{#<label>State</label>#}
+{#<input type="text" class="form-control" placeholder="state" name="state" value="" required data-parsley-required-message="Enter state">#}
+{#<span class="errorBlock"></span>#}
+{#</div>#}
+{#</div>#}
+{#<div class="row">#}
+{#<div class="col-sm-4">#}
+{#<label>Country</label>#}
+{#<select class="wide form-control" name="country" required data-parsley-required-message="Enter country name">#}
+{#<option value="">Select</option>#}
+{#<option value="India" >India</option>#}
+{#<option value="United Kingdom" >United Kingdom</option>#}
+{#<option value="Austrailia" >Austrailia</option>#}
+{#<option value="New ZeLand" >New ZeLand</option>#}
+{#</select>#}
+{#<span class="errorBlock"></span>#}
+{#</div>#}
+{#<div class="col-sm-4">#}
+{#<label>Zip Code</label>#}
+{#<input type="text" class="form-control" placeholder="Zip Code" name="zip_code" value="" required data-parsley-required-message="Enter zipcode">#}
+{#<span class="errorBlock"></span>#}
+{#</div>#}
+{#<div class="col-sm-4">#}
+{#<label>Company Logo</label>#}
+{#<div class="form-control">#}
+{#<input type="file" id="file" name="company_logo" required data-parsley-required-message="Upload logo" class="crop_upload"/>#}
+{#<span class="errorBlock"></span>#}
+{#<!--#}
+{#<input type="hidden" name="exist_logo" value="">#}
+{#-->#}
+{#<input type="hidden" name="crop_img_url" id="crop_img_url" value=""/>#}
+{#<!-- <div class="crop-upload-demo-i" style="background:#e1e1e1;width:46px;height:46px;">#}
+{#46X#}
+{#46</div> -->#}
+{#</div>#}
+{#</div>#}
+{#</div>#}
+{#<div class="row">#}
+{#<div class="col-sm-4">#}
+{#<label>Interview Location</label>#}
+{#<input type="text" class="form-control" placeholder="Interview Location" value="" name="interview_location" required data-parsley-required-message="Enter location">#}
+{#<span class="errorBlock"></span>#}
+{#</div>#}
+{#<div class="col-sm-4">#}
+{#<label>Contact Person Role</label>#}
+{#<input type="text" class="form-control" placeholder="Contact Person Role" name="contact_person_role" value="">#}
+{#<span class="errorBlock"></span>#}
+{#</div>#}
+{#<div class="col-sm-4">#}
+{#<label>Contact Person Name</label>#}
+{#<input type="text" class="form-control" placeholder="Contact Person Name" value="" name="contact_person_name">#}
+{#<span class="errorBlock"></span>#}
+{#</div>#}
+{#</div>#}
+{#<div class="row">#}
+{#<div class="col-sm-4">#}
+{#<label>Contact Person official email</label>#}
+{#    {{ form.cont_per_ofmail }}#}
+{#<input type="text" class="form-control" placeholder="Contact Person official email" name="contact_person_official_email" value="">#}
+{#<span class="errorBlock"></span>#}
+{#</div>#}
+{#</div>#}
+{#</div>#}
+{#</div>#}
+{#<div class="box">#}
+{#<div class="box-header">#}
+{#<h4>Job Description</h4>#}
+{#</div>#}
+{#<div class="box-body create_job_boxbody">#}
+{#<div class="row">#}
+{#<div class="col-sm-12">#}
+{#<label><b>Job Summary</b></br><span>(Describe the Position and its Role within Your Company)</span></label>#}
+{#    {{ form.job_summary }}#}
+{#<textarea class="form-control height-100 ckeditor" placeholder="Describe the Position and its Role within Your Company" name="job_summary" required data-parsley-required-message="Enter summery"></textarea>#}
+{#<span class="errorBlock"></span>#}
+{#</div></br>#}
+{#<div class="col-sm-12">#}
+{#<label><b>Responsibilities and Duties</b></br>(Outline the functions a person in this position will perform on a regular basis)</label>#}
+{#    {{ form.responsibilities }}#}
+{#<textarea class="form-control height-100 ckeditor" placeholder="Outline the functions a person in this position will perform on a regular basis" name="responsibilities_and_duties"></textarea>#}
+{#<span class="errorBlock"></span>#}
+{#</div></br>#}
+{#<div class="col-sm-12">#}
+{#<label><b>Required Experience, Skills and Qualifications</b></br>(This may include education,previous job experience,certifications and technical skills)</label>#}
+{#    {{ form. }}#}
+{#<textarea class="form-control height-100 ckeditor" placeholder="This may include education,previous job experience,certifications and technical skills" name="required_exp_skills_qualifications"></textarea>#}
+{#<span class="errorBlock"></span>#}
+{#</div></br>#}
+{#<div class="col-sm-12">#}
+{#<label><b>Benefits</b></br>(This may include training,mentoring, health insurance,consulting support,lunch service etc..)</label>#}
+{#    {{ form.benifits }}#}
+{#<textarea class="form-control height-100 ckeditor" placeholder="This may include training,mentoring, health insurance,consulting support,lunch service etc.." name="benefits"></textarea>#}
+{#<span class="errorBlock"></span>#}
+{#</div>#}
+{#<div class="col-sm-12">#}
+{#<label><b>Company Description</b></label>#}
+{#    {{ form.company_descrption }}#}
+{#<textarea class="form-control height-100 ckeditor" placeholder="Company Description" name="company_description" required data-parsley-required-message="Enter desscription">#}
+{#</textarea>#}
+{#<span class="errorBlock"></span>#}
+{#</div></br>#}
+{#</div>#}
+{#</div>#}
+{#</div>#}
+{#<div class="box">#}
+{#<div class="box-header">#}
+{#<h4>Social Accounts</h4>#}
+{#</div>#}
+{#<div class="box-body create_job_boxbody">#}
+{#<div class="row">#}
+{#<div class="col-sm-4">#}
+{#<label><i class="fa fa-facebook mrg-r-5"></i>Facebook</label>#}
+{#     {{ form.facebook}}#}
+{#<input type="url" class="form-control" name="facebook_account" value="">#}
+{#<span class="errorBlock"></span>#}
+{#</div>#}
+{##}
+{#<div class="col-sm-4">#}
+{#<label><i class="fa fa-google-plus mrg-r-5"></i>Google +</label>#}
+{#    {{ form.google}}#}
+{#<input type="url" class="form-control" name="google_account" value="">#}
+{#<span class="errorBlock"></span>#}
+{#</div>#}
+{##}
+{#<div class="col-sm-4">#}
+{#<label><i class="fa fa-twitter mrg-r-5"></i>Twitter</label>#}
+{#    {{ form.twitter}}#}
+{#<input type="url" class="form-control" name="twitter_account" value="">#}
+{#<span class="errorBlock"></span>#}
+{#</div>#}
+{##}
+{#<div class="col-sm-4">#}
+{#<label><i class="fa fa-linkedin mrg-r-5"></i>LinkedIn</label>#}
+{#     {{ form.linkedin}}#}
+{#<input type="url" class="form-control" name="linkedin_account" value="">#}
+{#<span class="errorBlock"></span>#}
+{#</div>#}
+{##}
+{#<div class="col-sm-4">#}
+{#<label><i class="fa fa-pinterest mrg-r-5"></i>Pinterest</label>#}
+{#        {{ form.pinterest}}#}
+{#<input type="url" class="form-control" name="pinterest_account"  value="">#}
+{#<span class="errorBlock"></span>#}
+{#</div>#}
+{##}
+{#<div class="col-sm-4">#}
+{#<label><i class="fa fa-instagram mrg-r-5"></i>Instagram</label>#}
+{#     {{ form.instagram}}#}
+{#<input type="url" class="form-control" name="instagram_account" value="">#}
+{#<span class="errorBlock"></span>#}
+{#</div>#}
 
 </div>
 </div>
