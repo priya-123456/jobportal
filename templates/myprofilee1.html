@@ -1,6 +1,6 @@
 	{% extends 'headerfooter.html' %}
 {% block content %}
-    {% load staticfiles %}
+  {% load static %}
 
 
 
@@ -56,7 +56,7 @@
 	<h4 class=" personal_details">Personal Details</h4>
 	</div>
 	<div class="edit">
-	<a href="Employer_Edit.html"><span class="glyphicon glyphicon-edit">	</span>	Edit</a>
+	<a href="{% url 'emp_edit' %}"><span class="glyphicon glyphicon-edit">	</span>	Edit</a>
 	</div>
 	<div class="col-md-6">
 	<div class="edit">

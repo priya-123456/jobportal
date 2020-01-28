@@ -13,7 +13,8 @@ def apploed_jobs(request):
 
 
 def browse_jobseeker(request):
-    return render(request, 'browse_jobseeker.html')
+    job=Createjob.objects.all()
+    return render(request, 'browse_jobseeker.html',{'job':job})
 
 
 def changepassword(request):
@@ -45,29 +46,38 @@ def jobsave(request):
 
 
 def create_resume(request):
-    # if request.method == "POST":
-    #     form = ResumeForm(request.POST, request.FILES)
-    #     if form.is_valid():j
-    #         form.save()
-    #         return redirect(create_resume)
-    #
-    # else:
-    #     form = ResumeForm()
-    # return render(request, 'create_resume.html', {'form': form})
+
     form = ResumeForm()
-    return render(request, 'create_resume.html', {'form': form})
-
-
-def resume_save(request):
-    if request.method == "POST":
-        form = ResumeForm(request.POST, request.FILES)
+    return render(request, 'create_resume.html', {'jform': form})
+def resumesave(request):
+    form=ResumeForm()
+    if request.method=='POST':
+        form = ResumeForm(request.POST)
         if form.is_valid():
-            form.save()
-            messages.success(request, "Added successfully")
-    messages.success(request, "Added failure")
+            form.save(commit=True)
+            return render(request, 'create_resume.html', {'form': form})
+        else:
+            messages.error(request, "Resume posting failed..........")
+            return redirect(create_resume)
+    # else:
+    #     jform = ResumeForm()
+    #     return render(request, "create_resume.html", {'jform': jform})
 
-    return redirect(create_resume)
-    # return render(request, "create_resume.html")
+
+
+# def resume_save(request):
+#     if request.method == "POST":
+#         rform = ResumeForm(request.POST, request.FILES)
+#         if rform.is_valid():
+#             rform.save()
+#             messages.success(request, "resume Posted Successfully........")
+#             return redirect(create_resume)
+#         else:
+#             messages.error(request, "reume posting failed..........")
+#             return redirect(create_resume)
+#     else:
+#         rform = ResumeForm()
+#         return render(request, "create_resume.html", {'rform': rform})
 
 
 def index(request):

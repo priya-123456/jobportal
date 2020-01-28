@@ -1,6 +1,6 @@
 {% extends 'headerfooter.html' %}
 {% block content %}
-    {% load staticfiles %}
+    {% load static %}
             <div class="full_width main_content">
                 
                
@@ -13,7 +13,7 @@
 
                                         <div class="job-owner hidden-xs hidden-sm">
                                             <div class="job-owner-avater">
-                                                <img src="assets/img/c-2.png" class="img-responsive img-circle" alt="" />
+                                                <img src="{% static 'assets/img/c-2.png' %}" class="img-responsive img-circle" alt="" />
                                             </div>
                                             <div class="job-owner-detail">
                                                 <h4>Google </h4>
