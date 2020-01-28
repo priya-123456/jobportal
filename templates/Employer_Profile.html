@@ -1,6 +1,6 @@
 {% extends 'headerfooter.html' %}
 {% block content %}
-    {% load staticfiles %}
+  {% load static %}
 
         
             <div class="full_width main_content">
@@ -44,7 +44,7 @@
 							<div class="detail-wrapper-body">
 							
 								<div class="text-center mrg-bot-30">
-									<img src="assets/img/client-1.jpg" class="img-circle width-100" alt=""/>
+									<img src="{% static 'assets/img/client-1.jpg' %}" class="img-circle width-100" alt=""/>
 									<h4 class="meg-0">Laxman Lucky</h4>
 									<span>Front End Designer</span>
 								</div>
