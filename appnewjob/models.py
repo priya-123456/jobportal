@@ -114,6 +114,7 @@ class Resume(models.Model):
     mobile_number = models.IntegerField()
     date_of_birth = models.DateField()
     resume = models.FileField(upload_to='resumes/')
+    uploadyourpic=models.FileField(upload_to='pics')
     passport = models.CharField(max_length=20, choices=Passport)
     address = models.CharField(max_length=200)
     city = models.CharField(max_length=25)

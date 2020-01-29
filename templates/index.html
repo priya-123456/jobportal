@@ -75,151 +75,21 @@
 						</div>
 					</div>
 				</div>
+
 				<div class="">
+
+                    {% for x in cat %}
 					<div class="col-md-2 col-sm-2">
-                        <a href="{% url 'browse_jobseeker' %}">
+                        <a href="{% url 'catgoryfilter' x.id %}">
                             <div class="features-box">
-                                <img src="{% static 'img/icons/1.jpg' %}">
-                                <h4>Beautician</h4>
+                                <img src="{{x.catimg.url}}">
+                                <h4>{{x.cat}}</h4>
                             </div>
                         </a>
 					</div>
-					<div class="col-md-2 col-sm-2">
-                        <a href="{% url 'browse_jobseeker' %}">
-                            <div class="features-box">
-                                <img src="{% static 'img/icons/2.jpg' %}">
-                                <h4>BPO/ Telecaller</h4>
-                            </div>
-                        </a>
-					</div>
-					<div class="col-md-2 col-sm-2">
-                        <a href="{% url 'browse_jobseeker' %}">
-                            <div class="features-box">
-                                <img src="{% static 'img/icons/3.jpg' %}">
-                                <h4>Cashier</h4>
-                            </div>
-                        </a>
-					</div>
-                    <div class="col-md-2 col-sm-2">
-                        <a href="{% url 'browse_jobseeker' %}">
-                            <div class="features-box">
-                                <img src="{% static 'img/icons/4.jpg' %}">
-                                <h4>Cook</h4>
-                            </div>
-                        </a>
-					</div>
-                    <div class="col-md-2 col-sm-2">
-                        <a href="{% url 'browse_jobseeker' %}">
-                            <div style="padding: 14px 20px;" class="features-box">
-                                <img src="{% static 'img/icons/5.jpg' %}">
-                                <h4>Data Entry / Back Office</h4>
-                            </div>
-                        </a>
-					</div>
-                    <div class="col-md-2 col-sm-2">
-                        <a href="{% url 'browse_jobseeker' %}">
-                            <div style="padding: 14px 20px;" class="features-box">
-                                <img src="{% static 'img/icons/6.jpg' %}">
-                                <h4>Delivery/ Collections</h4>
-                            </div>
-                        </a>
-					</div>
-                    <div class="col-md-2 col-sm-2">
-                        <a href="{% url 'browse_jobseeker' %}">
-                            <div class="features-box">
-                                <img src="{% static 'img/icons/7.jpg' %}">
-                                <h4>Driver</h4>
-                            </div>
-                        </a>
-					</div>
-					<div class="col-md-2 col-sm-2">
-                        <a href="{% url 'browse_jobseeker' %}">
-                            <div style="padding: 14px 20px;" class="features-box">
-                                <img src="{% static 'img/icons/8.jpg' %}">
-                                <h4>Hospitailty Executive <m> </m></h4>
-                            </div>
-                        </a>
-					</div>
-					<div class="col-md-2 col-sm-2">
-                        <a href="{% url 'browse_jobseeker' %}">
-                            <div class="features-box">
-                                <img src="{% static 'img/icons/9.jpg' %}">
-                                <h4>HR/Admin</h4>
-                            </div>
-                        </a>
-					</div>
-                    <div class="col-md-2 col-sm-2">
-                        <a href="{% url 'browse_jobseeker' %}">
-                            <div style="padding: 14px 20px;" class="features-box">
-                                <img src="{% static 'img/icons/10.jpg' %}">
-                                <h4>IT Hardware Engineer</h4>
-                            </div>
-                        </a>
-					</div>
-                    <div class="col-md-2 col-sm-2">
-                        <a href="{% url 'browse_jobseeker' %}">
-                            <div style="padding: 14px 20px;" class="features-box">
-                                <img src="{% static 'img/icons/11.jpg' %}">
-                                <h4>IT Software - Developer</h4>
-                            </div>
-                        </a>
-					</div>
-                    <div class="col-md-2 col-sm-2">
-                        <a href="{% url 'browse_jobseeker' %}">
-                            <div class="features-box">
-                                <img src="{% static 'img/icons/12.jpg' %}">
-                                <h4>Marketing</h4>
-                            </div>
-                        </a>
-					</div>
-                    <div class="col-md-2 col-sm-2">
-                        <a href="{% url 'browse_jobseeker' %}">
-                            <div class="features-box">
-                                <img src="{% static 'img/icons/13.jpg' %}">
-                                <h4>Nurse</h4>
-                            </div>
-                        </a>
-					</div>
-					<div class="col-md-2 col-sm-2">
-                        <a href="{% url 'browse_jobseeker' %}">
-                            <div style="padding: 14px 20px;" class="features-box">
-                                <img src="{% static 'img/icons/14.jpg' %}">
-                                <h4>Office Assistant/ Helper</h4>
-                            </div>
-                        </a>
-					</div>
-					<div class="col-md-2 col-sm-2">
-                        <a href="{% url 'browse_jobseeker' %}">
-                            <div style="padding: 14px 20px;" class="features-box">
-                                <img src="{% static 'img/icons/15.jpg' %}">
-                                <h4>Receptionist/ Front Office</h4>
-                            </div>
-                        </a>
-					</div>
-                    <div class="col-md-2 col-sm-2">
-                        <a href="{% url 'browse_jobseeker' %}">
-                            <div class="features-box">
-                                <img src="{% static 'img/icons/16.jpg' %}">
-                                <h4>Sales</h4>
-                            </div>
-                        </a>
-					</div>
-                    <div class="col-md-2 col-sm-2">
-                        <a href="{% url 'browse_jobseeker' %}">
-                            <div class="features-box">
-                                <img src="{% static 'img/icons/17.jpg' %}">
-                                <h4>Teacher</h4>
-                            </div>
-                        </a>
-					</div>
-                    <div class="col-md-2 col-sm-2">
-                        <a href="{% url 'browse_jobseeker' %}">
-                            <div style="padding: 14px 20px;" class="features-box">
-                                <img src="{% static 'img/icons/18.jpg' %}">
-                                <h4>Warehouse Executive</h4>
-                            </div>
-                        </a>
-					</div>
+                    {% endfor %}
+
+
                     <div style="text-align: center;" class="col-md-12">
                         <a href="#" class="btn btn-m mrg-5 cust_btn">Show all categories</a>
                     </div>
@@ -235,81 +105,85 @@
 					</div>
 				</div>
 				<div class="">
+                    {% for x in jtype %}
                     <div class="col-md-15 col-sm-3">
                         <div class="grid-job-widget">
                             <div class="u-content">
                                 <div class="avatar box-80">
-                                    <a href="{% url 'browse_jobseeker' %}">
-                                        <img class="img-responsive" src="{% static 'assets/img/c-1.png' %}" alt="">
+                                    <a href="{% url 'jobtypefilter' x.id %}">
+                                        <img class="img-responsive" src="{{ x.jobimg.url }}" alt="">
                                     </a>
                                 </div>
-                                <h5><a href="{% url 'browse_jobseeker' %}">Work from home</a></h5>
+                                <h5><a href="{% url 'jobtypefilter' x.id %}">{{x.jobtype}}</a></h5>
                             </div>
                             <div class="job-type-grid">
-                                <a href="{% url 'browse_jobseeker' %}" class="btn job-browse-btn btn-radius br-light">Open Now</a>
+                                <a href="{% url 'jobtypefilter' x.id %}" class="btn job-browse-btn btn-radius br-light">Open Now</a>
                             </div>
                         </div>
                     </div>
-                      <div class="col-md-15 col-sm-3">
-                            <div class="grid-job-widget">
-                            <div class="u-content">
-                                <div class="avatar box-80">
-                                    <a href="{% url 'browse_jobseeker' %}">
-                                        <img class="img-responsive" src="{% static 'assets/img/c-8.png' %}" alt="">
-                                    </a>
-                                </div>
-                                <h5><a href="{% url 'browse_jobseeker' %}">Internship</a></h5>
-                            </div>
-                            <div class="job-type-grid">
-                                <a href="{% url 'browse_jobseeker' %}" class="btn job-browse-btn btn-radius br-light">Open Now</a>
-                            </div>
-                        </div>
-                        </div>
-                      <div class="col-md-15 col-sm-3">
-                        <div class="grid-job-widget">
-                            <div class="u-content">
-                                <div class="avatar box-80">
-                                    <a href="{% url 'browse_jobseeker' %}">
-                                        <img class="img-responsive" src="{% static 'assets/img/c-3.png' %}" alt="">
-                                    </a>
-                                </div>
-                                <h5><a href="{% url 'browse_jobseeker' %}">Part time</a></h5>
-                            </div>
-                            <div class="job-type-grid">
-                                <a href="{% url 'browse_jobseeker' %}" class="btn job-browse-btn btn-radius br-light">Open Now</a>
-                            </div>
-                        </div>
-                        </div>
-                      <div class="col-md-15 col-sm-3">
-                        <div class="grid-job-widget">
-                            <div class="u-content">
-                                <div class="avatar box-80">
-                                    <a href="{% url 'browse_jobseeker' %}">
-                                        <img class="img-responsive" src="{% static 'assets/img/c-7.png' %}" alt="">
-                                    </a>
-                                </div>
-                                <h5><a href="{% url 'browse_jobseeker' %}">Full time</a></h5>
-                            </div>
-                            <div class="job-type-grid">
-                                <a href="{% url 'browse_jobseeker' %}" class="btn job-browse-btn btn-radius br-light">Open Now</a>
-                            </div>
-                        </div>
-                        </div>
-                      <div class="col-md-15 col-sm-3">
-                        <div class="grid-job-widget">
-                            <div class="u-content">
-                                <div class="avatar box-80">
-                                    <a href="{% url 'browse_jobseeker' %}">
-                                        <img class="img-responsive" src="{% static 'assets/img/c-4.png' %}" alt="">
-                                    </a>
-                                </div>
-                                <h5><a href="{% url 'browse_jobseeker' %}">Government job</a></h5>
-                            </div>
-                            <div class="job-type-grid">
-                                <a href="{% url 'browse_jobseeker' %}" class="btn job-browse-btn btn-radius br-light">Open Now</a>
-                            </div>
-                        </div>
-                        </div>
+
+    {% endfor %}
+
+{#                      <div class="col-md-15 col-sm-3">#}
+{#                            <div class="grid-job-widget">#}
+{#                            <div class="u-content">#}
+{#                                <div class="avatar box-80">#}
+{#                                    <a href="{% url 'browse_jobseeker' %}">#}
+{#                                        <img class="img-responsive" src="{% static 'assets/img/c-8.png' %}" alt="">#}
+{#                                    </a>#}
+{#                                </div>#}
+{#                                <h5><a href="{% url 'browse_jobseeker' %}">Internship</a></h5>#}
+{#                            </div>#}
+{#                            <div class="job-type-grid">#}
+{#                                <a href="{% url 'browse_jobseeker' %}" class="btn job-browse-btn btn-radius br-light">Open Now</a>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        </div>#}
+{#                      <div class="col-md-15 col-sm-3">#}
+{#                        <div class="grid-job-widget">#}
+{#                            <div class="u-content">#}
+{#                                <div class="avatar box-80">#}
+{#                                    <a href="{% url 'browse_jobseeker' %}">#}
+{#                                        <img class="img-responsive" src="{% static 'assets/img/c-3.png' %}" alt="">#}
+{#                                    </a>#}
+{#                                </div>#}
+{#                                <h5><a href="{% url 'browse_jobseeker' %}">Part time</a></h5>#}
+{#                            </div>#}
+{#                            <div class="job-type-grid">#}
+{#                                <a href="{% url 'browse_jobseeker' %}" class="btn job-browse-btn btn-radius br-light">Open Now</a>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        </div>#}
+{#                      <div class="col-md-15 col-sm-3">#}
+{#                        <div class="grid-job-widget">#}
+{#                            <div class="u-content">#}
+{#                                <div class="avatar box-80">#}
+{#                                    <a href="{% url 'browse_jobseeker' %}">#}
+{#                                        <img class="img-responsive" src="{% static 'assets/img/c-7.png' %}" alt="">#}
+{#                                    </a>#}
+{#                                </div>#}
+{#                                <h5><a href="{% url 'browse_jobseeker' %}">Full time</a></h5>#}
+{#                            </div>#}
+{#                            <div class="job-type-grid">#}
+{#                                <a href="{% url 'browse_jobseeker' %}" class="btn job-browse-btn btn-radius br-light">Open Now</a>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        </div>#}
+{#                      <div class="col-md-15 col-sm-3">#}
+{#                        <div class="grid-job-widget">#}
+{#                            <div class="u-content">#}
+{#                                <div class="avatar box-80">#}
+{#                                    <a href="{% url 'browse_jobseeker' %}">#}
+{#                                        <img class="img-responsive" src="{% static 'assets/img/c-4.png' %}" alt="">#}
+{#                                    </a>#}
+{#                                </div>#}
+{#                                <h5><a href="{% url 'browse_jobseeker' %}">Government job</a></h5>#}
+{#                            </div>#}
+{#                            <div class="job-type-grid">#}
+{#                                <a href="{% url 'browse_jobseeker' %}" class="btn job-browse-btn btn-radius br-light">Open Now</a>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        </div>#}
 			</div>
 		</section>
 {% endblock %}

@@ -41,7 +41,7 @@
                 <div class="col-md-10 col-md-offset-1">
 				<form class="c-form" action="{% url 'resumesave' %}" method="post" enctype="multipart/form-data">
                     {% csrf_token %}
-                    {{ jform|crispy }}
+                    {{ rform|crispy }}
 					
 					<div class="text-center">
 						<button type="submit" class="btn btn-m theme-btn">Submit</button>

@@ -1,4 +1,4 @@
-{% extends 'headerfooter.html' %}
+{% extends 'headerfooter2.html' %}
 {% block content %}
     {% load static %}
             <div class="full_width main_content">
@@ -6,7 +6,7 @@
                
                     <div class="shopping_main">
                         <div class="home-one"> <br/>
-						<section class="detail-section" style="background:url(assets/img/slider-2.jpg);">
+						<section class="detail-section" style="background:url({% static 'assets/img/slider-2.jpg' %});">
                                 <div class="overlay"></div>
                                 <div class="profile-cover-content">
                                     <div class="">

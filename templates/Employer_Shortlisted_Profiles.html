@@ -1,4 +1,4 @@
-{% extends 'headerfooter.html' %}
+{% extends 'headerfooter2.html' %}
 {% block content %}
    {% load static %}
                             <div class="full_width propery_listing">
@@ -62,7 +62,7 @@
 											<input type="checkbox" id="1" class="checkbox_design">
 											<ul class="can-skils cm_logo_emploer_mian">
                                                 <div class="vrt-job-cmp-logo cm_logo_emploer">
-                                                 <a href="job-detail.html">
+                                                 <a href="{% url 'emp_jobdetail' %}">
 												 <img src="{% static 'img/female.jpg' %}" class="img-responsive" alt="">
 												 </a>
                                                 </div>

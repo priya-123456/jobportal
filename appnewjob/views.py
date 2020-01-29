@@ -47,41 +47,29 @@ def jobsave(request):
 
 def create_resume(request):
 
-    form = ResumeForm()
-    return render(request, 'create_resume.html', {'jform': form})
+    rform = ResumeForm()
+    return render(request, 'create_resume.html', {'rform': rform})
 def resumesave(request):
-    form=ResumeForm()
-    if request.method=='POST':
-        form = ResumeForm(request.POST)
-        if form.is_valid():
-            form.save(commit=True)
-            return render(request, 'create_resume.html', {'form': form})
+    if request.method == "POST":
+        import ipdb;
+        ipdb.set_trace()
+        rform = ResumeForm(request.POST, request.FILES)
+        if rform.is_valid():
+            rform.save()
+            messages.success(request, "Resume Posted Successfully........")
+            return redirect(create_resume)
         else:
             messages.error(request, "Resume posting failed..........")
             return redirect(create_resume)
-    # else:
-    #     jform = ResumeForm()
-    #     return render(request, "create_resume.html", {'jform': jform})
-
-
-
-# def resume_save(request):
-#     if request.method == "POST":
-#         rform = ResumeForm(request.POST, request.FILES)
-#         if rform.is_valid():
-#             rform.save()
-#             messages.success(request, "resume Posted Successfully........")
-#             return redirect(create_resume)
-#         else:
-#             messages.error(request, "reume posting failed..........")
-#             return redirect(create_resume)
-#     else:
-#         rform = ResumeForm()
-#         return render(request, "create_resume.html", {'rform': rform})
+    else:
+        rform = ResumeForm()
+        return render(request, "create_resume.html", {'rform': rform})
 
 
 def index(request):
-    return render(request, 'index.html')
+    cat=Category.objects.all()
+    km=Jobtype.objects.all()
+    return render(request, 'index.html',{'cat':cat,'jtype':km})
 
 
 def index2(request):
@@ -194,3 +182,11 @@ def logins(request):
 def logout(request):
     auth_logout(request)
     return redirect(index)
+def catgoryfilter(request,id):
+    sk=Category.objects.get(id=id)
+    lm=Createjob.objects.filter(category=sk)
+    return render(request,'browse_jobseeker.html',{'job':lm})
+def jobtypefilter(request,id):
+    sk=Jobtype.objects.get(id=id)
+    lm=Createjob.objects.filter(jobtype=sk)
+    return render(request, 'browse_jobseeker.html', {'job': lm})

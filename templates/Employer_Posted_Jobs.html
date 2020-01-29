@@ -1,4 +1,4 @@
-{% extends 'headerfooter.html' %}
+{% extends 'headerfooter2.html' %}
 {% block content %}
     {% load static %}
                             <div class="full_width propery_listing">
@@ -10,7 +10,7 @@
 					
 <div class="text-center">
 <span class="photo_edit text-center">	
-<img src="img/noimg.jpg" class="img-responsive img-circle">
+<img src="{% static 'img/noimg.jpg' %}" class="img-responsive img-circle">
 <div class="image-upload">
     <label for="file-input">
         <img src="https://goo.gl/pB9rpQ"/>
@@ -76,7 +76,7 @@
                                             
 											<ul class="can-skils">
                                                 <div class="vrt-job-cmp-logo">
-                                                 <a href="job-detail.html"><img src="assets/img/c-1.png" class="img-responsive" alt=""></a>
+                                                 <a href="job-detail.html"><img src="{% static 'assets/img/c-1.png' %}" class="img-responsive" alt=""></a>
                                                 </div>
 												<li><h5><a href="#">Apple LTD</a></h5> <span style="margin-bottom: 6px;display: block;">Sr. Web Designer </span></li>
 												
@@ -117,7 +117,7 @@
 										<div class="col-md-6 col-sm-6">
 											<div class="cmp-job-review">
 												<ul>
-													<li><a href="Employer_job_appliers.html" class="apply_job_mem">Applied by 60 members</a></li>
+													<li><a href="{% url 'empjobappliers' %}" class="apply_job_mem">Applied by 60 members</a></li>
 												</ul>
 											</div>
 										</div>
@@ -141,7 +141,7 @@
                                             
 											<ul class="can-skils">
                                                 <div class="vrt-job-cmp-logo">
-                                                 <a href="Employer_job_detail.html"><img src="assets/img/c-1.png" class="img-responsive" alt=""></a>
+                                                 <a href="{% url 'emp_jobdetail' %}"><img src="{% static 'assets/img/c-1.png' %}" class="img-responsive" alt=""></a>
                                                 </div>
 												<li><h5><a href="#">Apple LTD</a></h5> <span style="margin-bottom: 6px;display: block;">Sr. Web Designer </span></li>
 												
@@ -164,7 +164,7 @@
 												<a href="#" class="btn btn-sm theme-btn">Apply Now</a>
 											</div>
 											<div class="vrt-job-act">
-												<a href="Employer_job_detail.html" title="" class="btn btn-sm view_jop">View Job</a>
+												<a href="{% url 'emp_jobdetail' %}" title="" class="btn btn-sm view_jop">View Job</a>
 											</div>
 										</div>
 									</div>
@@ -182,7 +182,7 @@
 										<div class="col-md-6 col-sm-6">
 											<div class="cmp-job-review">
 												<ul>
-													<li><a href="Employer_job_appliers.html" class="apply_job_mem">Applied by 60 members</a></li>
+													<li><a href="{% url 'empjobappliers' %}" class="apply_job_mem">Applied by 60 members</a></li>
 												</ul>
 											</div>
 										</div>

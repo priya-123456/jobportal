@@ -32,6 +32,8 @@ urlpatterns = [
     path('login/', views.logins, name='login'),
     path('logout/', views.logout, name='logout'),
     path('jobsave/', views.jobsave, name='jobsave'),
-    path('resumesave/', views.resumesave, name='resumesave')
+    path('resumesave/', views.resumesave, name='resumesave'),
+    path('catgoryfilter/<int:id>/',views.catgoryfilter,name='catgoryfilter'),
+    path('jobtypefilter/<int:id>/',views.jobtypefilter,name='jobtypefilter')
 
-              ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
