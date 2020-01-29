@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Createjob, Category, City, State, Resume, \
-                          Functionalarea, Jobtype, Industry, Experience, Package, Country
+from .models import Createjob, Category, City, State, Resume,Functionalarea, Jobtype, Industry, Experience, Package, Country
 from .forms import ResumeForm, JobForm
 from django.contrib.auth.models import User
 from django.contrib import auth
@@ -14,7 +13,16 @@ def apploed_jobs(request):
 
 def browse_jobseeker(request):
     job=Createjob.objects.all()
-    return render(request, 'browse_jobseeker.html',{'job':job})
+    skil = request.POST.get('Skil')
+    city = request.POST.get('city')
+    exp = request.POST.get('exper')
+    if skil:
+        job = job.filter(keyskills=skil)
+    if city:
+        job = job.filter(city=city)
+    if exp:
+        job = job.filter(experience=exp)
+    return render(request,'browse_jobseeker.html',{'job': job })
 
 
 def changepassword(request):
@@ -81,7 +89,9 @@ def resumesave(request):
 
 
 def index(request):
-    return render(request, 'index.html')
+    exp = Experience.objects.all()
+    cty = City.objects.all()
+    return render(request, 'index.html',{'e':exp,'ct':cty})
 
 
 def index2(request):
