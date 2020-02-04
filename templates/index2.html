@@ -83,7 +83,7 @@
 							</div>
 							<div class="col-md-1 col-sm-1 padd-0">
 							
-								<a href="Employer_browse_employer.html"  class="btn theme-btn" >FIND Employer</a>
+								<a href="{% url 'emp_bemp' %}"  class="btn theme-btn" >FIND Employer</a>
 							</div>
 						</fieldset>
 					</form>
@@ -136,109 +136,24 @@
 </div>
 </div>
 <div class="container">
-	
+	{% for x in ind %}
 		<div class="col-md-4 col-sm-6">
 		<div class="blog-box blog-grid-box">
-		<a href="browse_employer?industry=1">
+		<a href="{% url 'indfilter' x.id  %}">
 		<div class="blog-grid-box-img">
-		<img src="https://www.crazymar.com/assets/jobportal/images/trending1.jpg" class="img-responsive" alt="" />
+		<img src="{{x.indimg.url}}" class="img-responsive" alt="" />
 		</div>
 		<div class="blog-grid-box-content">
-		<h4>BPO</h4>
+		<h4>{{x.industry}}</h4>
 		<ul class="rend_indlist">
 		
 		</ul>
 		</div>
-
+        </a>
 		</div>
 		</a>
 		</div>
-	
-		<div class="col-md-4 col-sm-6">
-		<div class="blog-box blog-grid-box">
-		<a href="browse_employer?industry=2">
-		<div class="blog-grid-box-img">
-		<img src="https://www.crazymar.com/assets/jobportal/images/trending2.jpg" class="img-responsive" alt="" />
-		</div>
-		<div class="blog-grid-box-content">
-		<h4>LOGISTICS</h4>
-		<ul class="rend_indlist">
-		
-		</ul>
-		</div>
-
-		</div>
-		</a>
-		</div>
-	
-		<div class="col-md-4 col-sm-6">
-		<div class="blog-box blog-grid-box">
-		<a href="browse_employer?industry=3">
-		<div class="blog-grid-box-img">
-		<img src="https://www.crazymar.com/assets/jobportal/images/trending3.jpg" class="img-responsive" alt="" />
-		</div>
-		<div class="blog-grid-box-content">
-		<h4>HEALTH</h4>
-		<ul class="rend_indlist">
-		
-		</ul>
-		</div>
-
-		</div>
-		</a>
-		</div>
-	
-		<div class="col-md-4 col-sm-6">
-		<div class="blog-box blog-grid-box">
-		<a href="browse_employer?industry=4">
-		<div class="blog-grid-box-img">
-		<img src="https://www.crazymar.com/assets/jobportal/images/trending4.jpg" class="img-responsive" alt="" />
-		</div>
-		<div class="blog-grid-box-content">
-		<h4>HOSPITALITY</h4>
-		<ul class="rend_indlist">
-		
-		</ul>
-		</div>
-
-		</div>
-		</a>
-		</div>
-	
-		<div class="col-md-4 col-sm-6">
-		<div class="blog-box blog-grid-box">
-		<a href="browse_employer?industry=5">
-		<div class="blog-grid-box-img">
-		<img src="https://www.crazymar.com/assets/jobportal/images/trending5.jpg" class="img-responsive" alt="" />
-		</div>
-		<div class="blog-grid-box-content">
-		<h4>FACILITY MANAGEMENT</h4>
-		<ul class="rend_indlist">
-		
-		</ul>
-		</div>
-
-		</div>
-		</a>
-		</div>
-	
-		<div class="col-md-4 col-sm-6">
-		<div class="blog-box blog-grid-box">
-		<a href="browse_employer?industry=6">
-		<div class="blog-grid-box-img">
-		<img src="https://www.crazymar.com/assets/jobportal/images/trending6.jpg" class="img-responsive" alt="" />
-		</div>
-		<div class="blog-grid-box-content">
-		<h4>FINANCIAL SERVICES</h4>
-		<ul class="rend_indlist">
-		
-		</ul>
-		</div>
-
-		</div>
-		</a>
-		</div>
-	 
+	{% endfor %}
 
 </div>
 </div>
@@ -252,84 +167,28 @@
 					</div>
 				</div>
 				<div class="">
+{% for x in jtype %}
                     <div class="col-md-15 col-sm-3">
                         <div class="grid-job-widget">
 
                             <div class="u-content">
                                 <div class="avatar box-80">
-                                    <a href="browse_jobseeker.html">
-                                        <img class="img-responsive" src="{% static 'assets/img/c-1.png' %}" alt="">
+                                    <a href="{% url 'typefilter' x.id %}">
+                                        <img class="img-responsive" src="{{x.jobimg.url}}" alt="">
                                     </a>
                                 </div>
-                                <h5><a href="browse_jobseeker.html">Work from home</a></h5>
+                                <h5><a href="{% url 'typefilter' x.id %}">{{x.jobtype}}</a></h5>
                             </div>
 
                             <div class="job-type-grid">
-                                <a href="browse_jobseeker.html" class="btn job-browse-btn btn-radius br-light">Open Now</a>
+                                <a href="{% url 'typefilter' x.id %}" class="btn job-browse-btn btn-radius br-light">Open Now</a>
                             </div>
 
                         </div>
                     </div>
-                      <div class="col-md-15 col-sm-3">
-                            <div class="grid-job-widget">
-                            <div class="u-content">
-                                <div class="avatar box-80">
-                                    <a href="{% url 'browse_jobseeker' %}">
-                                        <img class="img-responsive" src="{% static 'assets/img/c-8.png' %}" alt="">
-                                    </a>
-                                </div>
-                                <h5><a href="{% url 'browse_jobseeker' %}">Internship</a></h5>
-                            </div>
-                            <div class="job-type-grid">
-                                <a href="{% url 'browse_jobseeker' %}" class="btn job-browse-btn btn-radius br-light">Open Now</a>
-                            </div>
-                        </div>
-                        </div>
-                      <div class="col-md-15 col-sm-3">
-                        <div class="grid-job-widget">
-                            <div class="u-content">
-                                <div class="avatar box-80">
-                                    <a href="{% url 'browse_jobseeker' %}">
-                                        <img class="img-responsive" src="{% static 'assets/img/c-3.png' %}" alt="">
-                                    </a>
-                                </div>
-                                <h5><a href="{% url 'browse_jobseeker' %}">Part time</a></h5>
-                            </div>
-                            <div class="job-type-grid">
-                                <a href="{% url 'browse_jobseeker' %}" class="btn job-browse-btn btn-radius br-light">Open Now</a>
-                            </div>
-                        </div>
-                        </div>
-                      <div class="col-md-15 col-sm-3">
-                        <div class="grid-job-widget">
-                            <div class="u-content">
-                                <div class="avatar box-80">
-                                    <a href="browse_jobseeker.html">
-                                        <img class="img-responsive" src="{% static 'assets/img/c-7.png' %}" alt="">
-                                    </a>
-                                </div>
-                                <h5><a href="{% url 'browse_jobseeker' %}">Full time</a></h5>
-                            </div>
-                            <div class="job-type-grid">
-                                <a href="{% url 'browse_jobseeker' %}" class="btn job-browse-btn btn-radius br-light">Open Now</a>
-                            </div>
-                        </div>
-                        </div>
-                      <div class="col-md-15 col-sm-3">
-                        <div class="grid-job-widget">
-                            <div class="u-content">
-                                <div class="avatar box-80">
-                                    <a href="{% url 'browse_jobseeker' %}">
-                                        <img class="img-responsive" src="{% static 'assets/img/c-4.png' %}" alt="">
-                                    </a>
-                                </div>
-                                <h5><a href="{% url 'browse_jobseeker' %}">Government job</a></h5>
-                            </div>
-                            <div class="job-type-grid">
-                                <a href="{% url 'browse_jobseeker' %}" class="btn job-browse-btn btn-radius br-light">Open Now</a>
-                            </div>
-                        </div>
-                        </div>
+{% endfor %}
+
+
 			</div>
 		</section>
 {% endblock %}

@@ -42,7 +42,7 @@
 				<form class="c-form" action="{% url 'resumesave' %}" method="post" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ rform|crispy }}
-					
+
 					<div class="text-center">
 						<button type="submit" class="btn btn-m theme-btn">Submit</button>
 					</div>

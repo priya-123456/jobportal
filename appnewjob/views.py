@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect
-from .models import Createjob, Category, City, State, Resume, \
-                          Functionalarea, Jobtype, Industry, Experience, Package, Country
-from .forms import ResumeForm, JobForm
+from .models import Createjob, Category, Jobtype, Industry,Resume
+from appnewjob.forms import ResumeForm,JobForm
 from django.contrib.auth.models import User
 from django.contrib import auth
 from django.contrib.auth import authenticate, logout as auth_logout, login as auth_login
@@ -51,19 +50,18 @@ def create_resume(request):
     return render(request, 'create_resume.html', {'rform': rform})
 def resumesave(request):
     if request.method == "POST":
-        import ipdb;
-        ipdb.set_trace()
-        rform = ResumeForm(request.POST, request.FILES)
+        rform=ResumeForm( request.POST,request.FILES)
+        # import ipdb;ipdb.set_trace()
         if rform.is_valid():
             rform.save()
-            messages.success(request, "Resume Posted Successfully........")
+            messages.success(request,'resume posted successfully')
             return redirect(create_resume)
         else:
-            messages.error(request, "Resume posting failed..........")
+            messages.error(request,'resume posted failure')
             return redirect(create_resume)
     else:
-        rform = ResumeForm()
-        return render(request, "create_resume.html", {'rform': rform})
+        rform=ResumeForm()
+        return render(request,'create_resume.html',{'rform':rform})
 
 
 def index(request):
@@ -73,15 +71,18 @@ def index(request):
 
 
 def index2(request):
-    return render(request, 'index2.html')
+    ind = Industry.objects.all()
+    jtype = Jobtype.objects.all()
+    return render(request, 'index2.html',{'ind':ind,'jtype':jtype})
 
 
 def intersted_jobs(request):
     return render(request, 'interested_jobs.html')
 
 
-def job_detail(request):
-    return render(request, 'job_detail.html')
+def job_detail(request,id):
+    job=Createjob.objects.get(id=id)
+    return render(request, 'job_detail.html',{'job':job})
 
 
 def myprofilee1(request):
@@ -92,21 +93,16 @@ def myprofilee2(request):
     return render(request, 'myprofilee2.html')
 
 
-def profile(request):
-    return render(request, 'profile.html')
-
-
-def shortlisted_comp(request):
-    return render(request, 'shortlisted_com.html')
-
+def profile(request,id):
+    pro=Resume.objects.get(id=id)
+    return render(request, 'profile.html',{'pro':p})
 
 def shortlisted_jobs(request):
     return render(request, 'shortlisted_jobs.html')
 
-
 def emp_bemp(request):
-    return render(request, 'Employer_browse_employer.html')
-
+    res=Resume.objects.all()
+    return render(request, 'Employer_browse_employer.html',{'res':res})
 
 def empchangepassword(request):
     return render(request, 'Employer_Changepassword.html')
@@ -131,10 +127,8 @@ def emp_posted_jobs(request):
 def emp_profiles(request):
     return render(request, 'Employer_profile.html')
 
-
-def emp_short_profil(request):
-    return render(request, 'Employer_Shortlisted_Profiles.html')
-
+def shortlisted_comp(request):
+    return render(request, 'shortlisted_com.html')
 
 def empjobappliers(request):
     return render(request, 'Employer_job_appliers.html')
@@ -190,3 +184,24 @@ def jobtypefilter(request,id):
     sk=Jobtype.objects.get(id=id)
     lm=Createjob.objects.filter(jobtype=sk)
     return render(request, 'browse_jobseeker.html', {'job': lm})
+def indfilter(request,id):
+    ind=Industry.objects.get(id=id)
+    kl=Resume.objects.filter(desired_industry=ind)
+    return render(request, 'Employer_browse_employer.html', {'res': kl})
+def typefilter(request,id):
+    sk=Jobtype.objects.get(id=id)
+    lm=Resume.objects.filter(desired_job_type=sk)
+    return render(request, 'browse_jobseeker.html', {'res': lm})
+
+
+# def short(request):
+#     usrs=request.POST.get('usr')
+#     resum=request.POST.get('resum')
+#     shrt=Shortlist(usr=usrs,resum=resum)
+#     shrt.save()
+#     return redirect(index)
+#
+# def emp_short_profil(request):
+#     xyz = User.objects.get(user=request.user.id)
+#     abc = Shortlist.objects.filter(id=xyz)
+#     return render(request, 'Employer_Shortlisted_Profiles.html', {'shoet': abc})

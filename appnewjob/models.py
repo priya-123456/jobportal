@@ -1,4 +1,6 @@
 from django.db import models
+from appnewjob.data import Gender ,Passport ,Marrital_status ,Shifts ,avaltojoin ,Hiringprocess,Eligiblefor
+from django.contrib.auth.models import User
 
 
 class Category(models.Model):
@@ -73,7 +75,6 @@ class Functionalarea(models.Model):
     def __str__(self):
         return self.functionalarea
 
-
 class Package(models.Model):
     package = models.CharField(max_length=25)
 
@@ -87,32 +88,12 @@ class Designation(models.Model):
     def __str__(self):
         return self.desg
 
-
-Gender = (('male', 'Male'), ('female', 'Female'), ('other', 'Other'))
-
-Passport = (('yes', 'Yes'), ('no', 'No'))
-
-Marrital_status = (('unmarried', 'Unmarried'), ('married', 'Married'))
-
-Shifts = (('Day shift', 'Day shift'), ('Night shift', 'Night shift'), ('Rotational shift', 'Rotational shift'))
-
-avaltojoin = (('Immediatly', 'Immediatly'), ('Within 15days', 'Within 15days'), ('1 month', '1 month'),
-              ('2 months', '2 months'),
-              ('3 months', '3 months'), ('4 months', '4 months'), ('5 months', '5 months'), ('6 months', '6 months '))
-
-Hiringprocess = (('Face to Face', 'Face to Face'), ('Written Test', 'Written Test'), ('Telephonic', 'Telephonic'),
-                 ('Group Discussion', 'Group Discussion'), ('Walk in', 'Walk in'))
-
-Eligiblefor = (('Male candidates only', 'Male candidates only'), ('Female candidates only', 'Female candidates only'),
-               ('both male and female candidates', 'both male and female candidates'))
-
-
 class Resume(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     email = models.EmailField()
     mobile_number = models.IntegerField()
-    date_of_birth = models.DateField()
+    date_of_birth = models.CharField(max_length=20)
     resume = models.FileField(upload_to='resumes/')
     uploadyourpic=models.FileField(upload_to='pics')
     passport = models.CharField(max_length=20, choices=Passport)
@@ -136,7 +117,7 @@ class Resume(models.Model):
     qualification = models.ForeignKey(Qualification, on_delete=models.CASCADE)
     university_name_collage_name_school_name = models.CharField(max_length=50)
     # specialization = models.ForeignKey(Specialization,on_delete=models.CASCADE)
-    year_of_passing = models.DateField()
+    year_of_passing = models.CharField(max_length=25)
     percentage = models.CharField(max_length=5)
     skills = models.CharField(max_length=70)
     experience = models.ForeignKey(Experience, on_delete=models.CASCADE)
@@ -163,6 +144,7 @@ class Createjob(models.Model):
     experience = models.ForeignKey(Experience, on_delete=models.CASCADE)
     no_of_vac = models.CharField(max_length=25)
     package = models.ForeignKey(Package, on_delete=models.CASCADE)
+    # role=models.CharField(max_length=50)
     jobtype = models.ForeignKey(Jobtype, on_delete=models.CASCADE)
     joblocation = models.CharField(max_length=60)
     keyskills = models.CharField(max_length=60)
@@ -196,8 +178,11 @@ class Createjob(models.Model):
     google = models.URLField()
     twitter = models.URLField()
     linkedin = models.URLField()
-    pinterest = models.URLField()
     instagram = models.URLField()
+    pinterest = models.URLField()
 
     def __str__(self):
         return self.comapnyname
+class Shortlist(models.Model):
+    users=models.ForeignKey(User,on_delete=models.CASCADE)
+    seejer=models.ForeignKey(Resume,on_delete=models.CASCADE)

@@ -421,7 +421,7 @@
                                             
 											<ul class="can-skils">
                                                 <div class="vrt-job-cmp-logo">
-                                                 <a href="{% url 'job_detail' %}"><img src="{{j.company_logo.url}}" class="img-responsive" alt=""></a>
+                                                 <a href="{% url 'job_detail' j.id %}"><img src="{{j.company_logo.url}}" class="img-responsive" alt=""></a>
                                                 </div>
 												<li><h5><a href="#">{{j.jobtitle}}</a></h5> <span style="margin-bottom: 6px;display: block;">{{j.designation}} </span></li>
 												
@@ -444,7 +444,7 @@
 												<a href="#" class="btn btn-sm theme-btn">Apply Now</a>
 											</div>
 											<div class="vrt-job-act">
-												<a href="{% url 'job_detail' %}" title="" class="btn btn-sm view_jop">View Job</a>
+												<a href="{% url 'job_detail' j.id %}" title="" class="btn btn-sm view_jop">View Job</a>
 											</div>
 										</div>
 									</div>
@@ -508,7 +508,7 @@
 {#												<a href="#"  class="btn btn-sm theme-btn">Apply Now</a>#}
 {#											</div>#}
 {#											<div class="vrt-job-act">#}
-{#												<a href="{% url 'job_detail' %}" title="" class="btn btn-sm view_jop">View Job</a>#}
+{#												<a href="" title="" class="btn btn-sm view_jop">View Job</a>#}
 {#											</div>#}
 {#										</div>#}
 {#									</div>#}
@@ -764,7 +764,7 @@
 {#												<a href="#" class="btn btn-sm theme-btn">Apply Now</a>#}
 {#											</div>#}
 {#											<div class="vrt-job-act">#}
-{#												<a href="{% url 'job_detail' %}" title="" class="btn btn-sm view_jop">View Job</a>#}
+{#												<a href="" title="" class="btn btn-sm view_jop">View Job</a>#}
 {#											</div>#}
 {#										</div>#}
 {#									</div>#}
@@ -829,7 +829,7 @@
 {#												<a href="#" class="btn btn-sm theme-btn">Apply Now</a>#}
 {#											</div>#}
 {#											<div class="vrt-job-act">#}
-{#												<a href="{% url 'job_detail' %}" title="" class="btn btn-sm view_jop">View Job</a>#}
+{#												<a href="" title="" class="btn btn-sm view_jop">View Job</a>#}
 {#											</div>#}
 {#										</div>#}
 {#									</div>#}

@@ -16,8 +16,8 @@
                                                 <img src="{% static 'assets/img/c-2.png' %}" class="img-responsive img-circle" alt="" />
                                             </div>
                                             <div class="job-owner-detail">
-                                                <h4>Google </h4>
-                                                <span class="theme-cl">Software Developer</span>
+                                                <h4>{{job.comapnyname}} </h4>
+                                                <span class="theme-cl">{{ job.designation }}</span>
                                             </div>
                                         </div>
                                     </div>
@@ -35,16 +35,16 @@
 						<div class="detail-wrapper">
 							<div class="detail-wrapper-body">
 								<div class="job-title-bar">
-									<h4><strong>Web Designer</strong> walk In Interview </h4>
+									<h4><strong>Web Designer</strong> {{ job.hiringprocess }} </h4>
 									<div>
 										<p class="mrg-bot-0">
                                             
-                                            <span><i class="ti-location-pin mrg-r-5"></i>Greenland Automation</span>&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <span><i class="fa fa-briefcase"></i>&nbsp;&nbsp;0 - 5 yrs</span>
+                                            <span><i class="ti-location-pin mrg-r-5"></i>{{job.comapnyname}}</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <span><i class="fa fa-briefcase"></i>&nbsp;&nbsp;{{ job.experience }}</span>
 											
 										</p>
                                         
-										<p><strong>Roles</strong> : UX/UI Designer, Web Designer, Graphic Designer</p>
+										<p><strong>Roles</strong> : {{job.designation}}</p>
 									</div>
                                     
                                     <div class="widget-boxed-body apply_interst">
@@ -60,10 +60,8 @@
 								<h4>Job Description</h4>
 							</div>
 							<div class="detail-wrapper-body">
-                                <h5>Sr. Web Designer</h5>
-								<p>Provide expertise with WordPress, HTML, CSS, MySQL, JavaScript, JQuery, PHP, WooCommerce.
-Develop, deploy, and maintain our main WordPress websites.
-Constantly improve and build new add-ons to attract readers</p>
+                                <h5></h5>
+								<p>{{job.job_summary}}</p>
                                 
                                 <div class="job-verticle-list job-verticle-list2">
 							<div class="vertical-job-card">
@@ -73,12 +71,12 @@ Constantly improve and build new add-ons to attract readers</p>
 										<div class="">
                                             
 											<ul class="can-skils">												
-												<li><strong>Salery: </strong>INR 1,75,000 - 3,75,000 P.A.</li>
-												<li><strong>Industry: </strong>IT-Software / Software Services</li>
-												<li><strong>Functional Area: </strong> <span class="desc">IT Software - Application Programming , Maintenance</span></li>
-												<li><strong>Role Category: </strong>Programming & Design</li>
-												<li><strong>Role: </strong>Software Developer</li>
-												<li><strong>Employment Type: </strong>Permanent Job, Full Time</li>                                       
+												<li><strong>Salery: </strong>{{ job.package }}</li>
+												<li><strong>Industry: </strong>{{ job.industry }}</li>
+												<li><strong>Functional Area: </strong> <span class="desc">{{ job.funarea }}</span></li>
+												<li><strong>Role Category: </strong>{{ job.category }}</li>
+												<li><strong>Role: </strong>{{job.designation}}</li>
+												<li><strong>Employment Type: </strong>{{ job.jobtype }}</li>
                                             </ul>
                                             
                                             
@@ -100,15 +98,15 @@ Constantly improve and build new add-ons to attract readers</p>
 							</div>
 							<div class="detail-wrapper-body">
 								<div class="key_skills">
-                                    <span class="skill-tag">Photoshop</span>
-                                    <span class="skill-tag">HTML</span>
-                                    <span class="skill-tag">css</span>
-                                    <span class="skill-tag">Wordpress</span>
-                                    <span class="skill-tag">php</span>
-                                    <span class="skill-tag">JQuery</span>
-                                    <span class="skill-tag">bootstrap</span>
-                                    <span class="skill-tag">Web Designing</span>
-                                    <span class="skill-tag">Web Technologies</span>
+                                    <span class="skill-tag">{{job.keyskills}}</span>
+{#                                    <span class="skill-tag">HTML</span>#}
+{#                                    <span class="skill-tag">css</span>#}
+{#                                    <span class="skill-tag">Wordpress</span>#}
+{#                                    <span class="skill-tag">php</span>#}
+{#                                    <span class="skill-tag">JQuery</span>#}
+{#                                    <span class="skill-tag">bootstrap</span>#}
+{#                                    <span class="skill-tag">Web Designing</span>#}
+{#                                    <span class="skill-tag">Web Technologies</span>#}
                                 </div>
 							</div>
 						</div>
@@ -128,11 +126,11 @@ Constantly improve and build new add-ons to attract readers</p>
                                             <h6>Education</h6>
 											<ul class="can-skils">
 												
-												<li><strong>UG: </strong><span class="desc">B.Tech/B.E. - Any Specialization, Diploma - Any Specialization, B.Sc - Any Specialization, B.Com - Commerce</span></li>
+												<li><strong>UG: </strong><span class="desc">{{job.educationqul}}</span></li>
 												
-												<li><strong>PG: </strong><span class="desc">MS/M.Sc(Science) - Any Specialization, MCA - Computers, M.Tech - Any Specialization, MBA/PGDM - Any Specialization</span></li>
-												
-                                                <li><strong>Doctorate: </strong><span class="desc">Other Doctorate, M.Phil. - Advertising/Mass Communication, Ph.D - Advertising/Mass Communication</span></li>
+{#												<li><strong>PG: </strong><span class="desc">MS/M.Sc(Science) - Any Specialization, MCA - Computers, M.Tech - Any Specialization, MBA/PGDM - Any Specialization</span></li>#}
+{#												#}
+{#                                                <li><strong>Doctorate: </strong><span class="desc">Other Doctorate, M.Phil. - Advertising/Mass Communication, Ph.D - Advertising/Mass Communication</span></li>#}
                                                 
 											</ul>
                                             
@@ -156,18 +154,18 @@ Constantly improve and build new add-ons to attract readers</p>
 								<h4>Company Profile:</h4>
 							</div>
 							<div class="detail-wrapper-body">
-								<h6>Greenland Automation</h6>
+								<h6>{{job.comapnyname}}</h6>
                                 <p>An ISO 9001:2008 Certified Company </p>
                                 <div class="content_desc">
-                                <p>Company Name -Greenland Automation </p>
-                                <p>India</p>
-                                <p>HR</p>
-                                <p>snehal</p>
+                                <p>Company Name -{{job.comapnyname}} </p>
+                                <p>{{job.city}}</p>
+                                <p>{{job.contact_person_name}}</p>
+                                <p>{{job.contact_person_role}}</p>
                                 <p>Phone:</p>
-                                <p>7249866047</p>
-                                <p>7249866387</p>
+                                <p>{{job.cnumber}}</p>
+                                <p>{{job.altermbl}}</p>
                                 </div>
-                                <h6>www.greenlandautomation.com</h6>
+                                <h6>{{job.website}}</h6>
 							</div>
 						</div>
 						

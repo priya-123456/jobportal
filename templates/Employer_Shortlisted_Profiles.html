@@ -53,6 +53,7 @@
 						<button class="button del_icon"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
 					<form class="checkboxes">
 					<ul>
+                       {% for x in shoet %}
 					   <li>
 						<div class="job-verticle-list">
 							<div class="vertical-job-card">
@@ -142,97 +143,10 @@
 								</div>
 							</div>
 						</div>
+
 					</li>
-					<li>
-						<div class="job-verticle-list">
-							<div class="vertical-job-card">
-								<div class="vertical-job-body">
-									<div class="row">
-										<div class="col-md-12 col-sm-12">
-											<input type="checkbox" id="1" class="checkbox_design">
-											<ul class="can-skils cm_logo_emploer_mian">
-                                                <div class="vrt-job-cmp-logo cm_logo_emploer">
-                                                 <a href="job-detail.html">
-												 <img src="{% static 'img/female.jpg' %}" class="img-responsive" alt="">
-												 </a>
-                                                </div>
-												<li>
-                                                    <h5><a href="#" class="cm_logo_emploer_heading">Somnath Bhadra</a><span>ID:2587TH</span></h5>
-                                                    <p>Teacher from Berhampur, Murshidabad</p>
-                                                    <span class="no_margin_left"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Graduate - Btech/BE, Computers (Computers)
-                                                    </span>
-                                                    <span><i class="fa fa-briefcase" aria-hidden="true"></i> 2 yrs</span>
-                                                    
-                                                
-                                                    <span><i class="fa fa-inr" aria-hidden="true"></i> 5000 / month</span>
-                                                </li>
-												
-												
-											</ul>
-                                            
-                                            
-                                            <ul class="emplouer_detials">
-                                                <p>Interested in Full Time Jobs with Any Shift</p>
-                                                
-                                                <li>
-                                                    <span class="emp_heading">Photo ID Proof</span>
-                                                    <span class="emp_repe">Aadhaar Card, Ration Card</span>
-                                                </li>
-                                                
-                                              
-                                                
-                                                <li>
-                                                    <span class="emp_heading">Sub Type</span>
-                                                    <span class="emp_repe">Govt Institution</span>
-                                                </li>
-                                                <li>
-                                                    <span class="emp_heading">Languages known</span>
-                                                    <span class="emp_repe">Hindi, Bengali, English</span>
-                                                </li>
-                                                
-                                                <li>
-                                                    <span class="emp_heading">Preference Location</span>
-                                                    <span class="emp_repe">Hyderabad</span>
-                                                </li>
-                                                
-                                               
-                                                <li>
-                                                    <span class="emp_heading">Passport</span>
-                                                    <span class="emp_repe">No</span>
-                                                </li> 
-                                             
-                                                <li>
-                                                    <span class="emp_heading">Industry</span>
-                                                    <span class="emp_repe">Others</span>
-                                                </li>
-                                                
-                                                <li>
-                                                    <span class="emp_heading">Job Title </span>
-                                                    <span class="emp_repe">Security Officer</span>
-                                                </li>
-                                                <li>
-                                                    <span class="emp_heading"> Address Proof</span>
-                                                    <span class="emp_repe">Voter ID Card, Ration Card</span>
-                                                </li>
-                                            </ul>
-										</div>
-									</div>
-								</div>
-								<div class="vertical-job-footer ertical-job-footer2 vertical-job-footerq">
-									<div class="row">
-										<div class="col-md-6 col-sm-6 footer_emploer">
-											<a href="#"><button type="button" class="btn btn-sm theme-btn" data-toggle="modal" data-target="#myModal">SMS</button></a>
-											<a href="#"><button type="button" class="btn btn-sm theme-btn" data-toggle="modal" data-target="#myModal">Email</button></a>
-											<a href="#" class="btn btn-sm theme-btn"><img src="{% static 'img/resume.png' %}" class="resumeicon">Download resume</a>
-										</div>
-										<div class="col-md-6 col-sm-6">
-											<a href="{% url 'emp_profiles' %}" class="btn btn-sm resume-theme-btn pull-right">View Contact</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</li>
+                        {% endfor %}
+
 				</ul>
 			</form>
   <ul class="pagination">
