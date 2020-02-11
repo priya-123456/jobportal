@@ -22,8 +22,10 @@
 <!-- <input id="sample_input" type="hidden" name="test[image]"> -->
 </span>	
 </div>
+            {% for pr in pro %}
+
     <div class="div_welcome">
-<h3>Welcome saipoojitha !!</h3>
+<h3>Welcome {{ pr.user }} !!</h3>
 </div>
 <ul>
    <li class="active"><a href="{% url 'myprofilee1' %}">My Profile</a></li>
@@ -70,12 +72,12 @@
 	 Name
 	</div>
 	 <div class="col-md-6">
-	 :  &nbsp;&nbsp;Vuppu Ravali
+	 :  &nbsp;&nbsp;{{ user }}
 	</div>
 	</div>	
     <div class="row">	
 	 <div class="col-md-3 ">
-	 Email 
+	 Email
 	</div>
 	 <div class="col-md-6">
 	 :  &nbsp;&nbsp;ravali@mhninformatics.com
@@ -187,7 +189,7 @@
 	</div>
   </div>
 </div>
-						
+			{% endfor %}
 </div>
 					
 					<!-- Sidebar -->

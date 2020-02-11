@@ -17,10 +17,11 @@
     <input id="file-input" type="file"/>
 </div>
 <!-- <input id="sample_input" type="hidden" name="test[image]"> -->
-</span>	
+</span>
+    {% for pr in pro %}
 </div>
     <div class="div_welcome">
-<h3>Welcome saipoojitha !!</h3>
+<h3>Welcome {{ pr.user }} !!</h3>
 </div>
 <ul>
    <li class="active"><a href="{% url 'myprofilee2' %}">My Profile</a></li>
@@ -184,7 +185,7 @@
 	</div>
   </div>
 </div>
-						
+		{% endfor %}
 </div>
 					
 					<!-- Sidebar -->

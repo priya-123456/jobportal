@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 from django.contrib import auth
 from django.contrib.auth import authenticate, logout as auth_logout, login as auth_login
 from django.contrib import messages
+from userapp.models import Profile
 
 
 def apploed_jobs(request):
@@ -13,7 +14,8 @@ def apploed_jobs(request):
 
 
 def browse_jobseeker(request):
-    return render(request, 'browse_jobseeker.html')
+    job = Createjob.objects.all()
+    return render(request, 'browse_jobseeker.html', {"job": job})
 
 
 def changepassword(request):
@@ -58,6 +60,23 @@ def create_resume(request):
     return render(request, 'create_resume.html', {'form': form})
 
 
+def jobupdate(request,id):
+    jdata = Createjob.objects.get(id=id)
+    if request.method == "POST":
+        import ipdb;ipdb.set_trace()
+        jform = JobForm(instance=jdata)
+        if jform.is_valid():
+            jform.save()
+            messages.success(request, "Job updated successfully")
+            return redirect('/')
+        else:
+            messages.error(request, "Job update failed...")
+            return redirect(create_job)
+    else:
+        jform = JobForm(instance=jdata)
+        return render(request, "create_job.html", {'jform': jform})
+
+
 def resume_save(request):
     if request.method == "POST":
         form = ResumeForm(request.POST, request.FILES)
@@ -83,15 +102,18 @@ def intersted_jobs(request):
 
 
 def job_detail(request):
-    return render(request, 'job_detail.html')
+    job = Createjob.objects.all()
+    return render(request, 'job_detail.html', {"job": job})
 
 
 def myprofilee1(request):
-    return render(request, 'myprofilee1.html')
+    pro = Profile.objects.all()
+    return render(request, 'myprofilee1.html', {'pro': pro})
 
 
 def myprofilee2(request):
-    return render(request, 'myprofilee2.html')
+    pro = Profile.objects.all()
+    return render(request, 'myprofilee2.html', {'pro': pro})
 
 
 def profile(request):
@@ -142,27 +164,27 @@ def empjobappliers(request):
     return render(request, 'Employer_job_appliers.html')
 
 
-def register(request):
-    if request.method == 'POST':
-        usernam = request.POST.get('username')
-        email = request.POST.get('email')
-        password1 = request.POST.get('password1')
-        password2 = request.POST.get('password2')
-        if password1 == password2:
-            if User.objects.filter(username=usernam).exists():
-                messages.error(request, 'Email already exists')
-                return redirect(index)
-            else:
-                user = User.objects.create_user(username=usernam, email=email, password=password1)
-                Log_User = authenticate(username=usernam, password=password1)
-                auth.login(request, user)
-                messages.success(request, 'Form submited successfully...')
-                return redirect(index)
-        else:
-            messages.error(request, 'username or password are not matching')
-            return redirect(index)
-    else:
-        return render(request, 'index.html')
+# def register(request):
+#     if request.method == 'POST':
+#         usernam = request.POST.get('username')
+#         email = request.POST.get('email')
+#         password1 = request.POST.get('password1')
+#         password2 = request.POST.get('password2')
+#         if password1 == password2:
+#             if User.objects.filter(username=usernam).exists():
+#                 messages.error(request, 'Email already exists')
+#                 return redirect(index)
+#             else:
+#                 user = User.objects.create_user(username=usernam, email=email, password=password1)
+#                 Log_User = authenticate(username=usernam, password=password1)
+#                 auth.login(request, user)
+#                 messages.success(request, 'Form submited successfully...')
+#                 return redirect(index)
+#         else:
+#             messages.error(request, 'username or password are not matching')
+#             return redirect(index)
+#     else:
+#         return render(request, 'index.html')
 
 
 def logins(request):
