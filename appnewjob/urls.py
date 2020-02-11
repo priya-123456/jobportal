@@ -37,7 +37,6 @@ urlpatterns = [
     path('jobtypefilter/<int:id>/',views.jobtypefilter,name='jobtypefilter'),
     path('indfilter/<int:id>/', views.indfilter, name='indfilter'),
     path('typefilter/<int:id>/', views.typefilter, name='typefilter'),
-
-                  # path('short/',views.short,name='short')
+    path('short/',views.short,name='short')
 
     ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

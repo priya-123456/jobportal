@@ -186,3 +186,12 @@ class Createjob(models.Model):
 class Shortlist(models.Model):
     users=models.ForeignKey(User,on_delete=models.CASCADE)
     seejer=models.ForeignKey(Resume,on_delete=models.CASCADE)
+
+class appliedjobs(models.Model):
+    users = models.IntegerField()
+    appjobs = models.IntegerField()
+class Contactedprofiles(models.Model):
+    users = models.ForeignKey(User,on_delete=models.CASCADE)
+    contacted=models.IntegerField()
+
+

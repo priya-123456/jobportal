@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Createjob, Category, Jobtype, Industry,Resume
+from .models import Createjob, Category, Jobtype, Industry,Resume,Shortlist,Experience,City
 from appnewjob.forms import ResumeForm,JobForm
 from django.contrib.auth.models import User
 from django.contrib import auth
@@ -13,6 +13,15 @@ def apploed_jobs(request):
 
 def browse_jobseeker(request):
     job=Createjob.objects.all()
+    skills=request.POST.get('skills')
+    exp=request.POST.get('exp')
+    cit=request.POST.get('city')
+    if skills:
+        job=job.filter(keyskills=skills)
+    if exp:
+        job=job.filter(experience=exp)
+    if cit:
+        job=job.filter(city=cit)
     return render(request, 'browse_jobseeker.html',{'job':job})
 
 
@@ -67,13 +76,17 @@ def resumesave(request):
 def index(request):
     cat=Category.objects.all()
     km=Jobtype.objects.all()
-    return render(request, 'index.html',{'cat':cat,'jtype':km})
+    exp=Experience.objects.all()
+    city=City.objects.all()
+    return render(request, 'index.html',{'cat':cat,'jtype':km,'exp':exp,'city':city})
 
 
 def index2(request):
     ind = Industry.objects.all()
     jtype = Jobtype.objects.all()
-    return render(request, 'index2.html',{'ind':ind,'jtype':jtype})
+    exp = Experience.objects.all()
+    city = City.objects.all()
+    return render(request, 'index2.html',{'ind':ind,'jtype':jtype,'exp':exp,'city':city})
 
 
 def intersted_jobs(request):
@@ -95,13 +108,22 @@ def myprofilee2(request):
 
 def profile(request,id):
     pro=Resume.objects.get(id=id)
-    return render(request, 'profile.html',{'pro':p})
+    return render(request, 'profile.html',{'pro':pro})
 
 def shortlisted_jobs(request):
     return render(request, 'shortlisted_jobs.html')
 
 def emp_bemp(request):
     res=Resume.objects.all()
+    skills = request.POST.get('skills')
+    exp = request.POST.get('exp')
+    cit = request.POST.get('city')
+    if skills:
+        res = res.filter(skills=skills)
+    if exp:
+        res = res.filter(experience=exp)
+    if cit:
+        res = res.filter(city=cit)
     return render(request, 'Employer_browse_employer.html',{'res':res})
 
 def empchangepassword(request):
@@ -193,15 +215,14 @@ def typefilter(request,id):
     lm=Resume.objects.filter(desired_job_type=sk)
     return render(request, 'browse_jobseeker.html', {'res': lm})
 
+def short(request):
+    usrs=request.POST.get('user')
+    resum=request.POST.get('resume')
+    shrt=Shortlist(users=usrs,seejer=resum)
+    shrt.save()
+    return redirect(index)
 
-# def short(request):
-#     usrs=request.POST.get('usr')
-#     resum=request.POST.get('resum')
-#     shrt=Shortlist(usr=usrs,resum=resum)
-#     shrt.save()
-#     return redirect(index)
-#
-# def emp_short_profil(request):
-#     xyz = User.objects.get(user=request.user.id)
-#     abc = Shortlist.objects.filter(id=xyz)
-#     return render(request, 'Employer_Shortlisted_Profiles.html', {'shoet': abc})
+def emp_short_profil(request):
+    xyz = User.objects.get(user=request.user.id)
+    abc = Shortlist.objects.filter(id=xyz)
+    return render(request, 'Employer_Shortlisted_Profiles.html', {'shoet': abc})

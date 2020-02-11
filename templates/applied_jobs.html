@@ -67,7 +67,9 @@
 						<button class="button uncheck-all check_uncheck">
 						<label><input type="checkbox" id="1" class="checkbox_design">Uncheck all</label></button>
 						<button class="button del_icon"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-					<form class="checkboxes">
+
+{#        #}
+        <form class="checkboxes">
 					<ul>
 					   <li>
 					<div class="job-verticle-list">
@@ -81,13 +83,13 @@
 								<div class="vertical-job-body">
 									<div class="row">
 										<div class="col-md-9 col-sm-8">
-                                            
+
 											<ul class="can-skils">
                                                 <div class="vrt-job-cmp-logo">
-                                                 <a href="{% url 'job_detail' %}"><img src="{% static 'assets/img/c-1.png' %}" class="img-responsive" alt=""></a>
+                                                 <a href="job_detail.html"><img src="{% static 'assets/img/c-1.png' %}" class="img-responsive" alt=""></a>
                                                 </div>
 												<li><h5><a href="#">Apple LTD</a></h5> <span style="margin-bottom: 6px;display: block;">Sr. Web Designer </span></li>
-												
+
 												<li><strong>Job Type: </strong>Full Time</li>
 												<li><strong>KeySkills: </strong>
 													<span class="skill-tag">Photoshop</span>
@@ -107,7 +109,7 @@
 												<a href="#" class="btn btn-sm theme-btn">Apply Now</a>
 											</div>
 											<div class="vrt-job-act">
-												<a href="{% url 'job_detail' %}" title="" class="btn btn-sm view_jop">View Job</a>
+												<a href="job_detail.html" title="" class="btn btn-sm view_jop">View Job</a>
 											</div>
 										</div>
 									</div>
@@ -135,69 +137,69 @@
 						</div>
 						</li>
 						 <li>
-					<div class="job-verticle-list">
-							<div class="vertical-job-card">
-								<div class="vertical-job-header">
-									<h5>
-										<input type="checkbox" id="1" class="checkbox_design">
-										<span style="margin-bottom: 6px;display:inline-block;">Sr. Web Designer </span>
-									</h5>
-								</div>
-								<div class="vertical-job-body">
-									<div class="row">
-										<div class="col-md-9 col-sm-8">
-                                            
-											<ul class="can-skils">
-                                                <div class="vrt-job-cmp-logo">
-                                                 <a href="{% url 'job_detail' %}"><img src="{% static 'assets/img/c-1.png' %}" class="img-responsive" alt=""></a>
-                                                </div>
-												<li><h5><a href="#">Apple LTD</a></h5> <span style="margin-bottom: 6px;display: block;">Sr. Web Designer </span></li>
-												
-												<li><strong>Job Type: </strong>Full Time</li>
-												<li><strong>KeySkills: </strong>
-													<span class="skill-tag">Photoshop</span>
-													<span class="skill-tag">HTML</span>
-													<span class="skill-tag">css</span>
-													<span class="skill-tag">java</span>
-													<span class="skill-tag">php</span>
-													<span class="skill-tag">bootstrap</span>
-												</li>
-												<li><strong>Experience: </strong>3.5 Year</li>
-												<li><strong>Job Description: </strong> <span class="desc">Should be comfortable with individual contributor role;Good proficient in all design aspects;Graduate ...</span></li>
-												<li><strong>Location: </strong><span></span>Hyderabad - Ameerpet, A S Rao Nagar, Dilsukh Nagar, Madhapur</li>
-											</ul>
-										</div>
-										<div class="col-md-3 col-sm-4">
-											<div class="vrt-job-act">
-												<a href="#" class="btn btn-sm theme-btn">Apply Now</a>
-											</div>
-											<div class="vrt-job-act">
-												<a href="{% url 'job_detail' %}" title="" class="btn btn-sm view_jop">View Job</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="vertical-job-footer">
-									<div class="row">
-										<div class="col-md-6 col-sm-6">
-											<div class="cmp-job-rating">
-												<ul>
-                                                    <li><span class="fa fa-star-o" aria-hidden="true"></span></li>
-													<li><span class="fa fa-inr" aria-hidden="true"></span> 1,00,000 - 6,00,000 P.A.and Posted by 1month Ago</li>
-												</ul>
-											</div>
-										</div>
-										<div class="col-md-6 col-sm-6">
-											<div class="cmp-job-review">
-												<ul>
-													<li><a href="" class="apply_job_mem">Applied by 60 members</a></li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+{#					<div class="job-verticle-list">#}
+{#							<div class="vertical-job-card">#}
+{#								<div class="vertical-job-header">#}
+{#									<h5>#}
+{#										<input type="checkbox" id="1" class="checkbox_design">#}
+{#										<span style="margin-bottom: 6px;display:inline-block;">Sr. Web Designer </span>#}
+{#									</h5>#}
+{#								</div>#}
+{#								<div class="vertical-job-body">#}
+{#									<div class="row">#}
+{#										<div class="col-md-9 col-sm-8">#}
+{#                                            #}
+{#											<ul class="can-skils">#}
+{#                                                <div class="vrt-job-cmp-logo">#}
+{#                                                 <a href="job_detail.html"><img src="{% static 'assets/img/c-1.png' %}" class="img-responsive" alt=""></a>#}
+{#                                                </div>#}
+{#												<li><h5><a href="#">Apple LTD</a></h5> <span style="margin-bottom: 6px;display: block;">Sr. Web Designer </span></li>#}
+{#												#}
+{#												<li><strong>Job Type: </strong>Full Time</li>#}
+{#												<li><strong>KeySkills: </strong>#}
+{#													<span class="skill-tag">Photoshop</span>#}
+{#													<span class="skill-tag">HTML</span>#}
+{#													<span class="skill-tag">css</span>#}
+{#													<span class="skill-tag">java</span>#}
+{#													<span class="skill-tag">php</span>#}
+{#													<span class="skill-tag">bootstrap</span>#}
+{#												</li>#}
+{#												<li><strong>Experience: </strong>3.5 Year</li>#}
+{#												<li><strong>Job Description: </strong> <span class="desc">Should be comfortable with individual contributor role;Good proficient in all design aspects;Graduate ...</span></li>#}
+{#												<li><strong>Location: </strong><span></span>Hyderabad - Ameerpet, A S Rao Nagar, Dilsukh Nagar, Madhapur</li>#}
+{#											</ul>#}
+{#										</div>#}
+{#										<div class="col-md-3 col-sm-4">#}
+{#											<div class="vrt-job-act">#}
+{#												<a href="#" class="btn btn-sm theme-btn">Apply Now</a>#}
+{#											</div>#}
+{#											<div class="vrt-job-act">#}
+{#												<a href="job_detail.html" title="" class="btn btn-sm view_jop">View Job</a>#}
+{#											</div>#}
+{#										</div>#}
+{#									</div>#}
+{#								</div>#}
+{#								<div class="vertical-job-footer">#}
+{#									<div class="row">#}
+{#										<div class="col-md-6 col-sm-6">#}
+{#											<div class="cmp-job-rating">#}
+{#												<ul>#}
+{#                                                    <li><span class="fa fa-star-o" aria-hidden="true"></span></li>#}
+{#													<li><span class="fa fa-inr" aria-hidden="true"></span> 1,00,000 - 6,00,000 P.A.and Posted by 1month Ago</li>#}
+{#												</ul>#}
+{#											</div>#}
+{#										</div>#}
+{#										<div class="col-md-6 col-sm-6">#}
+{#											<div class="cmp-job-review">#}
+{#												<ul>#}
+{#													<li><a href="" class="apply_job_mem">Applied by 60 members</a></li>#}
+{#												</ul>#}
+{#											</div>#}
+{#										</div>#}
+{#									</div>#}
+{#								</div>#}
+{#							</div>#}
+{#						</div>#}
 						</li>
 						</ul>
 						</form>
@@ -225,7 +227,7 @@
                                             
 											<ul class="can-skils">
                                                 <div class="vrt-job-cmp-logo">
-                                                 <a href="{% url 'job_detail' %}"><img src="{% static 'assets/img/c-1.png' %}" class="img-responsive" alt=""></a>
+                                                 <a href="job_detail.html"><img src="{% static 'assets/img/c-1.png' %}" class="img-responsive" alt=""></a>
                                                 </div>
 												<li><h5><a href="#">Apple LTD</a></h5> <span style="margin-bottom: 6px;display: block;">Sr. Web Designer </span></li>
 												
@@ -248,7 +250,7 @@
 												<a href="#" class="btn btn-sm theme-btn">Apply Now</a>
 											</div>
 											<div class="vrt-job-act">
-												<a href="{% url 'job_detail' %}" title="" class="btn btn-sm view_jop">View Job</a>
+												<a href="job_detail.html" title="" class="btn btn-sm view_jop">View Job</a>
 											</div>
 										</div>
 									</div>
@@ -290,7 +292,7 @@
                                             
 											<ul class="can-skils">
                                                 <div class="vrt-job-cmp-logo">
-                                                 <a href="{% url 'job_detail' %}"><img src="{% static 'assets/img/c-1.png' %}" class="img-responsive" alt=""></a>
+                                                 <a href="job_detail.html"><img src="{% static 'assets/img/c-1.png' %}" class="img-responsive" alt=""></a>
                                                 </div>
 												<li><h5><a href="#">Apple LTD</a></h5> <span style="margin-bottom: 6px;display: block;">Sr. Web Designer </span></li>
 												
@@ -313,7 +315,7 @@
 												<a href="#" class="btn btn-sm theme-btn">Apply Now</a>
 											</div>
 											<div class="vrt-job-act">
-												<a href="{% url 'job_detail' %}" title="" class="btn btn-sm view_jop">View Job</a>
+												<a href="job_detail.html" title="" class="btn btn-sm view_jop">View Job</a>
 											</div>
 										</div>
 									</div>
@@ -363,13 +365,13 @@
 								<div class="vertical-job-body">
 									<div class="row">
 										<div class="col-md-9 col-sm-8">
-                                            
+
 											<ul class="can-skils">
                                                 <div class="vrt-job-cmp-logo">
-                                                 <a href="{% url 'job_detail' %}"><img src="{% static 'assets/img/c-1.png' %}" class="img-responsive" alt=""></a>
+                                                 <a href="job_detail.html"><img src="{% static 'assets/img/c-1.png' %}" class="img-responsive" alt=""></a>
                                                 </div>
 												<li><h5><a href="#">Apple LTD</a></h5> <span style="margin-bottom: 6px;display: block;">Sr. Web Designer </span></li>
-												
+
 												<li><strong>Job Type: </strong>Full Time</li>
 												<li><strong>KeySkills: </strong>
 													<span class="skill-tag">Photoshop</span>
@@ -389,7 +391,7 @@
 												<a href="#" class="btn btn-sm theme-btn">Apply Now</a>
 											</div>
 											<div class="vrt-job-act">
-												<a href="{% url 'job_detail' %}" title="" class="btn btn-sm view_jop">View Job</a>
+												<a href="job_detail.html" title="" class="btn btn-sm view_jop">View Job</a>
 											</div>
 										</div>
 									</div>
@@ -407,7 +409,7 @@
 										<div class="col-md-6 col-sm-6">
 											<div class="cmp-job-review">
 												<ul>
-													<li><a href="{% url 'job_detail' %}" class="apply_job_mem">Applied by 60 members</a></li>
+													<li><a href="job_detail.html" class="apply_job_mem">Applied by 60 members</a></li>
 												</ul>
 											</div>
 										</div>
@@ -428,13 +430,13 @@
 								<div class="vertical-job-body">
 									<div class="row">
 										<div class="col-md-9 col-sm-8">
-                                            
+
 											<ul class="can-skils">
                                                 <div class="vrt-job-cmp-logo">
-                                                 <a href="{% url 'job_detail' %}"><img src="{% static 'assets/img/c-1.png' %}" class="img-responsive" alt=""></a>
+                                                 <a href="job_detail.html"><img src="{% static 'assets/img/c-1.png' %}" class="img-responsive" alt=""></a>
                                                 </div>
 												<li><h5><a href="#">Apple LTD</a></h5> <span style="margin-bottom: 6px;display: block;">Sr. Web Designer </span></li>
-												
+
 												<li><strong>Job Type: </strong>Full Time</li>
 												<li><strong>KeySkills: </strong>
 													<span class="skill-tag">Photoshop</span>
@@ -454,7 +456,7 @@
 												<a href="#" class="btn btn-sm theme-btn">Apply Now</a>
 											</div>
 											<div class="vrt-job-act">
-												<a href="{% url 'job_detail' %}" title="" class="btn btn-sm view_jop">View Job</a>
+												<a href="job_detail.html" title="" class="btn btn-sm view_jop">View Job</a>
 											</div>
 										</div>
 									</div>
