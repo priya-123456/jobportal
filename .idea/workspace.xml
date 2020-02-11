@@ -3,28 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="97591a9e-1799-4840-9ba5-f6168e627990" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appnewjob/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/appnewjob/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appnewjob/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/appnewjob/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobportalnew/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/jobportalnew/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobportalnew/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/jobportalnew/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Employer_Changepassword.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Employer_Changepassword.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Employer_Contacted_Pro.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Employer_Contacted_Pro.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Employer_Edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Employer_Edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Employer_Posted_Jobs.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Employer_Posted_Jobs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Employer_Profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Employer_Profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Employer_Shortlisted_Profiles.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Employer_Shortlisted_Profiles.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Employer_browse_employer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Employer_browse_employer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Employer_job_appliers.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Employer_job_appliers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Employer_job_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Employer_job_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/applied_jobs.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/applied_jobs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/browse_jobseeker.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/browse_jobseeker.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/headerfooter.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/headerfooter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/headerfooter2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/headerfooter2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/job_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/job_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/myprofilee1.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/myprofilee1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/myprofilee2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/myprofilee2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/userapp/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +34,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/jobportal" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -193,7 +172,9 @@
       <workItem from="1580725792950" duration="1946000" />
       <workItem from="1580731296878" duration="262000" />
       <workItem from="1581397052353" duration="396000" />
-      <workItem from="1581407616918" duration="287000" />
+      <workItem from="1581407616918" duration="1804000" />
+      <workItem from="1581414065152" duration="577000" />
+      <workItem from="1581424753371" duration="280000" />
     </task>
     <servers />
   </component>
@@ -206,17 +187,17 @@
     </state>
     <state x="452" y="149" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1578374534595" />
     <state x="530" y="176" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.860@0.0.1600.860" timestamp="1576754111339" />
-    <state x="580" y="184" key="FileChooserDialogImpl" timestamp="1580379428743">
+    <state x="580" y="184" key="FileChooserDialogImpl" timestamp="1581414104851">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="495" y="156" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1579519484565" />
-    <state x="580" y="184" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1580379428743" />
+    <state x="580" y="184" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1581414104851" />
     <state x="580" y="193" key="FileChooserDialogImpl/0.0.1600.900@0.0.1600.900" timestamp="1579849339401" />
-    <state x="495" y="253" key="com.intellij.ide.util.TipDialog" timestamp="1581407700734">
+    <state x="495" y="253" key="com.intellij.ide.util.TipDialog" timestamp="1581414072815">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="423" y="214" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1579519014864" />
-    <state x="495" y="253" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1581407700734" />
+    <state x="495" y="253" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1581414072815" />
     <state x="495" y="265" key="com.intellij.ide.util.TipDialog/0.0.1600.900@0.0.1600.900" timestamp="1580121670142" />
   </component>
 </project>

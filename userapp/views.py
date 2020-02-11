@@ -79,14 +79,14 @@ def register(request):
             messages.error("Passwords must match")
     return HttpResponse(json.dumps(resp))
 
-
-def login(request):
-    if request.method == 'POST':
-        username = request.POST.get("username")
-        password = request.POST.get("password")
-        user = authenticate(username=username, password=pasword)
-        if not user:
-            user = User.objects.get(username=email)
-            user = authenticate(username=username.user_object)
+#
+# def login(request):
+#     if request.method == 'POST':
+#         username = request.POST.get("username")
+#         password = request.POST.get("password")
+#         user = authenticate(username=username, password=pasword)
+#         if not user:
+#             user = User.objects.get(username=email)
+#             user = authenticate(username=username.user_object)
 
 
