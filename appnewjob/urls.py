@@ -29,8 +29,8 @@ urlpatterns = [
     path('jobappliers/', views.empjobappliers, name='empjobappliers'),
     path('save/', views.resume_save, name='rsave'),
     # path('register/', views.register, name='register'),
-    path('login/', views.logins, name='login'),
-    path('logout/', views.logout, name='logout'),
+    # path('login/', views.logins, name='login'),
+    # path('logout/', views.logout, name='logout'),
     path('jobsave/', views.jobsave, name='jobsave'),
     path('jobupdate/<int:id>/', views.jobupdate, name='jobupdate')
 

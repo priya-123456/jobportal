@@ -186,23 +186,23 @@ def empjobappliers(request):
 #     else:
 #         return render(request, 'index.html')
 
-
-def logins(request):
-    if request.method == 'POST':
-        uname = request.POST.get('uname')
-        raw_password = request.POST.get('upass')
-        user = auth.authenticate(username=uname, password=raw_password)
-        if user is not None:
-            auth_login(request, user)
-            messages.success(request, 'Logined............')
-            return redirect(index)
-        else:
-            messages.error(request, 'Invalid credentials............')
-            return redirect(index)
-    else:
-        return redirect(logins)
-
-
-def logout(request):
-    auth_logout(request)
-    return redirect(index)
+#
+# def logins(request):
+#     if request.method == 'POST':
+#         uname = request.POST.get('uname')
+#         raw_password = request.POST.get('upass')
+#         user = auth.authenticate(username=uname, password=raw_password)
+#         if user is not None:
+#             auth_login(request, user)
+#             messages.success(request, 'Logined............')
+#             return redirect(index)
+#         else:
+#             messages.error(request, 'Invalid credentials............')
+#             return redirect(index)
+#     else:
+#         return redirect(logins)
+#
+#
+# def logout(request):
+#     auth_logout(request)
+#     return redirect(index)
