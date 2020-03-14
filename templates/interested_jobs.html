@@ -27,15 +27,12 @@
 
 <ul>
    <li class=""><a href="{% url 'seekerprofile' %}">My Profile</a></li>
-    <!--<li class=""><a href="shortlisted_profiles.html">Shortlisted Profiles</a></li>
-    <li class=""><a href="posted_jobs.html">Posted Jobs</a></li>
-	<li class=""><a href="Contacted_pro.html">Contacted Profiles</a></li>-->
     <li class=""><a href="{% url 'apploed_jobs' %}">Applied Jobs (110)</a></li>
 	<li class="active"><a href="{% url 'intersted_jobs' %}">Interested Jobs</a></li>
     <li class=""><a href="{% url 'shortlisted_comp' %}">Shortlisted Companies</a></li>
 	 <li class=""><a href="{% url 'contacted_comp' %}">Contacted Companies</a></li>
     <li class=""><a href="{% url 'changepassword' %}">Change Password</a></li>
-    <li class=""><a href="#">Logout</a></li>
+    <li class=""><a href="{% url 'logout' %}">Logout</a></li>
 </ul>
 </div>
 						

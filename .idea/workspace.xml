@@ -1,22 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="97591a9e-1799-4840-9ba5-f6168e627990" name="Default Changelist" comment="">
+    <list default="true" id="eab05c32-2cea-4094-92e7-d3f321bb4bc7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/jobportal.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Django_Lib.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/bookmarks.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jobportalnew.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appnewjob/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/appnewjob/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/appnewjob/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/appnewjob/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appnewjob/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/appnewjob/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appnewjob/migrations/0002_resume_uploadyourpic.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/appnewjob/migrations/0003_auto_20200131_1516.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/appnewjob/migrations/0004_auto_20200204_1232.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/appnewjob/migrations/0005_remove_createjob_role.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/appnewjob/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/appnewjob/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/appnewjob/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/appnewjob/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/appnewjob/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/appnewjob/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Employer_Changepassword.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Employer_Changepassword.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Employer_Contacted_Pro.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Employer_Contacted_Pro.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Employer_Edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Employer_Edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Employer_Posted_Jobs.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Employer_Posted_Jobs.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Employer_Shortlisted_Profiles.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Employer_Shortlisted_Profiles.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Employer_browse_employer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Employer_browse_employer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Employer_job_appliers.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Employer_job_appliers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/applied_jobs.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/applied_jobs.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/browse_jobseeker.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/browse_jobseeker.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/create_resume.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/create_resume.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/headerfooter.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/headerfooter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/changepassword.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/changepassword.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contacted_com.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contacted_com.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/headerfooter2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/headerfooter2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/interested_jobs.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/interested_jobs.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/job_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/job_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/myprofilee1.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/myprofilee1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/myprofilee2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/myprofilee2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/resume.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/shortlisted_com.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shortlisted_com.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/shortlisted_jobs.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shortlisted_jobs.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,14 +56,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Python Script" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1Uk4HyYh2HC3bmHpHTb1mTwkIvF" />
+  <component name="ProjectId" id="1YZMgCTT3U0ff2pzXyYxPslMSqq" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -46,8 +72,9 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../04-02-2020/jobportal" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../sreekanth/gayatri/main_project" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -55,15 +82,12 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\jobportalnew\templates" />
-      <recent name="D:\jobportalnew\appnewjob\static" />
-    </key>
-  </component>
-  <component name="RunManager">
-    <configuration name="jobportalnew" type="Python.DjangoServer" factoryName="Django server">
-      <module name="jobportalnew" />
+  <component name="RunManager" selected="JavaScript Debug.browse_jobseeker.html">
+    <configuration name="browse_jobseeker.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/jobportal/templates/browse_jobseeker.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="jobportal" type="Python.DjangoServer" factoryName="Django server">
+      <module name="jobportal" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -85,109 +109,30 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
+    <recent_temporary>
       <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
+        <item itemvalue="JavaScript Debug.browse_jobseeker.html" />
       </list>
-    </option>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="97591a9e-1799-4840-9ba5-f6168e627990" name="Default Changelist" comment="" />
-      <created>1575887175743</created>
+      <changelist id="eab05c32-2cea-4094-92e7-d3f321bb4bc7" name="Default Changelist" comment="" />
+      <created>1583145771781</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1575887175743</updated>
-      <workItem from="1575887180912" duration="134000" />
-      <workItem from="1575890354960" duration="5486000" />
-      <workItem from="1575951701057" duration="6585000" />
-      <workItem from="1576045819033" duration="1326000" />
-      <workItem from="1576212028287" duration="8990000" />
-      <workItem from="1576298322552" duration="1804000" />
-      <workItem from="1576482026226" duration="1231000" />
-      <workItem from="1576578431596" duration="3935000" />
-      <workItem from="1576651414249" duration="3791000" />
-      <workItem from="1576665554571" duration="1499000" />
-      <workItem from="1576732336257" duration="4903000" />
-      <workItem from="1576741126093" duration="6186000" />
-      <workItem from="1577091928880" duration="3791000" />
-      <workItem from="1577161096107" duration="2162000" />
-      <workItem from="1577678011076" duration="4037000" />
-      <workItem from="1577683665492" duration="2239000" />
-      <workItem from="1577689987342" duration="2263000" />
-      <workItem from="1577695476417" duration="1085000" />
-      <workItem from="1577764646394" duration="594000" />
-      <workItem from="1577765880452" duration="1077000" />
-      <workItem from="1577771422544" duration="604000" />
-      <workItem from="1577938797665" duration="2181000" />
-      <workItem from="1577945601264" duration="497000" />
-      <workItem from="1577960540613" duration="179000" />
-      <workItem from="1578024986027" duration="1447000" />
-      <workItem from="1578032303035" duration="328000" />
-      <workItem from="1578283690049" duration="1005000" />
-      <workItem from="1578289328905" duration="3641000" />
-      <workItem from="1578301926344" duration="434000" />
-      <workItem from="1578303852077" duration="2927000" />
-      <workItem from="1578309854640" duration="5029000" />
-      <workItem from="1578315468330" duration="354000" />
-      <workItem from="1578370111191" duration="4487000" />
-      <workItem from="1578375920133" duration="4524000" />
-      <workItem from="1578382959762" duration="927000" />
-      <workItem from="1578389842926" duration="4020000" />
-      <workItem from="1578396817639" duration="1268000" />
-      <workItem from="1578398348054" duration="2107000" />
-      <workItem from="1578454378530" duration="1187000" />
-      <workItem from="1578456247297" duration="1624000" />
-      <workItem from="1578460470046" duration="163000" />
-      <workItem from="1578463501071" duration="4241000" />
-      <workItem from="1578469035735" duration="1638000" />
-      <workItem from="1578475083770" duration="3687000" />
-      <workItem from="1578480784282" duration="3768000" />
-      <workItem from="1578542625013" duration="1561000" />
-      <workItem from="1578544659292" duration="3271000" />
-      <workItem from="1578552450251" duration="1800000" />
-      <workItem from="1578563244213" duration="2857000" />
-      <workItem from="1578569288018" duration="2921000" />
-      <workItem from="1578628605299" duration="2238000" />
-      <workItem from="1578634974540" duration="734000" />
-      <workItem from="1578641821507" duration="1167000" />
-      <workItem from="1578650717281" duration="1176000" />
-      <workItem from="1578656194106" duration="706000" />
-      <workItem from="1578658473087" duration="1421000" />
-      <workItem from="1579493463215" duration="15000" />
-      <workItem from="1579505071906" duration="682000" />
-      <workItem from="1579511151885" duration="3730000" />
-      <workItem from="1579519015020" duration="2360000" />
-      <workItem from="1579679632249" duration="723000" />
-      <workItem from="1579694167649" duration="2690000" />
-      <workItem from="1579757994614" duration="2750000" />
-      <workItem from="1579761356220" duration="9450000" />
-      <workItem from="1579842647500" duration="3022000" />
-      <workItem from="1579929927662" duration="13932000" />
-      <workItem from="1580109101656" duration="4756000" />
-      <workItem from="1580126222932" duration="1097000" />
-      <workItem from="1580184417836" duration="15065000" />
-      <workItem from="1580270465947" duration="9712000" />
-      <workItem from="1580291466826" duration="522000" />
-      <workItem from="1580299749430" duration="1161000" />
-      <workItem from="1580364465479" duration="3416000" />
-      <workItem from="1580377704343" duration="1730000" />
-      <workItem from="1580450266980" duration="7423000" />
-      <workItem from="1580465504617" duration="1762000" />
-      <workItem from="1580530385654" duration="5673000" />
-      <workItem from="1580548476361" duration="12688000" />
-      <workItem from="1580703812837" duration="14078000" />
-      <workItem from="1580790445512" duration="7570000" />
+      <updated>1583145771781</updated>
+      <workItem from="1583145782411" duration="3670000" />
+      <workItem from="1583149761122" duration="2095000" />
+      <workItem from="1583208639002" duration="9776000" />
+      <workItem from="1583236820885" duration="2394000" />
+      <workItem from="1583294415043" duration="20807000" />
+      <workItem from="1583380570928" duration="2800000" />
+      <workItem from="1583402615077" duration="1346000" />
+      <workItem from="1583467647502" duration="233000" />
     </task>
     <servers />
   </component>
@@ -195,24 +140,17 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="452" y="149" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1578374534595">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="452" y="149" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1578374534595" />
-    <state x="530" y="176" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.860@0.0.1600.860" timestamp="1576754111339" />
-    <state x="495" y="158" key="FileChooserDialogImpl" timestamp="1580800069068">
+    <state x="413" y="115" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583149700314">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="495" y="156" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1579519484565" />
-    <state x="495" y="158" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1580800069068" />
-    <state x="580" y="184" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1576741134204" />
-    <state x="580" y="193" key="FileChooserDialogImpl/0.0.1600.900@0.0.1600.900" timestamp="1579760026562" />
-    <state x="423" y="217" key="com.intellij.ide.util.TipDialog" timestamp="1580790460524">
+    <state x="413" y="115" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.738@0.0.1366.738" timestamp="1583149700314" />
+    <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1583404099559">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="423" y="214" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1579519014864" />
-    <state x="423" y="217" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1580790460524" />
-    <state x="495" y="253" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1577161094977" />
-    <state x="495" y="265" key="com.intellij.ide.util.TipDialog/0.0.1600.900@0.0.1600.900" timestamp="1579694435900" />
+    <state x="463" y="123" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1583404099559" />
+    <state x="378" y="191" key="com.intellij.ide.util.TipDialog" timestamp="1583467750087">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="378" y="191" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1583467750087" />
   </component>
 </project>

@@ -24,15 +24,14 @@
 <h3>Welcome Mr. Employer.. !!</h3>
 </div>
 <ul>
-   <li class=""><a href="{% url 'myprofilee1' %}">My Profile</a></li>
+   <li class=""><a href="{% url 'myprofilee2' %}">My Profile</a></li>
     <li class="active"><a href="{% url 'emp_short_profil' %}">Shortlisted Profiles</a></li>
-    <!--<li class=""><a href="sent_jobs.html">Sent Jobs</a></li>-->
+    <li class=""><a href="{% url 'bookmark' %}">Bookmark Profiles</a></li>
     <li class=""><a href="{% url 'emp_posted_jobs' %}">Posted Jobs</a></li>
 	<li class=""><a href="{% url 'emp_contacted_pro' %}">Contacted Profiles</a></li>
-    <!--<li class=""><a href="applied_jobs.html">Apply Jobs (110)</a></li>-->
-    <!--<li class=""><a href="shortlisted_jobs.html">Shortlisted Jobs</a></li>-->
+     <li class=""><a href="{% url 'empjobappliers' %}">job appliers</a></li>
     <li class=""><a href="{% url 'empchangepassword' %}">Change Password</a></li>
-    <li class=""><a href="#">Logout</a></li>
+    <li class=""><a href="{% url 'logout' %}">Logout</a></li>
 </ul>
 </div>
 						
@@ -53,78 +52,77 @@
 						<button class="button del_icon"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
 					<form class="checkboxes">
 					<ul>
-                       {% for x in shoet %}
-					   <li>
+
+						{% for x in klm %}
+                        <li>
 						<div class="job-verticle-list">
 							<div class="vertical-job-card">
 								<div class="vertical-job-body">
 									<div class="row">
 										<div class="col-md-12 col-sm-12">
-											<input type="checkbox" id="1" class="checkbox_design">
+
 											<ul class="can-skils cm_logo_emploer_mian">
                                                 <div class="vrt-job-cmp-logo cm_logo_emploer">
-                                                 <a href="{% url 'emp_jobdetail' %}">
-												 <img src="{% static 'img/female.jpg' %}" class="img-responsive" alt="">
-												 </a>
+                                                 <a href="job-detail.html"><img src="{{x.uploadyourpic.url}}" class="img-responsive" alt="" height="70" width="50"></a>
                                                 </div>
 												<li>
-                                                    <h5><a href="#" class="cm_logo_emploer_heading">Somnath Bhadra</a><span>ID:2587TH</span></h5>
-                                                    <p>Teacher from Berhampur, Murshidabad</p>
-                                                    <span class="no_margin_left"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Graduate - Btech/BE, Computers (Computers)
+                                                    <h5><a href="#" class="cm_logo_emploer_heading">{{x.first_name}}{{ x.last_name }}</a><span>ID:2587TH</span></h5>
+{#                                                    <p>Teacher from Berhampur, Murshidabad</p>#}
+                                                    <span class="no_margin_left"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Qualification - {{x.qualification}}
                                                     </span>
-                                                    <span><i class="fa fa-briefcase" aria-hidden="true"></i> 2 yrs</span>
-                                                    
-                                                
-                                                    <span><i class="fa fa-inr" aria-hidden="true"></i> 5000 / month</span>
+                                                    <span><i class="fa fa-briefcase" aria-hidden="true"></i> {{x.experience}}</span>
+
+
+                                                    <span><i class="fa fa-inr" aria-hidden="true"></i>{{x.expect_package}}</span>
                                                 </li>
-												
-												
+
+
 											</ul>
-                                            
-                                            
+
+
                                             <ul class="emplouer_detials">
                                                 <p>Interested in Full Time Jobs with Any Shift</p>
-                                                
+
                                                 <li>
-                                                    <span class="emp_heading">Photo ID Proof</span>
-                                                    <span class="emp_repe">Aadhaar Card, Ration Card</span>
+                                                    <span class="emp_heading">Job Type</span>
+                                                    <span class="emp_repe">{{x.desired_job_type}}</span>
                                                 </li>
-                                                
-                                              
-                                                
+
+
+
                                                 <li>
-                                                    <span class="emp_heading">Sub Type</span>
-                                                    <span class="emp_repe">Govt Institution</span>
+                                                    <span class="emp_heading">Availability to join</span>
+                                                    <span class="emp_repe">{{x.availability_to_join}}</span>
                                                 </li>
                                                 <li>
                                                     <span class="emp_heading">Languages known</span>
-                                                    <span class="emp_repe">Hindi, Bengali, English</span>
+                                                    <span class="emp_repe">{{x.languages_known}}</span>
                                                 </li>
-                                                
+
                                                 <li>
                                                     <span class="emp_heading">Preference Location</span>
-                                                    <span class="emp_repe">Hyderabad</span>
+                                                    <span class="emp_repe">{{x.desired_location}}</span>
                                                 </li>
-                                                
-                                               
+
+
                                                 <li>
                                                     <span class="emp_heading">Passport</span>
-                                                    <span class="emp_repe">No</span>
-                                                </li> 
-                                             
+                                                    <span class="emp_repe">{{x.passport}}</span>
+                                                </li>
+
                                                 <li>
                                                     <span class="emp_heading">Industry</span>
-                                                    <span class="emp_repe">Others</span>
+                                                    <span class="emp_repe">{{x.desired_industry}}</span>
                                                 </li>
-                                                
+
                                                 <li>
                                                     <span class="emp_heading">Job Title </span>
-                                                    <span class="emp_repe">Security Officer</span>
+                                                    <span class="emp_repe">{{x.desired_job_title}}</span>
                                                 </li>
-                                                <li>
-                                                    <span class="emp_heading"> Address Proof</span>
-                                                    <span class="emp_repe">Voter ID Card, Ration Card</span>
-                                                </li>
+{#                                                <li>#}
+{#                                                    <span class="emp_heading"> Address Proof</span>#}
+{#                                                    <span class="emp_repe">{{x.address}}</span>#}
+{#                                                </li>#}
                                             </ul>
 										</div>
 									</div>
@@ -134,10 +132,10 @@
 										<div class="col-md-6 col-sm-6 footer_emploer">
 											<a href="#"><button type="button" class="btn btn-sm theme-btn" data-toggle="modal" data-target="#myModal">SMS</button></a>
 											<a href="#"><button type="button" class="btn btn-sm theme-btn" data-toggle="modal" data-target="#myModal">Email</button></a>
-											<a href="#" class="btn btn-sm theme-btn"><img src="{% static 'img/resume.png' %}" class="resumeicon">Download resume</a>
+											<a href="{% url 'profile' x.id %}" class="btn btn-sm theme-btn">View Contact</a>
 										</div>
 										<div class="col-md-6 col-sm-6">
-											<a href="{% url 'emp_profiles' %}" class="btn btn-sm resume-theme-btn pull-right">View Contact</a>
+											<a href="#" class="btn btn-sm resume-theme-btn pull-right"><img src="{{ x.resume.url }}" class="resumeicon">Download resume</a>
 										</div>
 									</div>
 								</div>

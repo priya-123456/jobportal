@@ -1,4 +1,5 @@
 from django.db import models
+import uuid
 from appnewjob.data import Gender ,Passport ,Marrital_status ,Shifts ,avaltojoin ,Hiringprocess,Eligiblefor
 from django.contrib.auth.models import User
 
@@ -62,18 +63,12 @@ class State(models.Model):
         return self.state
 
 
-# class Specialization(models.Model):
-#     special = models.CharField(max_length=100)
-
-#     def __str__(self):
-#         return self.special
-
-
 class Functionalarea(models.Model):
     functionalarea = models.CharField(max_length=150)
 
     def __str__(self):
         return self.functionalarea
+
 
 class Package(models.Model):
     package = models.CharField(max_length=25)
@@ -88,7 +83,10 @@ class Designation(models.Model):
     def __str__(self):
         return self.desg
 
+
 class Resume(models.Model):
+    uuid = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
+    user = models.OneToOneField('auth.User', on_delete=models.CASCADE, null=True, blank=True)
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     email = models.EmailField()
@@ -135,6 +133,8 @@ class Resume(models.Model):
 
 
 class Createjob(models.Model):
+    uuid = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
+    user = models.ForeignKey('auth.User', on_delete=models.CASCADE, null=True, blank=True)
     jobtitle = models.CharField(max_length=50)
     designation = models.ForeignKey(Designation, on_delete=models.CASCADE)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
@@ -183,6 +183,46 @@ class Createjob(models.Model):
 
     def __str__(self):
         return self.comapnyname
-class Shortlist(models.Model):
-    users=models.ForeignKey(User,on_delete=models.CASCADE)
-    seejer=models.ForeignKey(Resume,on_delete=models.CASCADE)
+
+
+class Register(models.Model):
+    user = models.OneToOneField('auth.User', on_delete=models.CASCADE)
+    areyou = models.CharField(max_length=50)
+
+    def __unicode__(self):
+        return self.user
+
+
+class Bookmark(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    seeker = models.ForeignKey(Resume, on_delete=models.CASCADE)
+
+
+class Shoortlist(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    seeker = models.ForeignKey(Resume, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.user
+
+
+class Contacetd_Profiles(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    contact = models.ForeignKey(Resume, on_delete=models.CASCADE)
+
+
+class Interestedjobs(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    job = models.ForeignKey(Createjob, on_delete=models.CASCADE)
+
+
+class Notinterestedjobs(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    cjob = models.ForeignKey(Createjob, on_delete=models.CASCADE)
+
+
+class Appliedjobs(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    appjob = models.ForeignKey(Createjob, on_delete=models.CASCADE)
+
+

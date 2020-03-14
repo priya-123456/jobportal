@@ -164,22 +164,39 @@
 					<div class="col-md-4 col-sm-4">
 						<div class="sidebar">
 						
-							<!-- Start: Opening hour -->
+							 Start: Opening hour
 							<div class="widget-boxed">
 								<div class="widget-boxed-body">
-									<a href="#" class="btn btn-m theme-btn full-width mrg-bot-10"><i class="ti-heart"></i>Bookmark This</a>
-{#									<a href="#" class="btn btn-m light-gray-btn full-width"><i class="ti-check"></i>Shortlist Resume</a>#}
-                                    <form action="" method="post" enctype="multipart/form-data">
+                                    <form action="{% url 'bookmarksave' %}" method="post">
                                         {% csrf_token %}
-                                        <input type="hidden" name="usr" value="{{ request.user.id }}">
-                                  <input type="hidden" name="resum">
-                                  <input type="button"  class="btn btn-m light-gray-btn full-width" value="Shortlisted" disabled>
-                                   <input type="submit"  class="btn btn-m light-gray-btn full-width" value="Shortlist" >
-
-
+                                        <input type="text" name="user" value="{{ request.user.id }}">
+                                 <input type="text" name="resume" value="{{pro.id }}">
+                                {% if book %}
+                                  <input type="button"  class="btn btn-m light-gray-btn full-width" value="Bookmarked" disabled>
+                                  {% else %}
+                                   <input type="submit"  class="btn btn-m light-gray-btn full-width" value="Bookmark" >
+                                  {% endif %}
                                     </form>
 								</div>
 							</div>
+								<div class="widget-boxed">
+								<div class="widget-boxed-body">
+                                    <form action="{% url 'shortlistsave' %}" method="post">
+                                        {% csrf_token %}
+                                        <input type="hidden" name="user" value="{{ request.user.id }}">
+                                 <input type="hidden" name="short" value="{{pro.id }}">
+                                {% if short %}
+                                  <input type="button"  class="btn btn-m light-gray-btn full-width" value="Shortlisted" disabled>
+                                  {% else %}
+                                   <input type="submit"  class="btn btn-m light-gray-btn full-width" value="Shortlist" >
+                                  {% endif %}
+                                    </form>
+
+
+								</div>
+							</div>
+
+
 							<!-- End: Opening hour -->
 							
 							<!-- Start: Job Overview -->
@@ -198,13 +215,25 @@
 											<li><i class="ti-shield padd-r-10"></i>{{pro.experience}}</li>
 										</ul>
 										<h5>Share Job</h5>
-										<ul class="side-list-inline no-border social-side">
-											<li><a href="#"><i class="fa fa-facebook theme-cl"></i></a></li>
-											<li><a href="#"><i class="fa fa-google-plus theme-cl"></i></a></li>
-											<li><a href="#"><i class="fa fa-twitter theme-cl"></i></a></li>
-											<li><a href="#"><i class="fa fa-linkedin theme-cl"></i></a></li>
-											<li><a href="#"><i class="fa fa-pinterest theme-cl"></i></a></li>
-										</ul>
+<!--										<ul class="side-list-inline no-border social-side">-->
+<!--											<li><a href="#"><i class="fa fa-facebook theme-cl"></i></a></li>-->
+<!--											<li><a href="#"><i class="fa fa-google-plus theme-cl"></i></a></li>-->
+<!--											<li><a href="#"><i class="fa fa-twitter theme-cl"></i></a></li>-->
+<!--											<li><a href="#"><i class="fa fa-linkedin theme-cl"></i></a></li>-->
+<!--											<li><a href="#"><i class="fa fa-pinterest theme-cl"></i></a></li>-->
+<!--										</ul>-->
+
+										<!-- AddToAny BEGIN -->
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<!--<a class="a2a_button_email"></a>-->
+<a class="a2a_button_linkedin"></a>
+<a class="a2a_button_pinterest"></a>
+</div>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
 									</div>
 								</div>
 							</div>

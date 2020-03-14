@@ -1,0 +1,241 @@
+{% extends 'headerfooter2.html' %}
+{% block content %}
+   {% load static %}
+                            <div class="full_width propery_listing">
+                                <div class="container">
+                                    <div class="row">
+					<div class="col-md-3 col-sm-3">
+					<div id="sticky-anchor"></div>
+<div class="filter_sidebar filtersidebar_menu for_mob_filter sidebar">
+
+<div class="text-center">
+<span class="photo_edit text-center">
+<img src="{% static 'img/noimg.jpg' %}" class="img-responsive img-circle">
+<div class="image-upload">
+    <label for="file-input">
+        <img src="https://goo.gl/pB9rpQ"/>
+    </label>
+
+    <input id="file-input" tybmarkpe="file"/>
+</div>
+</span>
+</div>
+    <div class="div_welcome">
+<h3>Welcome Mr. Employer.. !!</h3>
+</div>
+<ul>
+    <li class=""><a href="{% url 'myprofilee2' %}">My Profile</a></li>
+    <li class=""><a href="{% url 'emp_short_profil' %}">Shortlisted Profiles</a></li>
+    <li class="active"><a href="{% url 'bookmark' %}">Bookmark Profiles</a></li>
+    <li class=""><a href="{% url 'emp_posted_jobs' %}">Posted Jobs</a></li>
+	<li class=""><a href="{% url 'emp_contacted_pro' %}">Contacted Profiles</a></li>
+    <li class=""><a href="{% url 'empchangepassword' %}">Change Password</a></li>
+    <li class=""><a href="{% url 'logout' %}">Logout</a></li>
+</ul>
+</div>
+
+					</div>
+					<div class="col-md-9 liting_grid padding_10_right">
+
+<!-- <div class="fl-left"> -->
+   <!-- <ul class="nav nav-tabs nav-tabss"> -->
+    <!-- <li class="active"><a data-toggle="tab" href="#home">pending</a></li> -->
+    <!-- <li><a data-toggle="tab" href="#menu1">Accept</a></li> -->
+    <!-- <li><a data-toggle="tab" href="#menu2">Declined</a></li> -->
+  <!-- </ul></div> -->
+  <div class="stuff">
+  <button class="button check-all check_uncheck">
+						<label><input type="checkbox" id="1" class="checkbox_design">Check all</label></button>
+						<button class="button uncheck-all check_uncheck">
+						<label><input type="checkbox" id="1" class="checkbox_design">Uncheck all</label></button>
+						<button class="button del_icon"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+					<form class="checkboxes">
+					<ul>
+
+						{% for x in bmark %}
+                        {% if x.user == request.user %}
+                        <li>
+						<div class="job-verticle-list">
+							<div class="vertical-job-card">
+								<div class="vertical-job-body">
+									<div class="row">
+										<div class="col-md-12 col-sm-12">
+
+											<ul class="can-skils cm_logo_emploer_mian">
+                                                <div class="vrt-job-cmp-logo cm_logo_emploer">
+                                                 <a href="job-detail.html"><img src="{{x.uploadyourpic.url}}" class="img-responsive" alt="" height="70" width="50"></a>
+                                                </div>
+												<li>
+                                                    <h5><a href="#" class="cm_logo_emploer_heading">{{request.user.x.first_name}}{{ x.last_name }}</a><span>ID:2587TH</span></h5>
+{#                                                    <p>Teacher from Berhampur, Murshidabad</p>#}
+                                                    <span class="no_margin_left"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Qualification - {{x.qualification}}
+                                                    </span>
+                                                    <span><i class="fa fa-briefcase" aria-hidden="true"></i> {{x.experience}}</span>
+
+
+                                                    <span><i class="fa fa-inr" aria-hidden="true"></i>{{x.expect_package}}</span>
+                                                </li>
+
+
+											</ul>
+
+
+                                            <ul class="emplouer_detials">
+                                                <p>Interested in Full Time Jobs with Any Shift</p>
+
+                                                <li>
+                                                    <span class="emp_heading">Job Type</span>
+                                                    <span class="emp_repe">{{x.desired_job_type}}</span>
+                                                </li>
+
+
+
+                                                <li>
+                                                    <span class="emp_heading">Availability to join</span>
+                                                    <span class="emp_repe">{{x.availability_to_join}}</span>
+                                                </li>
+                                                <li>
+                                                    <span class="emp_heading">Languages known</span>
+                                                    <span class="emp_repe">{{x.languages_known}}</span>
+                                                </li>
+
+                                                <li>
+                                                    <span class="emp_heading">Preference Location</span>
+                                                    <span class="emp_repe">{{x.desired_location}}</span>
+                                                </li>
+
+
+                                                <li>
+                                                    <span class="emp_heading">Passport</span>
+                                                    <span class="emp_repe">{{x.passport}}</span>
+                                                </li>
+
+                                                <li>
+                                                    <span class="emp_heading">Industry</span>
+                                                    <span class="emp_repe">{{x.desired_industry}}</span>
+                                                </li>
+
+                                                <li>
+                                                    <span class="emp_heading">Job Title </span>
+                                                    <span class="emp_repe">{{x.desired_job_title}}</span>
+                                                </li>
+{#                                                <li>#}
+{#                                                    <span class="emp_heading"> Address Proof</span>#}
+{#                                                    <span class="emp_repe">{{x.address}}</span>#}
+{#                                                </li>#}
+                                            </ul>
+										</div>
+									</div>
+								</div>
+								<div class="vertical-job-footer ertical-job-footer2 vertical-job-footerq">
+									<div class="row">
+										<div class="col-md-6 col-sm-6 footer_emploer">
+											<a href="#"><button type="button" class="btn btn-sm theme-btn" data-toggle="modal" data-target="#myModal">SMS</button></a>
+											<a href="#"><button type="button" class="btn btn-sm theme-btn" data-toggle="modal" data-target="#myModal">Email</button></a>
+											<a href="{% url 'profile' x.id %}" class="btn btn-sm theme-btn">View Contact</a>
+										</div>
+										<div class="col-md-6 col-sm-6">
+											<a href="#" class="btn btn-sm resume-theme-btn pull-right"><img src="{{ x.resume.url }}" class="resumeicon">Download resume</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+					</li>
+                        {% endif %}
+                        {% endfor %}
+
+				</ul>
+			</form>
+  <ul class="pagination">
+  <li class="disabled"><a href="#">&laquo;</a></li>
+  <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+  <li><a href="#">2</a></li>
+  <li><a href="#">3</a></li>
+  <li><a href="#">4</a></li>
+  <li><a href="#">5</a></li>
+  <li><a href="#">&raquo;</a></li>
+</ul>
+
+</div>
+
+					<!-- Sidebar -->
+
+
+				</div>
+                                </div>
+
+                            </div>
+                            </div>
+
+
+		<script>
+function sticky_relocate() {
+			    var window_top = $(window).scrollTop() ;
+			    var footer_top = $(".footer").offset().top - 30;
+			    var div_top = $('#sticky-anchor').offset().top;
+			    var div_height = $(".sidebar").height();
+			    var leftHeight = $('.left-container').height();
+
+			    if (window_top + div_height > footer_top){
+			        $('.sidebar').removeClass('stick');
+			    	$('.sidebar').addClass('abs');
+			    	 $('.right-conatainer').css('min-height', leftHeight + 'px');
+			    	}
+			    else if (window_top > div_top) {
+			        $('.sidebar').addClass('stick');
+			        $('.sidebar').removeClass('abs');
+			    } else {
+			        $('.sidebar').removeClass('stick');
+			        $('.sidebar').removeClass('abs');
+			    }
+			}
+
+			$(function () {
+			    $(window).scroll(sticky_relocate);
+			    sticky_relocate();
+			});
+</script>
+		<script>
+		$(function() {
+			  $('.check-all').on('click', function() {
+				$('.checkboxes input:checkbox').prop('checked', true);
+			  });
+			  $('.uncheck-all').on('click', function() {
+				$('.checkboxes input:checkbox').prop('checked', false);
+			  });
+			});
+		</script>
+		<script>
+		$('#myTab a').click(function (e) {
+			e.preventDefault()
+			$(this).tab('show')
+		})
+		</script>
+
+		<script>
+			$('#reservation-date').dateDropper();
+		</script>
+
+		<script>
+			$('#date-from').dateDropper();
+		</script>
+
+		<script>
+			$('#date-to').dateDropper();
+		</script>
+
+		<script>
+			$('#e-date-from').dateDropper();
+		</script>
+
+		<script>
+			$('#e-date-to').dateDropper();
+		</script>
+
+		<script>
+			AOS.init();
+		</script>
+   {% endblock %}

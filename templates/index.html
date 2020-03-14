@@ -17,12 +17,13 @@
          <div class="row">
 		 <div class="search-bg">
 		 
-					<form>
+					<form action="{% url 'browse_jobseeker' %}" method="post">
+                    {% csrf_token %}
 						<fieldset class="home-form-1 icon-field">
 							<div class="col-md-4 col-sm-4 padd-0">
 								<div class="form-group">
 									<div class="icon-addon addon-lg">
-										<input type="text" class="form-control br-1" placeholder="Skills, Designation, Companies" />
+										<input type="text" class="form-control br-1" placeholder="Skills" name="skills">
 										<label class="fa fa-pencil"></label>
 									</div>
 								</div>
@@ -30,12 +31,11 @@
 							<div class="col-md-3 col-sm-3 padd-0">
 								<div class="form-group">
 									<div class="icon-addon addon-lg">
-										<select class="wide form-control br-1">
-											<option data-display="Location">All Country</option>
-											<option value="1">Allahabad</option>
-											<option value="2">India</option>
-											<option value="3" disabled>Australia</option>
-											<option value="4">United State</option>
+										<select class="wide form-control br-1" name="city">
+											<option data-display="Location"></option>
+											{% for x in city %}
+											<option value="{{ x.id }}">{{ x.city }}</option>
+											{% endfor %}
 										</select>
 										<label class="fa fa-map-marker"></label>
 									</div>
@@ -44,12 +44,11 @@
 							<div class="col-md-3 col-sm-3 padd-0">
 								<div class="form-group">
 									<div class="icon-addon addon-lg">
-										<select class="wide form-control">
-											<option data-display="Experience">Show All</option>
-											<option value="1">1</option>
-											<option value="2">2</option>
-											<option value="3" disabled>3</option>
-											<option value="4">4</option>
+										<select class="wide form-control" name="exp">
+                                        <option data-display="Experience"></option>
+                                        {% for x in exp %}
+											<option value="{{ x.id }}">{{x.experience}}</option>
+                                            {% endfor %}
 										</select>
 										<label class="fa fa-crosshairs"></label>
 									</div>
@@ -57,7 +56,7 @@
 							</div>
 							<div class="col-md-2 col-sm-2 padd-0">
 							
-								<a href="{% url 'browse_jobseeker' %}"  class="btn search_bg_theme_btn" >FIND JOB</a>
+								<input type="submit"  value="FIND JOB" class="btn search_bg_theme_btn" >
 							</div>
 						</fieldset>
 					</form>

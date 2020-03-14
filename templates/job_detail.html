@@ -47,10 +47,34 @@
 										<p><strong>Roles</strong> : {{job.designation}}</p>
 									</div>
                                     
-                                    <div class="widget-boxed-body apply_interst">
-                                        <a href="#" class="btn btn-m theme-btn full-width mrg-bot-10">I am Interested</a>
-                                        <a href="#" class="btn btn-m light-gray-btn full-width">I am not Interested </a>
-                                    </div>
+<!--                                    <div class="widget-boxed-body apply_interst">-->
+<!--                                        <a href="#" class="btn btn-m theme-btn full-width mrg-bot-10">I am Interested</a>-->
+<!--                                        <a href="#" class="btn btn-m light-gray-btn full-width">I am not Interested </a>-->
+<!--                                    </div>-->
+									<div>
+									<form action="{% url 'interested' %}" method="post">
+                                        {% csrf_token %}
+                                        <input type="hidden" name="user" value="{{ request.user.id }}">
+                                 <input type="hidden" name="ijob" value="{{job.id }}">
+                                {% if interest %}
+                                  <input type="button"  class="btn btn-m light-gray-btn full-width" value="I am Interested" disabled>
+                                  {% else %}
+                                   <input type="submit"  class="btn btn-m light-gray-btn full-width" value="Are you Interested" >
+                                  {% endif %}
+                                    </form>
+									</div>
+									<div>
+										<form action="{% url 'notinterested' %}" method="post">
+                                        {% csrf_token %}
+                                        <input type="hidden" name="user" value="{{ request.user.id }}">
+                                 <input type="hidden" name="njob" value="{{job.id }}">
+                                {% if notinterest %}
+                                  <input type="button"  class="btn btn-m light-gray-btn full-width" value="I am not Interested" disabled>
+                                  {% else %}
+                                   <input type="submit"  class="btn btn-m light-gray-btn full-width" value="Are you not Interested" >
+                                  {% endif %}
+                                    </form>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -159,8 +183,8 @@
                                 <div class="content_desc">
                                 <p>Company Name -{{job.comapnyname}} </p>
                                 <p>{{job.city}}</p>
-                                <p>{{job.contact_person_name}}</p>
-                                <p>{{job.contact_person_role}}</p>
+                                <p>Contact Person - {{job.contact_person_name}}</p>
+                                <p>Contact Person Role -{{job.contact_person_role}}</p>
                                 <p>Phone:</p>
                                 <p>{{job.cnumber}}</p>
                                 <p>{{job.altermbl}}</p>

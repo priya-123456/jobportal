@@ -24,15 +24,14 @@
 <h3>Welcome Mr. Employer.. !!</h3>
 </div>
 <ul>
-   <li class=""><a href="{% url 'myprofilee1' %}">My Profile</a></li>
+   <li class=""><a href="{% url 'myprofilee2' %}">My Profile</a></li>
     <li class=""><a href="{% url 'emp_short_profil' %}">Shortlisted Profiles</a></li>
-    <!--<li class=""><a href="sent_jobs.html">Sent Jobs</a></li>-->
-    <li class=""><a href="{% url 'emp_posted_jobs' %}">Posted Jobs</a></li>
+    <li class=""><a href="{% url 'bookmark' %}">Bookmark Profiles</a></li>
+    <li class="active"><a href="{% url 'emp_posted_jobs' %}">Posted Jobs</a></li>
 	<li class=""><a href="{% url 'emp_contacted_pro' %}">Contacted Profiles</a></li>
-    <!--<li class=""><a href="applied_jobs.html">Apply Jobs (110)</a></li>
-    <li class=""><a href="shortlisted_jobs.html">Shortlisted Jobs</a></li>-->
-    <li class="active"><a href="{% url 'emp_short_profil' %}">Change Password</a></li>
-    <li class=""><a href="#">Logout</a></li>
+     <li class=""><a href="{% url 'empjobappliers' %}">job appliers</a></li>
+    <li class=""><a href="{% url 'empchangepassword' %}">Change Password</a></li>
+    <li class=""><a href="{% url 'logout' %}">Logout</a></li>
 </ul>
 </div>
 						

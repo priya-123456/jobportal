@@ -22,18 +22,17 @@
     <div class="div_welcome">
 <h3>Welcome saipoojitha !!</h3>
 </div>
-<ul>
-   <li class="active"><a href="{% url 'seekerprofile' %}">My Profile</a></li>
-    <!--<li class=""><a href="shortlisted_profiles.html">Shortlisted Profiles</a></li>
-    <li class=""><a href="posted_jobs.html">Posted Jobs</a></li>
-	<li class=""><a href="Contacted_pro.html">Contacted Profiles</a></li>-->
-    <li class=""><a href="{% url 'apploed_jobs' %}">Applied Jobs (110)</a></li>
-	<li class=""><a href="{% url 'intersted_jobs' %}">Interested Jobs</a></li>
-    <li class=""><a href="{% url 'shortlisted_comp' %}">Shortlisted Companies</a></li>
-	 <li class=""><a href="{% url 'contacted_comp' %}">Contacted Companies</a></li>
-    <li class=""><a href="{% url 'changepassword' %}">Change Password</a></li>
-    <li class=""><a href="#">Logout</a></li>
-</ul>
+	<ul>
+	<li class=""><a href="{% url 'myprofilee2' %}">My Profile</a></li>
+    <li class=""><a href="{% url 'emp_short_profil' %}">Shortlisted Profiles</a></li>
+    <li class=""><a href="{% url 'bookmark' %}">Bookmark Profiles</a></li>
+    <li class="active"><a href="{% url 'emp_posted_jobs' %}">Posted Jobs</a></li>
+	<li class=""><a href="{% url 'emp_contacted_pro' %}">Contacted Profiles</a></li>
+     <li class=""><a href="{% url 'empjobappliers' %}">job appliers</a></li>
+    <li class=""><a href="{% url 'empchangepassword' %}">Change Password</a></li>
+    <li class=""><a href="{% url 'logout' %}">Logout</a></li>
+		</ul>
+
 </div>						
 					</div>
 					<div class="col-md-9 liting_grid padding_10_right">
@@ -52,9 +51,13 @@
 	<div class="col-md-6">
 	<h4 class=" personal_details">Personal Details</h4>
 	</div>
+	{% for prop in res %}
+                                    {% if prop.user == request.user %}
 	<div class="edit">
-	<a href="edit.html"><span class="glyphicon glyphicon-edit">	</span>	Edit</a>
+	<a href="{% url 'jobedit' id=prop.id %}"><span class="glyphicon glyphicon-edit">	</span>	Edit</a>
 	</div>
+		{% endif %}
+		{% endfor %}
 	<div class="col-md-6">
 	<div class="edit">
 	</div>
@@ -64,15 +67,15 @@
     <div class="panel-body">	
     <div class="row">	
 	 <div class="col-md-3">
-	 Name
+	Company Name
 	</div>
 	 <div class="col-md-6">
-	 :  &nbsp;&nbsp;Vuppu Ravali
+	 :  &nbsp;&nbsp;{{request.user.Createjob.comapnyname}}
 	</div>
 	</div>	
     <div class="row">	
 	 <div class="col-md-3 ">
-	 Email 
+	  Company Email
 	</div>
 	 <div class="col-md-6">
 	 :  &nbsp;&nbsp;ravali@mhninformatics.com
@@ -80,18 +83,18 @@
 	</div>	
     <div class="row">	
 	 <div class="col-md-3 ">
-	 Contact No  
+	 Company Contact No
 	</div>
 	 <div class="col-md-6">
-	 :  &nbsp;&nbsp;9876543210
+	 :  &nbsp;&nbsp;{{request.user.createjob.cnumber}}
 	</div>
 	</div>	
     <div class="row">	
 	 <div class="col-md-3 ">
-	 Address line  
+	 Company Address line
 	</div>
 	 <div class="col-md-6">
-	 :  &nbsp;&nbsp;9876543210
+	 :  &nbsp;&nbsp;{{request.user.Createjob.address}}
 	</div>
 	</div>	
     <div class="row">	
@@ -99,7 +102,7 @@
 	 City: 
 	</div>
 	 <div class="col-md-6">
-	 :  &nbsp;9876543210
+	 :  &nbsp;{{request.user.Createjob.city}}
 	</div>
 	</div>	
     <div class="row">	
@@ -107,15 +110,15 @@
 	 State 
 	</div>
 	 <div class="col-md-6">
-	 :  &nbsp;&nbsp;9876543210
+	 :  &nbsp;&nbsp;{{request.user.Createjob.state}}
 	</div>
 	</div>	
     <div class="row">	
 	 <div class="col-md-3 ">
-	 Country 
+	 Country
 	</div>
 	 <div class="col-md-6">
-	 :  &nbsp;9876543210
+	 :  {{request.user.Createjob.Country}}
 	</div>
 	</div>	
     <div class="row">	
@@ -123,7 +126,7 @@
 	 Zip code 
 	</div>
 	 <div class="col-md-6">
-	 :  &nbsp;&nbsp;9876543210
+	 :  &nbsp;{{request.user.Createjob.zipcode}}
 	</div>
 	</div>
 	</div>
@@ -142,19 +145,19 @@
 	 <div class="col-md-4">
 	
 	 <label>
-	 <i class="fa fa-facebook"></i>   Facebook :
-	 </label>Facebook
+	 <i class="fa fa-facebook"></i>  Company Facebook :
+	 </label>{{request.user.Createjob.facebook}}
 	</div>
 	 <div class="col-md-4">
 	 
 	 <label>
-	 <i class="fa fa-google"></i>   Google :
-	 </label>Google
+	 <i class="fa fa-google"></i>  Company Google :
+	 </label>{{request.user.Createjob.google}}
 	</div>
 	 <div class="col-md-4">	  
 	 <label>
-	 <i class="fa fa-twitter"></i>  Twitter :
-	 </label>Twitter
+	 <i class="fa fa-twitter"></i>  Company Twitter :
+	 </label>{{request.user.Createjob.twitter}}
 	</div>
 	</div>	
     <div class="row">	
@@ -162,22 +165,22 @@
 	   
 	  <label>
 	 
-<i class="fa fa-linkedin"></i>  LinkedIn :
+<i class="fa fa-linkedin"></i>  Company LinkedIn :
 	 </label>
-	 LinkedIn
+	 {{request.user.Createjob.linkedin}}
 	</div>
 	 <div class="col-md-4">  
 	  <label>
-	 <i class="fa fa-pinterest"></i>  Pinterest :
+	 <i class="fa fa-pinterest"></i>  Company Pinterest :
 	 </label>
-	 Pinterest
+	 {{request.user.Createjob.pinterest}}
 	</div>
 	 <div class="col-md-4">	  
 	  <label>
 	 
-	 <i class="fa fa-instagram"></i>  Instagram :
+	 <i class="fa fa-instagram"></i>  Company Instagram :
 	 </label>
-	 Instagram
+	 {{request.user.Createjob.instagram}}
 	</div>
 	</div>	
 	</div>

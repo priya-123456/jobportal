@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path,include
 from appnewjob import views
 from django.conf.urls.static import static
 from django.conf import settings
@@ -13,8 +13,8 @@ urlpatterns = [
     path('index2/', views.index2, name='index2'),
     path('intersted_jobs/', views.intersted_jobs, name='intersted_jobs'),
     path('job_detail/<int:id>/', views.job_detail, name='job_detail'),
-    path('myprofilee1/', views.myprofilee1, name='myprofilee1'),
-    path('myprofilee2/', views.myprofilee2, name='seekerprofile'),
+    path('myprofilee1/', views.myprofilee1, name='seekerprofile'),
+    path('myprofilee2/', views.myprofilee2, name='myprofilee2'),
     path('profile/<int:id>/', views.profile, name='profile'),
     path('shortlisted_comp/', views.shortlisted_comp, name='shortlisted_comp'),
     path('shortlisted_jobs/', views.shortlisted_jobs, name='shortlisted_jobs'),
@@ -24,20 +24,28 @@ urlpatterns = [
     path('emp_jobdetail/', views.emp_jobdetail, name='emp_jobdetail'),
     path('emp_posted_jobs/', views.emp_posted_jobs, name='emp_posted_jobs'),
     path('emp_profiles/', views.emp_profiles, name='emp_profiles'),
-    # path('emp_short_profil/', views.emp_short_profil, name='emp_short_profil'),
     path('empchangepassword/', views.empchangepassword, name='empchangepassword'),
     path('jobappliers/', views.empjobappliers, name='empjobappliers'),
-    # path('save/', views.resume_save, name='rsave'),
     path('register/', views.register, name='register'),
     path('login/', views.logins, name='login'),
     path('logout/', views.logout, name='logout'),
     path('jobsave/', views.jobsave, name='jobsave'),
     path('resumesave/', views.resumesave, name='resumesave'),
-    path('catgoryfilter/<int:id>/',views.catgoryfilter,name='catgoryfilter'),
-    path('jobtypefilter/<int:id>/',views.jobtypefilter,name='jobtypefilter'),
+    path('catgoryfilter/<int:id>/', views.catgoryfilter, name='catgoryfilter'),
+    path('jobtypefilter/<int:id>/', views.jobtypefilter, name='jobtypefilter'),
     path('indfilter/<int:id>/', views.indfilter, name='indfilter'),
     path('typefilter/<int:id>/', views.typefilter, name='typefilter'),
+    path('bookmarksave/', views.bookmarksave, name='bookmarksave'),
+    path('bookmark/', views.bookmark, name='bookmark'),
+    path('shortlistsave/', views.shortlistsave, name='shortlistsave'),
+    path('interested/', views.interested, name='interested'),
+    path('notinterested/', views.notinterested, name='notinterested'),
+    path('applied/', views.applied, name='appliedjobs'),
+    path('contactedpro/', views.contactedpro, name='contactedpro'),
+    path('emp_short_profil/', views.emp_short_profil, name='emp_short_profil'),
+    path('auth/', include('social_django.urls', namespace='social')),
+    path('editresu/<int:id>/', views.resumedata_edit, name='resedit'),
+    path('editjob/<int:id>/', views.jobdata_edit, name='editjob'),
 
-                  # path('short/',views.short,name='short')
 
     ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
